@@ -1,0 +1,143 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "User.json",
+  "title": "user",
+  "description": "Model object that contains details of a user",
+  "type": "object",
+  "identifier": "id",
+  "ignore": false,
+  "required": [
+    "id",
+    "firstName",
+    "lastName",
+    "isDeleted"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Primary identifier of the user.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "mi": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "mi",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "employeeNum": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "employee_num",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "loginId": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "login_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "user_mstr"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/users",
+      "description": "Get users based on filter criteria",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "/master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    }
+  ]
+}

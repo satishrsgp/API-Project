@@ -1,0 +1,153 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "CheckVaccineInteraction.json",
+  "title": "checkVaccineInteraction",
+  "description": "This model contains vaccine data relevent to checking for interactions. This model is not returned by any route.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "cvxCode": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cvx_cd",
+            "name": "REVDNCM0"
+          },
+          {
+            "type": "table",
+            "field": "evd_cvx_cd",
+            "name": "revdcvx0"
+          },
+          {
+            "type": "table",
+            "field": "cvx",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "cptCode": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cpt_cd",
+            "name": "revdcpt0"
+          },
+          {
+            "type": "table",
+            "field": "cpt",
+            "name": "ng_vaccines_xref"
+          },
+          {
+            "type": "table",
+            "field": "cpt",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "hiclSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "hicl_seqno",
+            "name": "VACCINE_ORDERS"
+          },
+          {
+            "type": "table",
+            "field": "hicl_seqno",
+            "name": "GCNSEQNOTBL"
+          }
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "vaccine_name",
+            "name": "VACCINE_ORDERS"
+          },
+          {
+            "type": "table",
+            "field": "evd_cvx_cd_desc_long",
+            "name": "REVDNCM0 "
+          },
+          {
+            "type": "table",
+            "field": "evd_cvx_cd_desc_long",
+            "name": "revdcvx0 "
+          }
+        ]
+      }
+    },
+    "containsLatex": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "latex_ind",
+          "name": "ng_vaccines_xref"
+        }
+      }
+    },
+    "containsEgg": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "egg_ind",
+          "name": "ng_vaccines_xref"
+        }
+      }
+    },
+    "containsNeomycin": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "neomycin_ind",
+          "name": "ng_vaccines_xref"
+        }
+      }
+    },
+    "containsGelatin": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gelatin_ind",
+          "name": "ng_vaccines_xref"
+        }
+      }
+    }
+  },
+  "required": [
+    "cvxCode",
+    "cptCode",
+    "containsLatex",
+    "containsEgg",
+    "containsNeomycin",
+    "containsGelatin"
+  ],
+  "links": [
+  ]
+}

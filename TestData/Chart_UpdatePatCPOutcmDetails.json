@@ -1,0 +1,6 @@
+{
+    "outcome": "#outcomepayload#",
+    "goalAchieved": "#goalAchieved#",
+    "goalAchievedDetails": "#goalAchievedDetails#",
+    "outcomeDate": "#outcomeDate#"
+}

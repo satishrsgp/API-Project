@@ -1,0 +1,1126 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "VitalSignsDetail.json",
+  "title": "VitalSignsDetail",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bmi": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "BMI_calc",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressure": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_display",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureSystolic": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_systolic",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureDiastolic": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_diastolic",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureMethod": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_method",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureSide": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "BP_target_side",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureBodySite": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_body_site",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureSite": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_target_site_cd",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureBodyPosition": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_body_position_2",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isBloodPressureCuffSizePediatric": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_cuff_size1",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isBloodPressureCuffSizeAdult": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_cuff_size2",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isBloodPressureCuffSizeLarge": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_cuff_size3",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isBloodPressureCuffSizeThigh": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_cuff_size4",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isBloodPressureCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_bp",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "measuredBy": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "measured_by",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "vitalSignsDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vitalSignsDate",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "vitalSignsTime": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vitalSignsTime",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "fractionOfInspiredOxygen": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "FiO2",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulsePattern": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pulse_pattern_2",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseRate": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pulse_rate",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseOximeterOxygenSaturationRest": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sp_o2_dtl",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseOximeterOxygenSaturationRestSite": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "SpO2TargetSite",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isGrowthChartCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "atxt_growth_charts",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isHealthAssessmentQuestionnaireCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "atxt_HAQ_popop",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isExclusionCaptured": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "atxt_vs_exclude",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bmiPercent": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bmi_percent",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bodySurfaceArea": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "body_surface_area",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isHipCircumferenceCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_hc",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isHeadCircumferenceCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_hh",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isHeightCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_ht",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isNeckCircumferenceCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_nc",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isTemperatureCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_T",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isWaistCircumferenceCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_wc",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isWeightCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_os_cons_wt",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "hasPatientRefused": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_Refused",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "isUnobtainable": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_unobtainable",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "comments": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comments",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "headCircumferenceCentimeters": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "head_circ_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "headCircumferenceInches": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "head_circ_in",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "headCircumferencePercent": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "head_circ_percent",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightCentimeters": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightDate": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_date",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightFeet": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_ft",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightInches": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_in",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightMeters": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_m",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightMethod": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_method",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightPercent": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_percent",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "hipCircumferenceCentimeters": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hip_circ_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "hipCircumferenceInches": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hip_circ_in",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightBodyPosition": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ht_body_position",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "neckCircumferenceCentimeters": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "neck_circ_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "neckCircumferenceInches": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "neck_circ_in",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseOximeterOxygenSaturationSource": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_O2_sat",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "painScoreLoinc": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "painScore_LOINC",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "painScoreDisplay": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "painScoreDisplay",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "peakFlow": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "peakFlow",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "peakFlowMethod": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "peakFlowMethod",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "peakFlowTiming": {
+      "type": "string",
+      "maxlength": 7,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "peakFlowTiming",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "respirationRate": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "respiration_rate",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseOximeterOxygenSaturationMeasured": {
+      "type": "string",
+      "maxlength": 7,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spO2Timing",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "temperatureDegreesCelcius": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "temp_deg_C",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "temperatureDegreesFahrenheit": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "temp_deg_F ",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "temperatureSite": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "temp_targt_site_cd",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "fractionOfInspiredOxygenLitresPerMinute": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_02LPM",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "currentAge": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_current_age",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "fractionOfInspiredOxygenRoomAir": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_Fio2_room_air",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseOximeterOxygenSaturationRestLitresPerMinute": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_ox_lpm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "painMethod": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_pain_method",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "pulseOximeterOxygenSaturationAmbulatory": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_pulse_ox_amb",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "reasonRefused": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_reason_refused",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "unobtainableReason": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_reason_unobtainable",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "patientRefusedVitals": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_refused",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "unobtainableVitals": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_unobtainable",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "waistCircumferenceCentimeters": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "waist_circ_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "waistCircumferenceInches": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "waist_circ_in",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "waistHipRatio": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "waist_hip_ratio",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightContext": {
+      "type": "string",
+      "maxlength": 22,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "weight_context",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightKilograms": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "weight_kg",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightPounds": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "weight_lb",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightPercent": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "weight_percent",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureCuffSize": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_cuff_size",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "areOrthostaticVitalSignsCaptured": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "atxt_ortho",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "menopausalStage": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_menopausal_stage",
+          "name": "histories_"
+        }
+      }
+    },
+    "lmp": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "LMP",
+          "name": "ros_gyn_"
+        }
+      }
+    },
+    "gestationalWeeks": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gest_weeks",
+          "name": "birth_hx_"
+        }
+      }
+    },
+    "heightCentimetersGraph": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ht_cm_graph",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightInchesGraph": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ht_in_graph",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightKilogramsGraph": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "wt_kg_graph",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightPoundsGraph": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "wt_lb_graph",
+          "name": "vital_signs_"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "encounterId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/vitals/{id}",
+      "description": "Get vital signs for provided vital id",
+      "method": "GET"
+    },
+    {
+      "name": "all-vitals",
+      "href": "/persons/{personId}/chart/vitals",
+      "description": "Get list of vital sign summary",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Gets chart demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets encounter details",
+      "method": "GET"
+    }
+  ]
+}

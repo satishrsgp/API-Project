@@ -1,0 +1,57 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Enterprise.json",
+  "title": "enterprise",
+  "description": "Model object that contains the enterprise details",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "enterprise"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_name",
+          "name": "enterprise"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "enterprise"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/enterprises?$filter=Id eq '{id}'",
+      "method": "GET"
+    }
+  ]
+}

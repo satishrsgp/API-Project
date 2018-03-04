@@ -1,0 +1,64 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "FdbMedicationNameSearch.json",
+  "title": "fdbMedicationNameSearch",
+  "description": "",
+  "type": "object",
+  "identifier": "medicationId",
+  "properties": {
+    "medicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "genericMedicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_medid",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationIdDescription": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid_desc",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gcn_seqno",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "medicationId",
+    "genericMedicationId",
+    "medicationIdDescription",
+    "gcnSequenceNumber"
+  ],
+  "links": [
+  ]
+}
+

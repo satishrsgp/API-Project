@@ -1,0 +1,689 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "LabOrder.json",
+  "title": "labOrder",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "readonly": true,
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_num",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "testDescription": {
+      "type": "string",
+      "maxlength": 2000,
+      "description": "The name of the tests for this lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_desc",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The encounter id that is tied to his lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the person.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "ufoNumber": {
+      "type": "string",
+      "maxlength": 128,
+      "description": "A user friendly order number.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ufo_num",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "generatedBy": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "The identity of the module that created the order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generated_by",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "This identifies the type of order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_type",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "testLocation": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the facility that ordered the tests.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_location",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderingProvider": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the provider that ordered the tests.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ordering_provider",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "encounterTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date time of the encounter.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date time when the order was placed.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderDateTimezone": {
+      "type": "integer",
+      "description": "The time zone of the order date.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "signOffDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date time when the order was signed off.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sign_off_date",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "signOffPerson": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "The user id of the person who signed off the lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sign_off_person",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "testStatus": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "The status of the order tests for this lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_status",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "nextgenStatus": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "The status of the lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ngn_status",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "labId": {
+      "type": "integer",
+      "description": "The id of the lab performing the tests.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lab_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "signoffCommentsIndicator": {
+      "type": "boolean",
+      "description": "A flag indicating whether there are any sign off comments.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "signoff_comments_ind",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "documentsIndicator": {
+      "type": "boolean",
+      "description": "A flag indicating whether there are any documents linked to this lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "documents_ind",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderControl": {
+      "type": "string",
+      "description": "The 'Order Control' field of the ORC segment.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_control",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderPriority": {
+      "type": "string",
+      "description": "The 'Priority' field of the OBR segment.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_priority",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "timeEntered": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date time the lab order was entered into the NextGen system.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "time_entered",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "specimenActionCode": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "The 'Specimen Action Code' field of the OBR segment.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_action_code",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "billingType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "The billing type, possible values are Client('C'), Patient('P'), Third Party('T') and Other('O').",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "billing_type",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "clinicalInformation": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "Clinical information containing suspected diagnoses or other clinical findings.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_info",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "cancelReason": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "The reason the order was cancelled.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cancel_reason",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "intrfMessage": {
+      "type": "string",
+      "maxlength": 500,
+      "description": "Message from interfaces.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "intrf_msg",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "The practice id.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "The enterprise id.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "A flag indicating whether this lab order is deleted.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "providerDisplayName": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "The display name of the provider.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "locationName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "The name of the service location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_name",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "addressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "The first address line of the location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_1",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "addressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "The second address line of the location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_2",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "The city of the service location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "The state of the service location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 9,
+      "description": "The zip code of the service location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "The phone number of the service location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phone",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "fax": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "The fax number of the service location.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "fax",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "The first name of the user that signed off the lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "The last name of the user that signed off the lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "middleInitial": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "The middle initial of the user that signed off the lab order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "mi",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "isFutureOrder": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "A flag indicating if the order is a future order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "future_ind",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The start date for this scheduled order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_date",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "nextDueDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The next due date for this order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "nextdue_date",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "expectedResultDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date when the results are expected.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "expected_rslt_date",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "generalComment": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "General order comments.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "general_comment",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderComment": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "Order comment.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_comment",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "patientComment": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "Patient specific comments for this order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_comment",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "isOrderedElseWhere": {
+      "type": "boolean",
+      "description": "Flag indicating if an order is created by NextGen or outside system.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ordered_elsewhere_ind",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "isCompleted": {
+      "type": "boolean",
+      "description": "An indicator that the order was fully completed by a lab.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "completed_ind",
+          "name": "lab_nor"
+        }
+      }
+    }  },
+  "required": [
+    "id",
+    "ufoNumber",
+    "orderType",
+    "encounterId",
+    "encounterTimestamp",
+    "signoffCommentsIndicator",
+    "documentsIndicator",
+    "isOrderedElseWhere",
+    "isCompleted",
+    "practiceId",
+    "enterpriseId",
+    "orderDate",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/orders/{id}",
+      "description": "Get order details for person by order id",
+      "method": "GET"
+    },
+    {
+      "name": "lab-orders",
+      "href": "/persons/{personId}/chart/lab/orders",
+      "description": "Get order details for person",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets The Encounter Details",
+      "method": "GET"
+    },
+    {
+      "name": "tracking-comments",
+      "href": "/persons/{personId}/chart/lab/orders/{id}/tracking-comments",
+      "description": "Get the tracking comments of the order",
+      "method": "GET"
+    },
+    {
+      "name": "insurances",
+      "href": "/persons/{personId}/chart/lab/orders/{id}/insurances",
+      "description": "Get the insurances for the corresponding order",
+      "method": "GET"
+    },
+    {
+      "name": "tests",
+      "href": "/persons/{personId}/chart/lab/orders/{id}/tests",
+      "description": "Get the tests for the order",
+      "method": "GET"
+    },
+    {
+      "name": "results",
+      "href": "/persons/{personId}/chart/lab/orders/{id}/results",
+      "description": "Get results for the corresponding order",
+      "method": "GET"  
+    }
+  ]
+}

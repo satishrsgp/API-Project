@@ -1,0 +1,164 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "GoalRequest.json",
+  "title": "goalRequest",
+  "description": "Model that contains information of a care plan goal",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "codeDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_description",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_system",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "codeValue": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_value",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "comments": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comments",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "isGoalAchieved": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_achieved",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "goalAchievedDetails": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_achieved_details",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "goalCompletionDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_completion_date",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "goalStartDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_start_date",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "isPatientGoal": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_goal_ind",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "patientPriority": {
+      "type": "string",
+      "description": "Enumeration for priority",
+      "enum": [
+        "DelayedPriority",
+        "HighPriority",
+        "NormalPriority"
+      ]
+    },
+    "isProviderGoal": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_goal_ind",
+          "name": "care_plan_goals_ext_"
+        }
+      }
+    },
+    "providerPriority": {
+      "type": "string",
+      "description": "Enumeration for priority",
+      "enum": [
+        "DelayedPriority",
+        "HighPriority",
+        "NormalPriority"
+      ]
+    }
+  },
+  "required": [
+    "description"
+  ],
+  "links": [
+  ]
+}

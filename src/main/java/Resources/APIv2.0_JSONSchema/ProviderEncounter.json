@@ -1,0 +1,154 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProviderEncounter.json",
+  "title": "providerEncounter",
+  "description": "Model object that contains the encounters for a provider",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "patientLastName": {
+      "type": "string",
+      "maxlength": 60,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "person"
+        }
+      }
+    },
+    "patientFirstName": {
+      "type": "string",
+      "maxlength": 60,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "person"
+        }
+      }
+    },
+    "patientMiddleName": {
+      "type": "string",
+      "maxlength": 25,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "person"
+        }
+      }
+    },
+    "patientDateOfBirth": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_of_birth",
+          "name": "person"
+        }
+      }
+    },
+    "patientSex": {
+      "type": "string",
+      "maxlength": 1,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sex",
+          "name": "person"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rendering_provider_id",
+          "name": "patient_encounter"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "practiceId",
+    "timestamp",
+    "personId",
+    "patientLastName",
+    "patientFirstName"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{providerId}/encounters",
+      "description": "Gets The Encounters",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{providerId}",
+      "description": "Gets The Provider Details",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "Gets The Person Demographics Of The Person",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    }
+  ]
+}

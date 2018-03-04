@@ -1,0 +1,10 @@
+{
+ 
+"userId":"#userId#",
+    
+ "id":"#groupId#",
+  
+  "groupName":"#groupName#",
+    
+ "sequenceNumber":#sequenceNumber#
+}

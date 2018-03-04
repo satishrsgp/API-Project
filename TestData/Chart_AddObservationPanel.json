@@ -1,0 +1,7 @@
+{
+    "OrderId": "#OrderId#",
+    "OrderedTestId": "#OrderedTestId#",
+    "CollectionDateTime": "#CollectionDateTime#",
+    "Status": #Status#,
+    "PanelComment": "#PanelComment#"
+}

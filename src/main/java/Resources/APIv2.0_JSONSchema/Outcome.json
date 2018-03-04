@@ -1,0 +1,291 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Outcome.json",
+  "title": "outcome",
+  "description": "Model that contains information of a care plan outcome",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "del_ind",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "goalAchieved": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_achieved",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "goalAchievedDetails": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_achieved_details",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "goalId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_num",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "healthConcernId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "health_concern_num",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "interventionId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "intervention_num",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "outcome",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "outcomeDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "outcome_date",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "OutcomeId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "outcome_num",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "createTimestampTimeZone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "modifyTimestampTimeZone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "encounterId",
+    "createdBy",
+    "createTimestamp",
+    "modifiedBy",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/health-concerns/{healthConcernId}/goals/{goalId}/interventions/{interventionId}/outcomes",
+      "description": "Get List of patient outcomes",
+      "method": "GET"
+    },
+    {
+      "name": "detail",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/health-concerns/{healthConcernId}/goals/{goalId}/interventions/{interventionId}/outcomeId/{outcomeId}",
+      "description": "Get the outcome details for the given outcome id",
+      "method": "GET"
+    },
+    {
+      "name": "health-concern",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/health-concerns/{healthConcernId}",
+      "description": "Gets patient's health concern",
+      "method": "GET"
+    },
+    {
+      "name": "goal",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/health-concerns/{healthConcernId}/goals/{goalId}",
+      "description": "Gets patient's goal",
+      "method": "GET"
+    },
+    {
+      "name": "intervention",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/health-concerns/{healthConcernId}/goals/{goalId}/interventions/{interventionId}",
+      "description": "Gets patient's intervention",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets Encounter Details",
+      "method": "GET"
+    }
+  ]
+}

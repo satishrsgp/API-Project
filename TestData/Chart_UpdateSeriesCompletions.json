@@ -1,0 +1,10 @@
+{
+ "id":"#seriesId#",
+     "personId":"#personId#",
+    "enterpriseId":"#enterpriseId#",
+    "practiceId":"#practiceId#",
+    "seriesName":"#seriesName#",
+    "isComplete":"#isComplete#", 
+    "comment":"#comment#"
+
+}

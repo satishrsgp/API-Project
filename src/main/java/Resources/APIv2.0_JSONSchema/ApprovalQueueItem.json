@@ -1,0 +1,765 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ApprovalQueueItem.json",
+  "title": "approvalQueueItem",
+  "description": "Model object that contains a provider approval queue (paq) item.",
+  "type": "object",
+  "identifier": "itemId",
+  "properties": {
+    "itemId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The item's unique identifier.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "document_id",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "note_id",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "image_id",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "document_id",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "order_num",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "report_id",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "document_id",
+            "name": "hie_document"
+          },
+          {
+            "type": "table",
+            "field": "item_id",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "secondaryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "This field is only populated for ICS images.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "ics_image_id",
+            "name": "patient_ics_images"
+          }
+        ]
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "For the approval queue, this is a calculated value based on the source table that the PAQ item is coming from. For PAQ History, the calculated value was added to the table and retrieved from there.",
+      "enum": [
+        "Invalid",
+        "Document",
+        "Image",
+        "Note",
+        "IcsImage",
+        "Order"
+      ],
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "calculated"
+          },
+          {
+            "type": "table",
+            "field": "item_type",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "This is the description associated with the item. Except in the case of patient notes, it is a table name and field name.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "document_desc",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "table_name",
+            "name": "patient_notes",
+            "description": "for notes type; concatenated with field_name"
+          },
+          {
+            "type": "table",
+            "field": "field_name",
+            "name": "patient_notes",
+            "description": "for notes type; concatenated with table_name"
+          },
+          {
+            "type": "table",
+            "field": "image_desc",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "description",
+            "name": "document",
+            "description": "for ICS type; if not null or empty"
+          },
+          {
+            "type": "table",
+            "field": "description",
+            "name": "doc_type_mstr",
+            "description": "for ICS type; if document.description is null or empty, uses value from doc_type_mstr"
+          },
+          {
+            "type": "table",
+            "field": "test_desc",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "item_name",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "This item is only filled in for patient report items which are not supported at this time.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "report_name",
+          "name": "patient_report"
+        }
+      }
+    },
+    "fileName": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "File name of the item where applicable.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "document_file",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "note_id",
+            "description": "concatenated with '.rtf",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "image_file",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "file_name",
+            "name": "page"
+          },
+          {
+            "type": "table",
+            "field": "item_file",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "format": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "The file format of the item.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "file_format",
+            "name": "patient_documents"
+          },
+          {
+            "type": "calculated",
+            "description": "RTF', 'IMG', 'ICS', 'LAB' depending on type"
+          },
+          {
+            "type": "table",
+            "field": "item_format",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "signoffStatus": {
+      "type": "string",
+      "description": "The current signoff status of the item.",
+      "enum": [
+        "Pending",
+        "SignedOff",
+        "Rejected",
+        "Reassigned"
+      ],
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "signoff_action",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "signoffDescription": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "Only applies to PAQ history. This contains the signoff description of the item, which is who acted on the item and what action was performed.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "signoff_desc",
+          "name": "paq_signoff_history"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "practice_id",
+            "name": "patient_encounter"
+          },
+          {
+            "type": "table",
+            "field": "practice_id",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "practice_id",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "practiceName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_name",
+          "name": "practice"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "For the approval queue, this is set to the provider id of the provider whose PAQ is being retrieved. This will be the same for each record and will not be OData compatible. It is needed for links/model expansion. For PAQ history, this is the provider who acted on the item.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "paq_signoff_history"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The encounter id associated with the item if applicable.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "enc_id",
+            "name": "patient_encounter"
+          },
+          {
+            "type": "table",
+            "field": "enc_id",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "encounterTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "encounterTimestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp_tz",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_encounter"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_ics_images",
+            "description": "This is important, because person_id may be null for encounter"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "person"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "person"
+        }
+      }
+    },
+    "middleName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "person"
+        }
+      }
+    },
+    "appCreatedBy": {
+      "type": "string",
+      "maxlength": 8,
+      "description": "The app that inserted the item. For types other than documents, this field is null",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "app_created_by",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "app_created_by",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "signoff_user_id",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "signoff_user_id",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "paq_signoff_history"
+          }
+        ]
+      }
+    },
+    "isCompleted": {
+      "type": "boolean",
+      "description": "For the approval queue, this is a flag that only applies to lab orders which indicates whether the lab order was completed.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "completed_ind",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "labPrecedence": {
+      "type": "integer",
+      "description": "This property only applies to lab items and contains the lab precendence value.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "item_file",
+            "name": "paq_signoff_history"
+          },
+          {
+            "type": "table",
+            "field": "precedence",
+            "name": "paq_lab_flags"
+          }
+        ]
+      }
+    },
+    "isRestricted": {
+      "type": "boolean",
+      "description": "Indicator for whether the provider has access to this PAQ item. This property is not OData compatible.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "calculated"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "itemId",
+    "providerId",
+    "personId",
+    "practiceId",
+    "practiceName",
+    "createdBy",
+    "createTimestamp",
+    "modifiedBy",
+    "modifyTimestamp",
+    "isRestricted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{providerId}/approval-queue",
+      "description": "Gets the approval queue items for a provider",
+      "method": "GET"
+    },
+    {
+      "name": "item-history",
+      "href": "/providers/{providerId}/approval-queue-history?$filter=ItemId eq guid'{itemId}'",
+      "description": "Gets the signoff action history for a PAQ item",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{providerId}",
+      "description": "Gets provider details",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets encounter details",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "RenderingProviderId": "#RenderingProviderId#",
+    "BillableTimestamp": "#BillableTimestamp#",
+    "BillableTimestampTimezone": #BillableTimestampTimezone#,
+    "IsClinical": "#IsClinical#",
+    "IsBillable": "#IsBillable#",
+    "IsOptical": "#IsOptical#",
+    "LocationId": "#LocationId#",
+    "Remarks": "#Remarks#",
+    "OnsetDate": "#OnsetDate#",
+    "OnsetTime": "#OnsetTime#",
+    "AdmitDate": "#AdmitDate#",
+    "DischargeDate": "#DischargeDate#",
+    "ReferringProviderId": "#ReferringProviderId#"
+}

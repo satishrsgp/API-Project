@@ -1,0 +1,5 @@
+{
+    "StatusActionType": "#StatusActionType#",
+    "ReassignProviderId": "#ReassignProviderId#",
+    "TryDeleteDocumentOrImageOnReject": "#TryDeleteDocumentOrImageOnReject#"
+}

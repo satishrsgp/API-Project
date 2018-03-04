@@ -1,0 +1,72 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProcedureGroup.json",
+  "title": "ProcedureGroup",
+  "description": "Model object that contains the information about a procedure group and associated procedures",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "name": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_group_name",
+          "name": "sim_groups"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "sim_groups"
+        }
+      }
+    },
+    "serviceItemIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxlength": 12
+      },
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_id",
+          "name": "sim_group_members"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "sim_groups"
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "serviceItemIds",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "description": "Get master list of procedures",
+      "href": "/master/procedure-groups",
+      "method": "GET"
+    }
+  ]
+}

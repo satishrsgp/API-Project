@@ -1,0 +1,247 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "OrderableVaccine.json",
+  "title": "orderableVaccine",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "cptCode": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cpt",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "cvxCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cvx",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vaccine_name",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "categoryName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "category_name",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "hiclSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hicl_seqno",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gcn_seqno",
+          "name": "imm_vaccine_favorites"
+        }
+      }
+    },
+    "diagnosisCodeId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "icd9cmCodeId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "icd9cm_code_id",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "diagnosisDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "diagnosisUserDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_description",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "displayName": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "display_name",
+          "name": "vw_fdb_vaccines"
+        }
+      }
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cvx_status",
+          "name": "vw_fdb_vaccines"
+        }
+      }
+    },
+    "containsLatex": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "latex_ind",
+          "name": "vw_fdb_vaccines"
+        }
+      }
+    },
+    "containsEgg": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "egg_ind",
+          "name": "vw_fdb_vaccines"
+        }
+      }
+    },
+    "containsNeomycin": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "neomycin_ind",
+          "name": "vw_fdb_vaccines"
+        }
+      }
+    },
+    "containsGelatin": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gelatin_ind",
+          "name": "vw_fdb_vaccines"
+        }
+      }
+    },
+    "relatedDisplayNames": {
+      "type": "array",
+      "description":
+        "List of display names for related vaccines. EHR uses these as group names. This property does not support Odata operations in favor of performance.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "cptCode",
+    "cvxCode",
+    "name",
+    "categoryName",
+    "practiceId",
+    "containsLatex",
+    "containsEgg",
+    "containsNeomycin",
+    "containsGelatin",
+    "relatedDisplayNames"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/orderable-vaccines",
+      "description": "Gets A List Of Orderable Vaccines",
+      "method": "GET"
+    }
+  ]
+}

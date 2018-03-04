@@ -1,0 +1,123 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PersonInsurance.json",
+  "title": "personInsurance",
+  "description": "Model object that contains active insurance for a person.",
+  "type": "object",
+  "identifier": "payerId",
+  "properties": {
+    "payerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "payer_id",
+            "name": "person_payer"
+          },
+          {
+            "type": "table",
+            "field": "payer_id",
+            "name": "employer_payers"
+          }
+        ]
+      }
+    },
+    "payerName": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "payer_name",
+            "name": "person_payer"
+          },
+          {
+            "type": "table",
+            "field": "payer_mstr",
+            "name": "person_payer"
+          }
+        ]
+      }
+    },
+    "personPayerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "person_payer_id",
+            "name": "person_payer"
+          },
+          {
+            "type": "table",
+            "field": "employer_payer_id",
+            "name": "employer_payers"
+          }
+        ]
+      }
+    },
+    "defaultCob": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "def_cob",
+          "name": "person_payer"
+        }
+      }
+    },
+    "policyEffectiveDate": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "policy_eff_date",
+          "name": "person_payer"
+        }
+      }
+    },
+    "policyExpirationDate": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "policy_exp_date",
+          "name": "person_payer"
+        }
+      }
+    },
+    "isPatientInsurance": {
+      "type": "boolean"
+    },
+    "isActive": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "personPayerId",
+    "isPatientInsurance",
+    "isActive"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/insurances",
+      "description": "Get insurance for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    }
+  ]
+}

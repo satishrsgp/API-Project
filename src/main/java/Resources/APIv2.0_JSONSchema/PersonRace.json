@@ -1,0 +1,114 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PersonRace.json",
+  "title": "personRace",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "person_race_xref"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "race_item_id",
+          "name": "person_race_xref"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "mstr_list_item_desc",
+          "name": "mstr_lists"
+        }
+      }
+    },
+    "order": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "race_order",
+          "name": "person_race_xref"
+        }
+      }
+    },
+    "categoryId": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code",
+          "name": "race_category_mapping"
+        }
+      }
+    },
+    "categoryName": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "code_tables"
+        }
+      }
+    },
+    "cdcRaceCode": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_rec_id",
+          "name": "intrf_mstr_lists"
+        }
+      }
+    }
+  },
+  "required": [
+    "personId",
+    "id",
+    "description"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/races",
+      "description": "Gets a list of a person's races",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    }
+  ]
+}

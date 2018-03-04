@@ -1,0 +1,446 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientRecallPlan.json",
+  "title": "patientRecallPlan",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "recallPlanId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the master recall plan that the patient is on.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recall_plan_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "description": "The sequence number of the patient's recall plan. This number increases when a patient is enrolled in the same master recall plan multiple times.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_nbr",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "The name of the master recall plan.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "active_plan_ind",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "plan_start_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "plan_end_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "lastDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date of last time a procedure was performed.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "approximateLastDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "A calculated approximation of the date of last time a procedure was performed when no last date exists. The value is the expected return date minus the number of days the recall plan suggests for a return date. This property is not OData compatible.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "expectedReturnDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "expected_return_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "letter1ScheduledDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "letter1_sched_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "letter1SentDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "letter1_sent_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "letter2ScheduledDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "letter2_sched_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "letter2SentDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "letter2_sent_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "letter3ScheduledDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "letter3_sched_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "letter3SentDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "letter3_sent_date",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "stopReasonId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "manual_stop_reason_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "stopReason": {
+      "type": "string",
+      "description": "This is the reason the recall plan was stopped. It was either manually stopped or was automatically stopped because the related appointment was either Scheduled or Kept.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "stop_reason",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "eventId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "eventDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event",
+          "name": "events"
+        }
+      }
+    },
+    "resourceId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resource_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "resourceDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "resources"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "locationName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_name",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "createdByUserId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "createdByName": {
+      "type": "string",
+      "description": "This field is calculated based on 3 values and is not OData compatible.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "mi",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "modifiedByUserId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "patient_recall_plans"
+        }
+      }
+    },
+    "modifiedByName": {
+      "type": "string",
+      "description": "This field is calculated based on 3 values and is not OData compatible.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "mi",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_recall_plans"
+        }
+      }
+    }
+  },
+  "required": [
+    "personId",
+    "practiceId",
+    "recallPlanId",
+    "id",
+    "description",
+    "isActive",
+    "createdByUserId",
+    "createTimestamp",
+    "modifiedByUserId",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/recall-plans",
+      "description": "Get a list of recall plans assigned to a patient",
+      "method": "GET"
+    },
+    {
+      "name": "detail",
+      "href": "/persons/{personId}/chart/recall-plans/{recallPlanId}/{id}",
+      "description": "Get the recall plan details",
+      "method": "GET"
+    },
+    {
+      "name": "recall-plan",
+      "href": "/master/recall-plans?$filter=Id eq guid'{recallPlanId}'",
+      "description": "Get the master recall plan entry",
+      "method": "GET"
+    }
+  ]
+}

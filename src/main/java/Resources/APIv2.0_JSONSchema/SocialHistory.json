@@ -1,0 +1,1421 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "SocialHistory.json",
+  "title": "socialHistory",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "homeLanguage": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "language_at_home",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "birthCountry": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "birthplace",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "handDominance": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_right_left_hnd",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "educationLevel": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "education_level",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "educationDegree": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_bh_degree",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "educationDegreeCountry": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_bh_degree_country",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "occupationalHazard1": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hazard1",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "occupationalHazard2": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hazard2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "hasMilitaryExperience": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_military_experience",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_military_type",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryBranch": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_military_branch",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryYearsServed": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_military_years_served",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryDischargeType": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_military_discharge_type",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryStationedOverseas": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_military_stat_overseas",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryStationedOverseasLocation": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_military_overseas_where",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryNoiseExposure": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_military_noise_exp",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "militaryBiohazardExposure": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_military_biohazard_exp",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "previousWidowed": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "previous_widowed",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "previousWidowedTimes": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "prev_widow_times",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "previousDivorce": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "previous_divorce",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "previousDivorceTimes": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "prev_divorce_times",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "hasChildren": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "children",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "sonsCount": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "number_sons",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "daughtersCount": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "number_daughter",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "supportNetworkComments": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_support_netwk_comments",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "supportNetwork": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_suuport_network",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "primaryResidenceComments": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_primary_res_comments",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoUsage": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tobacco_yes",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoType": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tobacco_type",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoUnitsPerDay": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pack_per_day",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoUnit": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_unit",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoYearsSmoked": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "Yrs_Smoked",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoPackYears": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "packyears",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoCurrentOrPast": {
+      "type": "string",
+      "maxlength": 7,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_current_past",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoPreviousCessationAttempt": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tobaccoQuit",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoYearQuit": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tobacco_date_stop",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoLongestFreePeriod": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_prd_tobac_free",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoRelapseReason": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_reason_relapse",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "passiveSmokeExposure": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "passiveSmoke",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "tobaccoCessationMethods": {
+      "type": "string",
+      "maxlength": 350,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_concat",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholUsage": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alcohol_yes",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "caffeineUsage": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "caffeine_yes",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "caffeineType": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "caffeine_type",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "caffeineType2": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "caffeine_type2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "caffeinePerDay": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "caffeine_per_day",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "activityLevel": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "activity_level",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "healthClubMember": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "helath_club_mbr",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseFrequency": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exercise_freq",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseHoursWeek": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exerciseHrsWk",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseType": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exercise_type",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exercisetype2": {
+      "type": "string",
+      "maxlength": 26,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exerciseType2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exercisetype3": {
+      "type": "string",
+      "maxlength": 26,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exerciseType3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "hobby1": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hobby1",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "hobby2": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hobby2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "hobby3": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hobby3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "dietHistory1": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diet_hx1",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "dietHistory2": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diet_hx2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "dietHistory3": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diet_hx3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "dietHistory4": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diet_hx4",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "dietHistory5": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diet_hx5",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "petAnimals": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "animals",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "petBirds": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "birds",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "petDogs": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dogs",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "petRodents": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rodents",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "petReptiles": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "reptiles",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "petOther": {
+      "type": "string",
+      "maxlength": 65,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "other",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "pets": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_pets_doc_txt",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "cleansAnimals": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "animals_clean",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "changesInSleepPatterns": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_sleep",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "religiousAffiliation": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_religious_affillation",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "practiceReligion": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_practice_religion",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "spiritualBeliefs": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_spiritual_beliefs",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "importanceOfReligionSpirituality": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_importance_spirituality",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "smokeDetectorsInHome": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "smoke_detectors",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "carbonMonoxideDetectorsInHome": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "co_detectors",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "radonInHome": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "radon",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "homeHeating": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "homeHeating",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "seatBeltUsage": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seat_belts",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "fireArmsAtHome": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "firearms_yes",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "agreesToTransfusion": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "transfusion_yes",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelOutOfState": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "travelState",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelOutOfStateLocation": {
+      "type": "string",
+      "maxlength": 45,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_travel_out_state",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelOutOfCountry": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "travelCountry",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelOutOfCounrtyLocation": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_travel_out_counrty",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelOutOfCountryRegion": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_travel_rgn",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelExposure": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_travelexposure",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "travelExposureDetail": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_travel_exposure",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesReviewDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dt_directives_reviewed",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesNone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_none",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesRefused": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_refused",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesDnr": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_DNR",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesLivingWill": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_livingwill",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesDoNotPlaceOnLifeSupport": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_life_support",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesDurablePowerOfAttorney": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_Attorney",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesHcProxy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_hcproxy",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesHcProxyName": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "proxy_name",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesIncremented": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_incremented",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "advanceDirectivesDiscussionsCount": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ADR_sum_discussed",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "comments": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comments",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholYearQuit": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "etoh_date_stopped",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholType": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alcoholType",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholFrequency": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "etohfrequency",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholLastDrink": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_alcoholic_bev",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholAmount": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "amount_per_day",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "smokingStatus": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "smoke_status",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "smokingStatusCode": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "smoke_status_code",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "maritalStatus": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "marital_status",
+          "name": "person"
+        }
+      }
+    },
+    "religion": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "religion",
+          "name": "person"
+        }
+      }
+    }
+  },
+  "required": [
+    "createTimestamp",
+    "createdBy",
+    "modifyTimestamp",
+    "modifiedBy",
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "encounterId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/social-history",
+      "description": "Gets A List Of Social History",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets The Encounter Details",
+      "method": "GET"
+    }
+  ]
+}

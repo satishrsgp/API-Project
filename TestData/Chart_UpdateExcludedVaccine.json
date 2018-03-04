@@ -1,0 +1,16 @@
+{
+    "id": "#exclusionId#",
+    "personId": "#personId#",
+    "enterpriseId": "#enterpriseId#",
+    "practiceId": "#practiceId#",
+    "cvxCode": #CvxCode#,
+    "name": "#name#",
+    "reasons": [
+        "#Reasons#"
+    ],
+    "startDate": "#StartDate#",
+    "endDate": "#EndDate#",
+    "comment": "#Comment#"
+   
+   
+}

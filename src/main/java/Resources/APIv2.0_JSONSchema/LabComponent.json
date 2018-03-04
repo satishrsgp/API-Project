@@ -1,0 +1,196 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "LabComponent.json",
+  "title": "LabComponent",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lab_component_key",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "systemId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "system_id",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "testId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "labtest_key",
+          "name": "lab_test_components_xref"
+        }
+      }
+    },
+    "labComponentDescription": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lab_component_desc",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_system",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "units": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "units",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "refRange": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ref_range",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "loincCode": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "loinc_code",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "snomedCode": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_code",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "dataType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "data_type",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "lab_components_mstr"
+        }
+      }
+    },
+    "clinicalName": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_name",
+          "name": "loinc"
+        }
+      }
+    },
+    "longCommonName": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "long_common_name",
+          "name": "loinc"
+        }
+      }
+    },
+    "sequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sequence_num",
+          "name": "lab_test_components_xref"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "systemId",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/lab-tests/{testId}/components",
+      "description": "Gets The Components",
+      "method": "GET"
+    },
+    {
+      "name": "lab-test",
+      "href": "/master/lab-tests?$filter=Id eq '{testId}'",
+      "description": "Return the specified test.",
+      "method": "GET"
+    }
+
+  ]
+}

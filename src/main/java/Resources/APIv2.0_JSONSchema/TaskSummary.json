@@ -1,0 +1,370 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskSummary.json",
+  "title": "taskSummary",
+  "description": "Summary of a task",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "priorityId": {
+      "type": "integer",
+      "description": "This property is the raw value from the query. Also used for sorting by priority.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_priority",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "priority": {
+      "type": "string",
+      "description": "This is a string representation of the priorityId. Ex: 1 = High, 2 = Normal, 3 = Low."
+    },
+    "subject": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_subj",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_desc",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "description": "Identifies PAQ action tasks",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "todo_task_type",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "ownerId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_owner",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_due_date",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isRead": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "read_flag",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isAssigned": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_assgn",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isAccepted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_assgn",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isRejected": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_rejected",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isCompleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_completed",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_deleted",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "isRestricted": {
+      "type": "boolean"
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pat_acct_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "personFirstName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "person"
+        }
+      }
+    },
+    "personMiddleName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "person"
+        }
+      }
+    },
+    "personLastName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "person"
+        }
+      }
+    },
+    "patientHasChartInCurrentPractice": {
+      "type": "boolean"
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pat_enc_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "user_todo_list"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "enterpriseId",
+    "practiceId",
+    "priorityId",
+    "priority",
+    "status",
+    "type",
+    "dueDate",
+    "isAssigned",
+    "isRead",
+    "isAccepted",
+    "isRejected",
+    "isCompleted",
+    "isDeleted",
+    "isRestricted",
+    "createdBy",
+    "modifiedBy",
+    "createTimestamp",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/tasks",
+      "description": "Get summary of all tasks",
+      "method": "GET"
+    },
+    {
+      "name": "task-detail",
+      "href": "/users/{userId}/tasks/{id}",
+      "description": "Gets task details",
+      "method": "GET"
+    },
+    {
+      "name": "favorite-assignees",
+      "href": "/users/{userId}/tasks/favorite-assignees",
+      "description": "Gets a list of favorite users or groups",
+      "method": "GET"
+    },
+    {
+      "name": "add-task",
+      "href": "/users/{userId}/tasks",
+      "description": "Adds a task",
+      "method": "POST"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "Gets The Person Demographics Of The Person",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets The Encounter Details",
+      "method": "GET"
+    }
+  ]
+}

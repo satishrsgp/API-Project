@@ -1,0 +1,530 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientEncounter.json",
+  "title": "patientEncounter",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "caseId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "case_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "caseManagementCaseId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "casemgt_case_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+
+    "parentEncounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "parent_enc_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "groupEncounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_enc_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "isLocked": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "timestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp_tz",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "renderingProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rendering_provider_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "renderingProviderName": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "lockedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "locked_by",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "lockTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lock_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "lockTimestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lock_timestamp_tz",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "billableTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "billable_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "billableTimestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "billable_timestamp_tz",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "isClinical": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_ind",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "isBillable": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "billable_ind",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "isOptical": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "optical_ind",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "remarks": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "remarks",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_status",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "sourceProductId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "source_product_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+
+    "siteId": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "site_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "encounterNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_nbr",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "guarantorId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "guar_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "guarantorType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "guar_type",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "cob1PayerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cob1_payer_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "cob1InsuredPersonId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cob1_insured_person_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "cob1PersonPayerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cob1_person_payer_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "onsetDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "onset_date",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "onsetTime": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "onset_time",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "admitDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "admit_date",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "dischargeDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "discharge_date",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "referringProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "refer_provider_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "referringProviderName": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "refer_provider_name",
+            "name": "patient_encounter"
+          },
+          {
+            "type": "table",
+            "field": "description",
+            "name": "provider_mstr"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "caseId",
+    "id",
+    "timestamp",
+    "isLocked",
+    "lockTimestamp",
+    "siteId",
+    "encounterNumber"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/encounters/{id}",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "patient-encounters",
+      "href": "/persons/{personId}/chart/encounters",
+      "description": "Get encounters for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "provider-encounters",
+      "href": "/providers/{renderingProviderId}/encounters",
+      "description": "Get encounters for a given providers",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "telephone-call",
+      "href": "/persons/{personId}/chart/encounters/{id}/telephone-call",
+      "description": "Get telephone call for a given patient and encounter",
+      "method": "GET"
+    },
+    {
+      "name": "telephone-contact",
+      "href": "/persons/{personId}/chart/encounters/{id}/telephone-contact",
+      "description": "Get telephone contact for a given patient and encounter",
+      "method": "GET"
+    }
+  ]
+}

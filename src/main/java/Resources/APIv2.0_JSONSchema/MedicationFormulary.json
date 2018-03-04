@@ -1,0 +1,489 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationFormulary.json",
+  "title": "MedicationFormulary",
+  "description": "",
+  "type": "object",
+  "identifier": "routedMedId",
+  "properties": {
+    "routedMedId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "routed_med_id",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "medicationName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_name",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "isGeneric": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "generic_ind",
+            "name": "formu_med_mstr"
+          },
+          {
+            "type": "table",
+            "field": "med_name_type_code",
+            "name": "ng_med_tables_mstr"
+          }
+        ]
+      }
+    },
+    "isSingleSource": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "avail_generic_ind",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "isOTC": {
+      "type": "boolean",
+      "description": "Is Over the Counter medication",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_fed_legend",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "isMedicalSupply": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_type_ind",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "genericName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_name",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "genericRoutedMedId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_routed_med_id",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "hic3": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hic3",
+          "name": "formu_med_mstr"
+        }
+      }
+    },
+    "medicationId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "routedDosageFormMedId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "routed_dosage_form_med_id",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gcn_seqno",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "genericMedid": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_medid",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "medicationStrength": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_strength",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "medicationStrengthUnitOfMeasure": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_strength_uom",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "medicationRouteAbbreviation": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_route_abbrv",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "medicationDosageFormAbbreviation": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_dosage_form_abbrv",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "medicationDescription": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid_desc",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "deaClassCode": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_ref_dea_class_code",
+          "name": "ng_med_tables_mstr"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "pbmId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pbm_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "pbmName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pbm_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "planId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "plan_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "planName": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "plan_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "formularyId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "formulary_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "altFormularyId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alt_formulary_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "coverageId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "coverage_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "copayId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "copay_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isHidden": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hidden_flag",
+          "name": "medication_hidden"
+        }
+      }
+    },
+    "formularyStatusCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "formulary_status",
+          "name": "ng_rxh_formulary_med_data"
+        }
+      }
+    },
+    "formularyStatusDescription": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "copayDescription": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "coverageSummary": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "coverageDescription": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "textMessages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    }
+  },
+  "required": [
+    "routedMedId",
+    "medicationName",
+    "isSingleSource",
+    "isMedicalSupply",
+    "medicationId",
+    "routedDosageFormMedId",
+    "isOTC",
+    "gcnSequenceNumber",
+    "genericMedid",
+    "medicationRouteAbbreviation",
+    "medicationDosageFormAbbreviation",
+    "medicationDescription",
+    "isGeneric",
+    "deaClassCode",
+    "personId",
+    "isHidden"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/formularies",
+      "description": "Gets a list of medication formularies for the specified person id",
+      "method": "GET"
+    },
+    {
+      "name": "eligibilities",
+      "href": "/persons/{personId}/eligibilities",
+      "description": "Gets a list of eligibilities for a person",
+      "method": "GET"
+    },
+    {
+      "name": "demographics",
+      "href": "/persons/{personId}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "medication-copay",
+      "href": "/persons/{personId}/formularies/medications/{medicationId}/copays/{copayId}",
+      "description": "Gets copay data for a formulary medication",
+      "method": "GET"
+    },
+    {
+      "name": "medication-coverage",
+      "href": "/persons/{personId}/formularies/medications/{medicationId}/coverages/{coverageId}",
+      "description": "Gets coverage data for a formulary medication",
+      "method": "GET"      
+    },
+    {
+      "name": "formulary-alternatives",
+      "href": "/persons/{personId}/formularies/medications/{medicationId}/alternatives",
+      "description": "Gets coverage data for a formulary medication",
+      "method": "GET"      
+    }
+  ]
+}

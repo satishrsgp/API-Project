@@ -1,0 +1,20 @@
+{
+    "ConceptId": "#ConceptId#",
+    "SideId": "#SideId#",
+    "Site": "#Site#",
+    "OnsetDate": "#OnsetDate#",
+    "LastAddressedDate": "#LastAddressedDate#",
+    "ResolvedDate": "#ResolvedDate#",
+    "ResolvedReason": "#ResolvedReason#",
+    "ResolvedBy": "#ResolvedBy#",
+    "ProblemStatusId": "#ProblemStatusId#",
+    "ClinicalStatusId": "#ClinicalStatusId#",
+    "IsChronic": #IsChronic#,
+    "HasSecondaryCondition": #HasSecondaryCondition#,
+    "IsComorbid": #IsComorbid#,
+    "LocationId": "#LocationId#",
+    "ProviderId": "#ProviderId#",
+    "IsRecordedElsewhere": #IsRecordedElsewhere#,
+    "RecordedElsewhereSource": "#RecordedElsewhereSource#",
+    "ResponsibleProviderId": "#ResponsibleProviderId#"
+}

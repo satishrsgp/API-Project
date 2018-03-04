@@ -1,0 +1,446 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProblemDetail.json",
+  "title": "problemDetail",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "fullySpecifiedName": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "fully_specified_name",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "conceptId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "concept_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "sideId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "side_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "site": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "site",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "onsetDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "onset_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "lastAddressedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_addressed_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedReason": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_reason",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_by",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "problemStatusId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "problem_status_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "problemStatus": {
+      "type": "string",
+      "description": "ConceptId value for the problem's status."
+    },
+    "recentNoteId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recent_note_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "clinicalStatusId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_status_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isChronic": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chronic_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "hasSecondaryCondition": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "secondary_condition_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isRecordedElsewhere": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recorded_elsewhere_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "recordedElsewhereSource": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recorded_elsewhere_source",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "responsibleProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "responsible_provider_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isComorbid": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comorbid_condition_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "patient_problems"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "conceptId",
+    "isChronic",
+    "hasSecondaryCondition",
+    "isRecordedElsewhere",
+    "isDeleted",
+    "isComorbid",
+    "createdBy",
+    "modifiedBy",
+    "createTimestamp",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/problems/{id}",
+      "description": "Get particular problems details based on problem id",
+      "method": "GET"
+    },
+    {
+      "name": "problems",
+      "href": "/persons/{personId}/chart/problems",
+      "description": "Get summary on all the problem for the given person",
+      "method": "GET"
+    },
+    {
+      "name": "notes",
+      "href": "/persons/{personId}/chart/problems/{id}/notes",
+      "description": "Get problem notes text based on problem id",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

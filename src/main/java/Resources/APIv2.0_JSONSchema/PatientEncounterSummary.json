@@ -1,0 +1,129 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientEncounterSummary.json",
+  "title": "patientEncounterSummary",
+  "description": "Model object that contains the summary an encounter of a patient",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "timestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp_tz",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "isLocked": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "renderingProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rendering_provider_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "renderingProviderName": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "provider_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "isLocked"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/encounters",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{id}",
+      "description": "Get encounter details for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

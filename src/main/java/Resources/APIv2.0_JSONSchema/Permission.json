@@ -1,0 +1,66 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Permission.json",
+  "title": "permission",
+  "description": "Model object that contains the user's access right to a permission.",
+  "type": "object",
+  "identifier": "",
+  "ignored": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The permission name."
+    },
+    "category": {
+      "type": "string",
+      "description": "The category in which this permission belongs, e.g. System."
+    },
+    "isOperation": {
+      "type": "boolean",
+      "description": "Indicator whether this permission is an operation permission."
+    },
+    "position": {
+      "type": "integer",
+      "description": "The position of the permission."
+    },
+    "add": {
+      "type": "boolean",
+      "description": ""
+    },
+    "remove": {
+      "type": "boolean",
+      "description": ""
+    },
+    "update": {
+      "type": "boolean"
+    },
+    "view": {
+      "type": "boolean"
+    },
+    "print": {
+      "type": "boolean"
+    },
+    "execute": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "name",
+    "isOperation",
+    "position",
+    "add",
+    "remove",
+    "update",
+    "view",
+    "print",
+    "execute" 
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{id}/permissions",
+      "description": "Gets a list of permissions for a user.",
+      "method": "GET"
+    }
+  ]
+}

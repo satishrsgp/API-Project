@@ -1,0 +1,20 @@
+{
+    "CvxCode": "#CvxCode#",
+    "VaccineDescription": "#VaccineDescription#",
+    "LotNumber": "#LotNumber#",
+    "Cpt4Code": "#Cpt4Code#",  
+ "ManufacturerName": "#ManufacturerName#",
+    "ManufacturerNumber": #ManufacturerNumber#,
+    "Strength": #Strength#,
+    "Units": "#Units#",
+     "UnitsCode": "#UnitsCode#",
+    "Dose": "#Dose#",
+    "Route": "#Route#",
+  "RouteCode": "#RouteCode#",
+     "Site": "#Site#",
+    "SiteCode": "#SiteCode#",
+    "BrandName": "#BrandName#",
+ "WastedReason": "#WastedReason#",
+    "WastedDate": "#WastedDate#",
+   "RecordSource": "#RecordSource#"
+}

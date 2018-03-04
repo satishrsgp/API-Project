@@ -1,0 +1,11 @@
+{
+ "Stop":"#Stop#",
+ "StopReasonId":"#StopReasonId#",
+ "RecallPlanId":"#recallPlanId#",
+ "LastDate":"#LastDate#",
+ "ReturnDate":"#ReturnDate#",
+ "EventId":"#EventId#",
+ "ResourceId":"#ResourceId#",
+ "LocationId":"#LocationId#",
+ "Note":"#Note#"
+}

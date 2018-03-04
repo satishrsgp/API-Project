@@ -1,0 +1,104 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "UserProviderRelationship.json",
+  "title": "userProviderRelationship",
+  "description": "",
+  "type": "object",
+  "identifier": "relationshipId",
+  "properties": {
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "user_provider_xref"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "user_provider_xref"
+        }
+      }
+    },
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_provider_xref"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "user_provider_xref"
+        }
+      }
+    },
+    "relationshipId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "relationship_id",
+          "name": "user_provider_xref"
+        }
+      }
+    },
+    "relationshipDescription": {
+      "type": "string",
+      "maxlength": 128,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "relationship_desc",
+          "name": "user_provider_relationship"
+        }
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "userId",
+    "providerId",
+    "relationshipId"
+  ],
+  "links": [
+    {
+      "name": "provider",
+      "href": "/providers/{providerId}",
+      "description": "Get provider details",
+      "method": "GET"
+    },
+    {
+      "name": "user",
+      "href": "/users?$filter=Id eq {userId}",
+      "description": "Get provider details",
+      "method": "GET"
+    }
+  ]
+}

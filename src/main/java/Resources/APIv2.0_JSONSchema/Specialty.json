@@ -1,0 +1,58 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Specialty.json",
+  "title": "Specialty",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "specialty_code",
+          "name": "specialty_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "specialty_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "specialty_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/specialties",
+      "description": "Gets a list of specialties",
+      "method": "GET"
+    }
+  ]
+}

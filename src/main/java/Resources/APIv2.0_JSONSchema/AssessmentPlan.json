@@ -1,0 +1,342 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AssessmentPlan.json",
+  "title": "assessmentPlan",
+  "description": "Care Assessment Plan",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "personId",
+    "encounterId",
+    "enterpriseId",
+    "practiceId",
+    "encounterDate"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "encounterDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "aip": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_aip",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "aipPriority": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_aip_priority_display",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_description",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "diagnosisCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_diagnosis_code_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "diagnosisId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_diagnosis_uniq_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "encounterDiagnosisPriority": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_enc_dx_priority",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "icd9cmCodeId": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_icd9cm_code_id",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "reportDisplay": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_report_display",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "axis": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "axis",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "chiefComplaint": {
+      "type": "string",
+      "maxLength": 190,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chief_complaint",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "detailType": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "detail_type",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "detailTypePriority": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "detail_type_priority",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "differentialDiagnosis": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "differential_diagnosis",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "episode": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "episode",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "side": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "side",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "site": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "site",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "hasHistoryRecord": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_hx_record_ind",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "specifiers": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_Specifiers",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    },
+    "isSupplemental": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_supplemental_ind",
+          "name": "assessment_impression_plan_"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/care-plan-assessments",
+      "description": "Get all alert care plan assessments",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets The Encounter Details",
+      "method": "GET"
+    }
+  ]
+}

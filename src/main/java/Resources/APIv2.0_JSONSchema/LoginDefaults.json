@@ -1,0 +1,119 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "LoginDefaults.json",
+  "title": "loginDefaults",
+  "description": "Model object that contains a user's login defaults",
+  "type": "object",
+  "identifier": "",
+  "ignore": false,
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "locationId",
+    "providerId",
+    "timeZone",
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Primary identifier of the user.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "description": "The currently set enterprise for the user.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "description": "The currently set practice for the user.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "description": "The currently set location for the user.",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "description": "The currently set provider for the user.",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "timeZone": {
+      "type": "string",
+      "description": "The preferred timezone for the user.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_mstr"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{id}/login-defaults",
+      "description": "Gets a user's login defaults for enterprise, practice, location, provider, and timezone.",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{providerId}",
+      "description": "Gets The Provider Details",
+      "method": "GET"
+    },
+    {
+      "name": "location",
+      "href": "/master/locations?$filter=Id eq guid'{locationId}'",
+      "description": "Returns Locations",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "/master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    }
+  ]
+}

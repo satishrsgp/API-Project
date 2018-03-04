@@ -1,0 +1,93 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientAllergyReaction.json",
+  "title": "patientAllergyReaction",
+  "description": "Model object that contains an allergy reaction of a patient",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "patientAllergyId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "reactionDescription": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "reaction_desc",
+          "name": "patient_allergy_reactions"
+        }
+      }
+    },
+    "snomedCode": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "reaction_code",
+          "name": "patient_allergy_reactions"
+        }
+      }
+    },
+    "severityCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "severity_code",
+          "name": "patient_allergy_reactions"
+        }
+      }
+    },
+    "severityDescription": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "code_tables"
+        }
+      }
+    },
+    "rank": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rank",
+          "name": "patient_allergy_reactions"
+        }
+      }
+    }
+  },
+  "required": [
+    "patientAllergyId",
+    "reactionDescription"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/allergies/{patientAllergyId}/reactions",
+      "description": "Get allergy reactions",
+      "method": "GET"
+    },
+    {
+      "name": "allergy",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/allergies/{patientAllergyId}",
+      "description": "Get allergy details",
+      "method": "GET"
+    }
+  ]
+}

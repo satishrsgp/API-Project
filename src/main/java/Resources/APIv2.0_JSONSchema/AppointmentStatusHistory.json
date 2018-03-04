@@ -1,0 +1,198 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AppointmentStatusHistory.json",
+  "title": "AppointmentStatusHistory",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "resourceId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the resource.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resource_id",
+          "name": "resources"
+        }
+      }
+    },
+    "appointmentId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the resource.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "appt_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "sequenceNumber": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_status",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "room": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_room",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "documentedBy": {
+      "type": "string",
+      "maxlength": 31,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_documented_by",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "createTimestampZone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    },
+    "modifyTimestampZone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "pat_apt_status_hx_"
+        }
+      }
+    }
+  },
+  "required": [
+    "resourceId",
+    "appointmentId",
+    "sequenceNumber",
+    "encounterId",
+    "personId",
+    "createTimestamp",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/resources/{resourceId}/appointments/{appointmentId}/status-histories",
+      "description": "Gets Appointment Status Histories",
+      "method": "GET"
+    },
+    {
+      "name": "appointment",
+      "href": "/resources/{resourceId}/appointments/{appointmentId}",
+      "description": "Gets Details Of Appointment",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets Encounter Details",
+      "method": "GET"
+    }
+  ]
+}

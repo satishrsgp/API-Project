@@ -1,0 +1,234 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProviderSummary.json",
+  "title": "ProviderSummary",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "middleName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerAddressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "Provider's business/primary address line 1",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_1",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerAddressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "Provider's business/primary address line 2",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_2",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerCity": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "Provider's business/primary address city",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerState": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "Provider's business/primary address state",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerZip": {
+      "type": "string",
+      "maxlength": 9,
+      "description": "Provider's business/primary address zip code",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerPhone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "Provider's business/primary phone number",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phone",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerPhoneExtension": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "Provider's business/primary phone number extension",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phone_ext",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "degree": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "degree",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "provider_practice_mstr"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "provider_practice_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "practiceId",
+    "enterpriseId",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers",
+      "description": "Get all Provider records of based on logedin user enterprise and practice Id.",
+      "method": "GET"
+    },
+    {
+      "name": "details",
+      "href": "/providers/{id}",
+      "description": "Get details for a given provider",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "/master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    }
+  ]
+}

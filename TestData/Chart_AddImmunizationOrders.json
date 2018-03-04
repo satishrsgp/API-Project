@@ -1,0 +1,12 @@
+{
+    "GeneratedBy": "#GeneratedBy#",
+    "LocationId": "#LocationId#",
+    "OrderingProviderId": "#OrderingProviderId#",
+    "SupervisorProviderId": "#SupervisorProviderId#",  
+ "RegistryId": #RegistryId#,
+    "Comment": "#Comment#",
+    "VerbalOrderIndicator": "#VerbalOrderIndicator#",
+    "AllergiesReviewed": [
+        #AllergiesReviewed#
+    ]
+}

@@ -1,0 +1,270 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Person.json",
+  "title": "person",
+  "description": "Model object that contains details of a person",
+  "type": "object",
+  "identifier": "id",
+  "ignore": false,
+  "required": [
+    "id",
+    "firstName",
+    "lastName",
+    "personNumber",
+    "isPatient"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Primary identifier of the person.",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "person"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "person"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "person"
+        }
+      }
+    },
+    "middleName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "person"
+        }
+      }
+    },
+    "nickname": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "nickname",
+          "name": "person"
+        }
+      }
+    },
+    "addressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_1",
+          "name": "person"
+        }
+      }
+    },
+    "addressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_2",
+          "name": "person"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "person"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "person"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 9,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "person"
+        }
+      }
+    },
+    "country": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "country",
+          "name": "person"
+        }
+      }
+    },
+    "homePhone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "home_phone",
+          "name": "person"
+        }
+      }
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_of_birth",
+          "name": "person"
+        }
+      }
+    },
+    "sex": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sex",
+          "name": "person"
+        }
+      }
+    },
+    "socialSecurityNumber": {
+      "type": "string",
+      "maxlength": 9,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ssn",
+          "name": "person"
+        }
+      }
+    },
+    "personNumber": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_nbr",
+          "name": "person"
+        }
+      }
+    },
+    "medicalRecordNumber": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_rec_nbr",
+          "name": "patient"
+        }
+      }
+    },
+    "otherIdNumber": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "other_id_number",
+          "name": "person"
+        }
+      }
+    },
+    "isEnterpriseChart": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_chart_ind",
+          "name": "patient_enterprise_chart"
+        }
+      }
+    },
+    "isPatient": {
+      "type": "boolean",
+      "description":
+        "This value is determined based on whether or not the person_id column from the patient table is null."
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/lookup",
+      "description": "Get person records based on filter criteria",
+      "method": "GET"
+    },
+    {
+      "name": "demographics",
+      "href": "/persons/{id}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{id}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

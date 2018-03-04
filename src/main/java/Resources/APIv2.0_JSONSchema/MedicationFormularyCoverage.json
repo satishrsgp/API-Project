@@ -1,0 +1,225 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationFormularyCoverage.json",
+  "title": "MedicationFormularyCoverage",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "coverageMessage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": 
+          [
+            {
+              "type": "table",
+              "field": "msg_short",
+              "name": "erx_coverage_text_message"
+            },
+            {
+              "type": "table",
+              "field": "msg_long",
+              "name": "erx_coverage_text_message"
+            }
+          ]
+        }
+    },
+    "gender": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gender_code",
+          "name": "erx_coverage_gender_limit"
+        }
+      }
+    },
+    "minAge": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "min_age",
+          "name": "erx_coverage_age_limit"
+        }
+      }
+    },
+    "minAgeQualifier": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "min_age_qualifier",
+          "name": "erx_coverage_age_limit"
+        }
+      }
+    },
+    "maxAge": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "max_age",
+          "name": "erx_coverage_age_limit"
+        }
+      }
+    },
+    "maxAgeQualifier": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "max_age_qualifier",
+          "name": "erx_coverage_age_limit"
+        }
+      }
+    },
+    "quantityLimitDescription": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isMedicalNecessity": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isDrugCoverageExcluded": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isPriorAuthorizationRequired": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isStepTherapy": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isAgeLimit": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "resourceLinks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "stepMedications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "pbmId": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pbm_id",
+          "name": "erx_coverage_text_message"
+        }
+      }
+    },
+    "coverageId": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "coverage_id",
+          "name": "erx_coverage_text_message"
+        }
+      }
+    },
+    "medid": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid",
+          "name": "erx_coverage_text_message"
+        }
+      }
+    }
+  },
+  "required": [
+    "pbmId",
+    "coverageId",
+    "medid"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/formularies/medications/{medicationId}/coverages/{coverageId}",
+      "description": "Gets coverage data for a formulary medication",
+      "method": "GET"
+    }
+  ]
+}

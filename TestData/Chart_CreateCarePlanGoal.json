@@ -1,0 +1,15 @@
+{
+    "codeDescription": #codeDescription#,
+    "codeSystem": #codeSystem#,
+    "codeValue": #codeValue#,
+    "comments": "#comments#",
+    "description": "#description#",
+    "isGoalAchieved": "#isGoalAchieved#",
+    "goalAchievedDetails": "#goalAchievedDetails#",
+    "goalCompletionDate": "#goalCompletionDate#",
+    "goalStartDate": "#goalStartDate#",
+    "isPatientGoal": "#isPatientGoal#",
+    "patientPriority": "#patientPriority#",
+    "isProviderGoal": "#isProviderGoal#",
+    "providerPriority": "#providerPriority#"
+}

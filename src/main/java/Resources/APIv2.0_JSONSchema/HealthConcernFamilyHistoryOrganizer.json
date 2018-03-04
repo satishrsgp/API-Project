@@ -1,0 +1,200 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "HealthConcernFamilyHistoryOrganizer.json",
+  "title": "HealthConcernFamilyHistoryOrganizer",
+  "description": "Model object that contains an health concern family history organizer category",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "relationship": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "family_mbr_dtl",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "familyMember": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "family_mbr_name",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "isDeceased": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "deceased",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "age": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "age_dtl",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "condition": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dx_dtl",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_system",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "code": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    },
+    "healthConcern": {
+      "type": "string",
+      "description": "Description to create health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "category": {
+      "type": "string",
+      "description": "Calculated column based on Health Concerns family history organizer category",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "Family_Hx_Dtl_"
+        }
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "id",
+    "createTimestamp"
+  ],
+   "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/health-concerns/family-histories-organizer",
+      "description": "Get List of patient Health Concerns family histories organizer",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

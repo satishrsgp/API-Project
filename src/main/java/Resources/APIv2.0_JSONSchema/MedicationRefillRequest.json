@@ -1,0 +1,304 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationRefillRequest.json",
+  "title": "medicationRefillRequest",
+  "description": "",
+  "type": "object",
+  "identifier": "requestId",
+  "properties": {
+    "rxRequestName": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_request_name",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "request_id",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "requestingNcpdpId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "requesting_ncpdp_id",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "workflowTaskId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workflow_task_id",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "sig": {
+      "type": "string",
+      "maxlength": 140,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sig",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "requestedAmount": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "requested_amount",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "lastFillDate": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_fill_date",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "ndcId": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ndc_id",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "daysSupply": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "days_supply",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "writtenDate": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "written_date",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "maxlength": 210,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "notes",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "requestRefillQuantity": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "req_refill_qty",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "requestError": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "request_err",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "requestMedication": {
+      "type": "string",
+      "maxlength": 105,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "request_med",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "deaClass": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dea_class",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "matchedPersonId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "matched_person_id",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "isPatientAccessibleToUser": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isUnmatchedRequest": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unmatched_request_ind",
+          "name": "rx_refill_request"
+        }
+      }
+    },
+    "isUnmatchedPatient": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isUnmatchedPrescription": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isSubstitutionAllowed": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "rx_refill_request"
+        }
+      }
+    }
+},
+	"required": [
+    "requestId",
+    "isPatientAccessibleToUser",
+	  "isUnmatchedRequest",
+    "isSubstitutionAllowed"
+	],
+  "links": [
+    {
+      "name": "self",
+      "href": "providers/{providerId}/medicationrefillrequests",
+      "description": "Get matched and unmatched refill requests for a given provider",
+      "method": "GET"
+    },
+    {
+      "name": "erxprovider",
+      "href": "/providers/{providerId}/erx-info",
+      "description": "Get erx details for a given provider",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{providerId}",
+      "description": "Get details for a given provider",
+      "method": "GET"
+    },
+    {
+      "name": "pharmacy",
+      "href": "/master/pharmacies/{pharmacyId}",
+      "description": "Get details for erx pharmacy",
+      "method": "GET"
+    }
+  ]
+}

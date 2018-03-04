@@ -1,0 +1,380 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AppointmentSummary.json",
+  "title": "appointmentSummary",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "appt_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "appointmentDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "appt_date",
+          "name": "appointments"
+        }
+      }
+    },
+    "beginTime": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "begintime",
+          "name": "appointments"
+        }
+      }
+    },
+    "isCancelled": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cancel_ind",
+          "name": "appointments"
+        }
+      }
+    },
+    "duration": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration",
+          "name": "appointments"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "endTime": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "endtime",
+          "name": "appointments"
+        }
+      }
+    },
+    "eventName": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event",
+          "name": "events"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "renderingProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rendering_provider_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "resourceId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resource_id",
+          "name": "resources"
+        }
+      }
+    },
+    "workflowRoom": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workflow_room",
+          "name": "appointments"
+        }
+      }
+    },
+    "workflowStatus": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workflow_status",
+          "name": "appointments"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "appointments"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "appointments"
+        }
+      }
+    },
+    "middleName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "appointments"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "appointments"
+        }
+      }
+    },
+    "homePhone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "home_phone",
+          "name": "appointments"
+        }
+      }
+    },
+    "addressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_1",
+          "name": "appointments"
+        }
+      }
+    },
+    "addressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_2",
+          "name": "appointments"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "appointments"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "appointments"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 9,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "appointments"
+        }
+      }
+    },
+    "details": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "The reason for the appointment.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "details",
+          "name": "appointments"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "appointmentDate",
+    "beginTime",
+    "isCancelled",
+    "locationId",
+    "practiceId",
+    "resourceId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/resources/{resourceId}/appointments",
+      "description": "Gets Appointments",
+      "method": "GET"
+    },
+    {
+      "name": "appointment",
+      "href": "/resources/{resourceId}/appointments/{id}",
+      "description": "Gets Appointment Detail",
+      "method": "GET"
+    },
+    {
+      "name": "resource",
+      "href": "/resources/{resourceId}",
+      "description": "Gets Resource Detail",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets Encounter Details",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{renderingProviderId}",
+      "description": "Gets Provider Details",
+      "method": "GET"
+    },
+    {
+      "name": "location",
+      "href": "/master/locations?$filter=Id eq guid'{locationId}'",
+      "description": "Returns Locations",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    }
+  ]
+}

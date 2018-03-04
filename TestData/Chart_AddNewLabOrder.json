@@ -1,0 +1,57 @@
+{
+    "TestLocationId": "#TestLocationId#",
+    "OrderingProvider": "#OrderingProvider#",
+    "OrderedElsewhere": #OrderedElsewhere#,
+    "CopyToProviders": [
+        "#CopyToProviders#"
+    ],
+    "Payers": #Payers#,
+    "GeneralComment": "#GeneralComment#",
+    "OrderComment": "#OrderComment#",
+    "PatientComment": "#PatientComment#",
+    "OrderedTests": [
+        {
+            "TestCodeId": "#TestCodeId#",
+            "TestCodeSystem": "#TestCodeSystem#",
+            "TestCodeText": "#TestCodeText#",
+            "LoincCode": "#LoincCode#",
+            "ScheduleDateTime": "#ScheduleDateTime#",
+            "VolumeQuantity": "#VolumeQuantity#",
+            "VolumeUnit": "#VolumeUnit#",
+            "CollectionDate": "#CollectionDate#",
+            "SourceSite": "#SourceSite#",
+            "SourceDescription": "#SourceDescription#",
+            "Additives": "#Additives#",
+            "BodySite": "#BodySite#",
+            "SiteModifier": "#SiteModifier#",
+            "SpecimenRole": "#SpecimenRole#",
+            "SpecimenStorage": "#SpecimenStorage#",
+            "CollectionMethod": "#CollectionMethod#",
+            "Comment": "#Comment#",
+            "OrderingReason": "#OrderingReason#",
+            "ExpectedResultDate": "#ExpectedResultDate#",
+            "SuspectedDiagnoses": [
+                {
+                    "DiagnosisCodeLibraryId": "#DiagnosisCodeLibraryId#",
+                    "DiagnosisCodeId": "#DiagnosisCodeId#"
+                }
+            ],
+            "OrderEntryAnswers": [
+                {
+                    "Answer": "#Answer#",
+                    "QuestionCode": "#QuestionCode#"
+                }
+            ],
+            "GeneratedBy": "#GeneratedBy#"
+        }
+    ],
+    "CancelReason": "#CancelReason#",
+    "ClinicalInfo": "#ClinicalInfo#",
+    "LabId": #LabId#,
+    "GeneratedBy": "#GeneratedBy1#",
+    "BillingType": #BillingType#,
+    "OrderControl": #OrderControl#,
+    "OrderPriority": #OrderPriority#,
+    "AbnCode": #AbnCode#,
+    "SpecimenAction": #SpecimenAction#
+}

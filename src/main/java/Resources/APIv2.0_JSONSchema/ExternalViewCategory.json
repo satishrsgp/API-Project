@@ -1,0 +1,98 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ExternalViewCategory.json",
+  "title": "ExternalViewCategory",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "intrf_vwcategories_mstr"
+        }
+      }
+    },
+    "categoryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "internal_rec_id",
+          "name": "intrf_vwcategories_mstr"
+        }
+      }
+    },
+    "externalSystemId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_system_id",
+          "name": "intrf_vwcategories_mstr"
+        }
+      }
+    },
+    "externalId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_rec_id",
+          "name": "intrf_vwcategories_mstr"
+        }
+      }
+    },
+    "externalSystemName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_system_name",
+          "name": "external_system"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "categoryId",
+    "externalSystemId",
+    "externalId",
+    "externalSystemName"
+  ],
+  "links": [
+    {
+      "name": "view-category",
+      "href": "/master/view-categories?$filter=Id eq guid'{categoryId}'",
+      "description": "Get all view categories",
+      "method": "GET"
+    },
+    {
+      "name": "item-types",
+      "href": "/master/view-categories/{categoryId}/items-types",
+      "description": "Get view categories items",
+      "method": "GET"
+    },
+    {
+      "name": "self",
+      "href": "/master/view-categories/{categoryId}/items-external",
+      "description": "Get view categories external items",
+      "method": "GET"
+    }
+  ]
+}

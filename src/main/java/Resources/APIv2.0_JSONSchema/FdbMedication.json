@@ -1,0 +1,107 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "FdbMedication.json",
+  "title": "fdbMedication",
+  "description": "",
+  "type": "object",
+  "identifier": "ndcId",
+  "properties": {
+    "ndcId": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ndc_id",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "medicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "deaId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dea_id",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "available_ind",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gcn_seqno",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "brandName": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "brand_name",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "genericName": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_name",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "hiclSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hicl_seqno",
+          "name": "fdb_medication"
+        }
+      }
+    }
+  },
+  "required": [
+    "ndcId",
+    "isAvailable"
+  ],
+  "links": [
+  ]
+}

@@ -1,0 +1,81 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskWorkgroupUser.json",
+  "title": "taskWorkgroupUser",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "workgroupId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workgroup_id",
+          "name": "task_workgroup_user_xref"
+        }
+      }
+    },
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "task_workgroup_user_xref"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "task_workgroup_user_xref"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "task_workgroup_user_xref"
+        }
+      }
+    }
+  },
+  "required": [
+    "workgroupId",
+    "userId",
+    "createdBy",
+    "createTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/tasks/workgroups/{workgroupId}/workgroup-users",
+      "description": "Gets master list of workgroup-users",
+      "method": "GET"
+    },
+    {
+      "name": "workgroup",
+      "href": "/master/tasks/workgroups?$filter=Id eq {workgroupId}",
+      "description": "Get tasking workgroups",
+      "method": "GET"
+    },
+    {
+      "name": "user",
+      "href": "/users?$filter=Id eq {userId}",
+      "description": "Gets users",
+      "method": "GET"
+    }
+  ]
+}

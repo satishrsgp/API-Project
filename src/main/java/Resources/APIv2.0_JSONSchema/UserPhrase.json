@@ -1,0 +1,89 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "UserPhrase.json",
+  "title": "userPhrase",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "userId": {
+      "type": "integer",
+      "description": "The id of the user who owns the phrase. This value can be null, but is used in conjunction with UserName when filtering.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "userId",
+          "name": "ngkbm_my_phrases_"
+        }
+      }
+    },
+    "userName": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "The name of the user who owns the phrase. This value can be null, but if used in conjunction with UserId when filtering.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_name",
+          "name": "ngkbm_my_phrases_"
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phrase_type",
+          "name": "ngkbm_my_phrases_"
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phrase_summary",
+          "name": "ngkbm_my_phrases_"
+        }
+      }
+    },
+    "text": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phrase",
+          "name": "ngkbm_my_phrases_"
+        }
+      }
+    },
+    "kbmIndicator": {
+      "type": "string",
+      "maxlength": "1",
+      "description": "This is apparently not a boolean. The EHR query filters where kbm_ind <> 'D'.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "kbm_ind",
+          "name": "ngkbm_my_phrases_"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/phrases",
+      "description": "Gets List Of All User Phrases",
+      "method": "GET"
+    }
+  ]
+}

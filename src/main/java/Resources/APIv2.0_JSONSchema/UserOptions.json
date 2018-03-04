@@ -1,0 +1,359 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "UserOptions.json",
+  "title": "userOptions",
+  "description": "Model object that contains options for a particular user",
+  "type": "object",
+  "identifier": "",
+  "ignore": false,
+  "required": [
+    "displayRenewals",
+    "sendErxCreatedDayLimit",
+    "providerFavoriteMedicationsXml",
+    "showTasksAssignedToOthers",
+    "showCompletedTasks",
+    "showDeletedTasks",
+    "filterTasksByEnterpriseAndPractice",
+    "useMetric"
+  ],
+  "properties": {
+    "displayRenewals": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Display Renewal History Popup"
+        }
+      }
+    },
+    "sendErxCreatedDayLimit": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "config_value",
+          "name": "surescripts_config",
+          "filter": "NG_SEND_ERX_CREATE_DATE_LIMIT"
+        }
+      }
+    },
+    "providerFavoriteMedicationsXml": {
+      "type": "string",
+      "description": "This is the xml string of the provider's favorite medication options.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "data",
+          "name": "user_component_preference",
+          "filter": "Med_Search_OptionsFavorites"
+        }
+      }
+    },
+    "showTasksAssignedToOthers": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_pref",
+          "name": "item_name",
+          "filter": "Show Tasks Assigned To Others"
+        }
+      }
+    },
+    "taskFuturePastFilter": {
+      "type": "string",
+      "description":
+        "This value is a semi-colon separated value. The first number is how many days in the future that tasks should show. The second number is how many months in the past should tasks show.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_pref",
+          "name": "item_name",
+          "filter": "Filter Future Past Tasks"
+        }
+      }
+    },
+    "showCompletedTasks": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_pref",
+          "name": "item_name",
+          "filter": "Show Completed Tasks"
+        }
+      }
+    },
+    "showDeletedTasks": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_pref",
+          "name": "item_name",
+          "filter": "Show Deleted Tasks"
+        }
+      }
+    },
+    "filterTasksByEnterpriseAndPractice": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Task List by Enterprise/Practice"
+        }
+      }
+    },
+    "useMetric": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Metric"
+        }
+      }
+    },
+    "weightColumn": {
+      "type": "string",
+      "description": "This is the column which the weight is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Weight"
+        }
+      }
+    },
+    "metricWeightColumn": {
+      "type": "string",
+      "description": "This is the column which the weight is stored in metric units",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Weight (Metric)"
+        }
+      }
+    },
+    "heightColumn": {
+      "type": "string",
+      "description": "This is the column which the height is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Height"
+        }
+      }
+    },
+    "metricHeightColumn": {
+      "type": "string",
+      "description": "This is the column which the height is stored in metric units",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Height (Metric)"
+        }
+      }
+    },
+    "headCircumferenceColumn": {
+      "type": "string",
+      "description": "This is the column which the head circumference is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Head Circumference"
+        }
+      }
+    },
+    "metricHeadCircumferenceColumn": {
+      "type": "string",
+      "description": "This is the column which the head circumference is stored in metric units",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Head Circumference (Metric)"
+        }
+      }
+    },
+    "temperatureColumn": {
+      "type": "string",
+      "description": "This is the column which the temperature is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Temperature"
+        }
+      }
+    },
+    "systolicBloodPressureColumn": {
+      "type": "string",
+      "description": "This is the column which the systolic blood pressure is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Systolic Blood Pressure"
+        }
+      }
+    },
+    "diastolicBloodPressureColumn": {
+      "type": "string",
+      "description": "This is the column which the diastolic blood pressure is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Diastolic Blood Pressure"
+        }
+      }
+    },
+    "bmiColumn": {
+      "type": "string",
+      "description": "This is the column which the bmi is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "BMI Data"
+        }
+      }
+    },
+    "heartRateColumn": {
+      "type": "string",
+      "description": "This is the column which the heart rate is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Heart Rate"
+        }
+      }
+    },
+    "respirationRateColumn": {
+      "type": "string",
+      "description": "This is the column which the respiration rate is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Respiration Rate"
+        }
+      }
+    },
+    "measurementDateColumn": {
+      "type": "string",
+      "description": "This is the column which the measurement date is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Measurement Date Column"
+        }
+      }
+    },
+    "pulseOximetryRestColumn": {
+      "type": "string",
+      "description": "This is the column which the pulse oximetry at rest is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Pulse Oximetry (Rest)"
+        }
+      }
+    },
+    "pulseOximetryAmbColumn": {
+      "type": "string",
+      "description": "This is the column which the pulse oximetry amb is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Pulse Oximetry (Amb)"
+        }
+      }
+    },
+    "waistCircumferenceColumn": {
+      "type": "string",
+      "description": "This is the column which the waist circumference is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Waist Circumference"
+        }
+      }
+    },
+    "hipCircumferenceColumn": {
+      "type": "string",
+      "description": "This is the column which the hip circumference is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Hip Circumference"
+        }
+      }
+    },
+    "fio2PercentageColumn": {
+      "type": "string",
+      "description": "This is the column which the fio2 percentage is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "FiO2 Percentage"
+        }
+      }
+    },
+    "peakFlowColumn": {
+      "type": "string",
+      "description": "This is the column which the peak flow is stored",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "preference_value",
+          "name": "preference_list",
+          "filter": "Peak Flow"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/options",
+      "description": "Get user options",
+      "method": "GET"
+    }
+  ]
+}

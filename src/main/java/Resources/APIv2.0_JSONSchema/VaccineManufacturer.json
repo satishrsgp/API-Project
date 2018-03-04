@@ -1,0 +1,63 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "VaccineManufacturer.json",
+  "title": "vaccineManufacturer",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "manufacturerNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "manufacturer_nbr",
+          "name": "vaccine_manufacturer_mstr"
+        }
+      }
+    },
+    "manufacturerName": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "manufacturer_name",
+          "name": "vaccine_manufacturer_mstr"
+        }
+      }
+    },
+    "manufacturerCdcCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "manufacturer_cdc_code",
+          "name": "vaccine_manufacturer_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "vaccine_manufacturer_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "manufacturerNumber",
+    "manufacturerName",
+    "isDeleted"
+  ],
+  "links": [
+  ]
+}

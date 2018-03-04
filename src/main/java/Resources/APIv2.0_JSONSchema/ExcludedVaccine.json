@@ -1,0 +1,268 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ExcludedVaccine.json",
+  "title": "excludedVaccine",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exclusion_id",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "cvxCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cvx",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vaccine_name",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "reasons": {
+      "type": "array",
+      "maxlength": 150,
+      "description": "List of reasons for excluding the vaccine. Not OData compatible.",
+      "items": {
+        "type": "string"
+      },
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "reason",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_date",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "end_date",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "comment": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comment",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    },
+    "practiceName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_name",
+          "name": "practice"
+        }
+      }
+    },
+    "excludedBy": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "mi",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "imm_vaccine_exclusion"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "personId",
+    "enterpriseId",
+    "practiceId",
+    "cvxCode",
+    "name",
+    "reasons",
+    "startDate",
+    "createdBy",
+    "createTimestamp",
+    "modifiedBy",
+    "modifyTimestamp",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/immunizations/exclusions",
+      "description": "Get a patient's excluded immunizations",
+      "method": "GET"
+    },
+    {
+      "name": "immunizations",
+      "href": "/persons/{personId}/chart/immunizations",
+      "description": "Get a patient's excluded immunizations",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

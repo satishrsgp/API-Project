@@ -1,0 +1,414 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientProcedureRequest.json",
+  "title": "PatientProcedureRequest",
+  "description": "Model object that contains patient procedure request.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "serviceItemId": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_date",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "startTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_time",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "stopTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "stop_time",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "amount": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "amount",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "placeOfService": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "place_of_service",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "units": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "units",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "rxOnFileIndicator": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_on_file_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "suppressBillingIndicator": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "suppress_billing_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "nationalDrugCode": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "national_drug_code",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "tooth": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tooth",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "surface": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surface",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "quadrant": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "quadrant",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId1": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId2": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId3": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId4": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId5": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId6": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId7": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId8": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId9": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId10": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId11": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId12": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "modifierId1": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_1",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId2": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId3": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId4": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "patient_procedure"
+        }
+      }
+    }
+  },
+  "required": [
+    "serviceItemId",
+    "serviceDate",
+    "locationId",
+    "providerId",
+    "rxOnFileIndicator",
+    "suppressBillingIndicator"
+  ],
+  "links": [
+  ]
+}

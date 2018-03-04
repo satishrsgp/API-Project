@@ -1,0 +1,13 @@
+{
+    "name": "#name#",
+    "category": "#category#",
+    "categoryId": "#categoryId#",
+    "status": "#status#",
+    "startDate": "#startDate#",
+    "frequency": "#frequency#",
+    "nextReviewDate": "#nextReviewDate#",
+    "interventionProgress": "#interventionProgress#",
+    "codeSystem": "#codeSystem#",
+    "codeValue": "#codeValue#",
+    "codeDescription": "#codeDescription#"
+}

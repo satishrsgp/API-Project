@@ -1,0 +1,165 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PaqSignoffComment.json",
+  "title": "paqSignoffComment",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "required": [
+    "itemId"
+  ],
+  "properties": {
+    "itemId": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "item_key",
+            "name": "signoff_queue"
+          },
+          {
+            "type": "table",
+            "field": "order_id",
+            "name": "lab_order_signoff"
+          }
+        ]
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+    },
+    "authorName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "item_notes",
+            "name": "signoff_queue"
+          },
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "comment": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "item_notes",
+            "name": "signoff_queue"
+          },
+          {
+            "type": "table",
+            "field": "signoff_comment",
+            "name": "lab_order_signoff"
+          }
+        ]
+      }
+    },
+    "commentType": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "calculated"
+          },
+          {
+            "type": "table",
+            "field": "tracking_type",
+            "name": "lab_order_signoff"
+          }
+        ]
+      }
+    },
+    "isDelegate": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "calculated"
+          },
+          {
+            "type": "table",
+            "field": "delegate_ind",
+            "name": "lab_order_signoff"
+          }
+        ]
+      }
+    },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "item_notes",
+            "name": "signoff_queue"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "lab_order_signoff"
+          }
+        ]
+      }
+    },
+    "createdDateTimeZoneAbbreviation": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "item_notes",
+          "name": "signoff_queue"
+        }
+      }
+    },
+    "createdDateTimeZoneId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "lab_order_signoff"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{providerId}/approval-queue/{itemId}/comments",
+      "description": "Gets list of signoff comments on a PAQ item.",
+      "method": "GET"
+    },
+    {
+      "name": "paq-item",
+      "href": "/providers/{providerId}/approval-queue/{itemId}",
+      "description": "Gets the PAQ item details.",
+      "method": "GET"
+    }
+  ]
+}

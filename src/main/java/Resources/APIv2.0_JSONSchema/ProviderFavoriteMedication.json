@@ -1,0 +1,519 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProviderFavoriteMedication.json",
+  "title": "providerFavoriteMedication",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_id",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "provider_order_group_xref"
+        }
+      }
+    },
+    "groupId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_group_id",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "groupName": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_name",
+          "name": "provider_order_group_xref"
+        }
+      }
+    },
+    "medicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "ndcId": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ndc_id",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "medicationNameId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_name_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationName": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_name",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "tm_alt_med_name_desc",
+            "name": "fdb_tall_man_name_mstr"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationDescription": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "medid_desc",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "generic_name",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "dose",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "route_desc",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "dose_form_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationStrength": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_strength",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "dose",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationStrengthUnit": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_strength_uom",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "isGeneric": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "generic_medid",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "generic_indicator",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "genericMedicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_medid",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "genericName": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_name",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "generic_name",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationDosageFormId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_dosage_form_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationDosageFormDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_dosage_form_desc",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "dose_form_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationRouteId": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_route_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationRouteDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_route_desc",
+            "name": "fdb_med_route_mstr"
+          },
+          {
+            "type": "table",
+            "field": "route_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "sigId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sig_id",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "sigDescription": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sig_desc",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "deaId": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_ref_dea_class_code",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "dea_id",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "hiclSequenceNumber": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "hicl_seqno",
+            "name": "gcnseqnotbl"
+          },
+          {
+            "type": "table",
+            "field": "hicl_seqno",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "isCustomSig": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "custom_sig_ind",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "refills": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "refills",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "quantity": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "quantity",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "duration": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "rxUnits": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_units",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "rxComment": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_comment",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "isGenericOk": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_ok_ind",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "isPrn": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "prn_ind",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "limitRenewal": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "limit_renewal",
+          "name": "provider_order_mstr"
+        }
+      }
+    },
+    "isPediatricSig": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pediatric_sig_ind",
+          "name": "provider_order_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "providerId",
+    "groupId",
+    "medicationId",
+    "isCustomSig",
+    "refills",
+    "isGenericOk",
+    "isGeneric",
+    "genericMedicationId",
+    "isPrn",
+    "limitRenewal",
+    "isPediatricSig",
+    "medicationDosageFormId",
+    "medicationNameId",
+    "deaId",
+    "medicationRouteId",
+    "groupName"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{providerId}/favorites/medications",
+      "description": "Gets favorites",
+      "method": "GET"
+    },
+    {
+      "name": "detail",
+      "href": "/providers/{providerId}",
+      "description": "Gets provider details",
+      "method": "GET"
+    }
+  ]
+}

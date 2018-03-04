@@ -1,0 +1,12 @@
+{
+    "Priority": "#Priority#",
+       "Subject": "#Subject#",
+       "Description": "#Description#",
+       "DueDate": "#DueDate#",
+       "ItemId": "#ItemId#",
+       "ItemDescription": "#ItemDescription#",
+       "Type": "#Type#",
+       "ItemType": "#ItemType#",
+        "EncounterId": "#EncounterId#",
+        "PersonId": "#PersonId#"
+}

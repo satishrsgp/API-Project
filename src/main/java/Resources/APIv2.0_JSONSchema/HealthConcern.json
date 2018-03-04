@@ -1,0 +1,247 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "HealthConcern.json",
+  "title": "healthConcern",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "encounterID",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "personId",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "category": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "category",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "comments": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comments",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "health_concern",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "health_concern_num",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "childRecordExists": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "child_record_exists",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "del_ind",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "secondaryTo": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "parent_health_concern_nbr",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "identifiedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "identified_date",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "resolvedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_date",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "codeDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_description",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_system",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "codeValue": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_value",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "status",
+          "name": "health_concern_ext_"
+        }
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "childRecordExists",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/care-plan/health-concerns",
+      "description": "Get List of patient Health Concerns",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets Encounter Details",
+      "method": "GET"
+    }
+  ]
+}

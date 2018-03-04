@@ -1,0 +1,19 @@
+{
+"vaccineVisId": "#visId#",
+"orderVaccineId": "#vaccineId#",
+"personId": "#personId#",
+"orderId": "#orderId#",
+"visGiveDate": "#visGiveDate#",
+"visGiveDateTimeZone": "#visGiveDateTimeZone#",
+"visPublishDate": "#visPublishDate#",
+"givenVisId": "#givenVisId#",
+"vaccineType": "#vaccineType#",
+"visDocumentType": "#visDocumentType#",
+"createdBy": "#createdBy#",
+"visDescription": "#visDescription#",
+"languageId": "#languageId#",
+"givenBy": "#givenBy#",
+"languageName": "#languageName#",
+"visHistoryPublishDate": "#visHistoryPublishDate#",
+"givenVisVaccineType": "#givenVisVaccineType#"
+}

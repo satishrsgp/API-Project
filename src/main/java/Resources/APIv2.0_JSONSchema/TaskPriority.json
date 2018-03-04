@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskPriority.json",
+  "title": "taskPriority",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "name": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/tasks/priorities",
+      "description": "Gets master list of task priorities",
+      "method": "GET"
+    }
+  ]
+}

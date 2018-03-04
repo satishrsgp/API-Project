@@ -1,0 +1,262 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProviderErxDetails.json",
+  "title": "providerErxDetails",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "provider_practice_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "provider_practice_mstr"
+        }
+      }
+    },
+    "addressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "addr_line_1",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "addressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "addr_line_2",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 55,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 9,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phone",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "fax": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "fax",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "spiNumber": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spi_nbr",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "enrollDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enroll_date",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "unenrollDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unenroll_date",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "rxHubProviderId": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_hub_provider_id",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "rxHubEnrollDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_hub_enroll_date",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "requiresSupervisor": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "require_supervisor_ind",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "supervisingProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "supervising_provider_id",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "surescriptsServiceLevel": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ss_service_level",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "rxHubServiceLevel": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_hub_service_level",
+          "name": "erx_provider_mstr"
+        }
+      }
+    },
+    "isSurescriptsActive": {
+      "type": "boolean",
+      "description": "A calculated value that represents if the provider is actively enrolled in ePrescribing."
+    }
+  },
+  "required": [
+    "id",
+    "enterpriseId",
+    "practiceId",
+    "requiresSupervisor",
+    "surescriptsServiceLevel",
+    "rxHubServiceLevel",
+    "isSurescriptsActive"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{id}/erx-info",
+      "description": "Get erx details for a given provider",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{id}",
+      "description": "Get details for a given provider",
+      "method": "GET"
+    }
+  ]
+}

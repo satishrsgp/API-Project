@@ -1,0 +1,137 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Diagnosis.json",
+  "title": "diagnosis",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "diagnosisCodeLibraryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "diagnosisCodeId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "icd9cmCodeId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "icd9cm_code_id",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "userDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_description",
+          "name": "diagnosis_code_mstr"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "icd_type",
+          "name": "icd9cm_code_mstr"
+        }
+      }
+    },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "eff_date",
+          "name": "icd9cm_code_mstr"
+        }
+      }
+    },
+    "expirationDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exp_date",
+          "name": "icd9cm_code_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "diagnosisCodeId",
+    "diagnosisCodeLibraryId",
+    "icd9cmCodeId",
+    "codeSystem",
+    "isDeleted",
+    "effectiveDate",
+    "expirationDate"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/diagnoses",
+      "description": "Gets Master List Of Diagnoses",
+      "method": "GET"
+    }
+  ]
+}

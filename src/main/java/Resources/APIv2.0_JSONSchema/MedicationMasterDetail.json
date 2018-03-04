@@ -1,0 +1,420 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationMasterDetail.json",
+  "title": "medicationMasterDetail",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "brandId": {
+      "type": "integer",
+      "description": "The brand id of a medication. For user-defined medications, this is -1.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_name_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationName": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_name",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "tm_alt_med_name_desc",
+            "name": "fdb_tall_man_name_mstr"
+          },
+          {
+            "type": "table",
+            "field": "tm_alt_medid_desc",
+            "name": "fdb_tall_man_name_mstr"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "medid",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "medid",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationStrength": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_strength",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "dose",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationStrengthUom": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_strength_uom",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationIdDescription": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "medid_desc",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "generic_name",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "dose",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "route_desc",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "dose_form_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "gcn_Seqno",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationRefDeaClassCode": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_ref_dea_class_code",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "dea_id",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "genericMedicationId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_medid",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationRouteId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_route_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationDosageFormId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_dosage_form_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationDosageFormDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_dosage_form_desc",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "dose_form_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationStrengthNumeric": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_strength_numeric",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationRouteDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_route_desc",
+            "name": "fdb_med_route_mstr"
+          },
+          {
+            "type": "table",
+            "field": "route_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "etcId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "etc_id",
+          "name": "RETCMED0"
+        }
+      }
+    },
+    "ndcId": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ndc_id",
+          "name": "fdb_medication"
+        }
+      }
+    },
+    "genericName": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_name",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "generic_name",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "hic3": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "hic3",
+            "name": "gcnseqnotbl"
+          },
+          {
+            "type": "table",
+            "field": "hic3",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "hiclSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "hicl_seqn",
+            "name": "gcnseqnotbl"
+          },
+          {
+            "type": "table",
+            "field": "hicl_seqn",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "isGeneric": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "generic_medid",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "generic_indicator",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "isHidden": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "hidden_flag",
+            "name": "medication_hidden"
+          },
+          {
+            "type": "table",
+            "field": "delete_ind",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "available_ind",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "brandId",
+    "medicationName",
+    "medicationId",
+    "medicationStrength",
+    "medicationStrengthUom",
+    "medicationIdDescription",
+    "gcnSequenceNumber",
+    "medicationRefDeaClassCode",
+    "genericMedicationId",
+    "medicationRouteId",
+    "medicationDosageFormId",
+    "medicationDosageFormDescription",
+    "medicationStrengthNumeric",
+    "medicationRouteDescription",
+    "etcId",
+    "ndcId",
+    "genericName",
+    "hic3",
+    "hiclSequenceNumber",
+    "isGeneric",
+    "isHidden"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/medications/{medicationId}",
+      "description": "Get Details Of Specific Medication",
+      "method": "GET"
+    },
+    {
+      "name": "medication",
+      "href": "/master/medications",
+      "description": "Gets Master List Of Medications",
+      "method": "GET"
+    },
+    {
+      "name": "default-dosage",
+      "href": "/master/medications/{gcnSequenceNumber}/fdb-dosage-orders?$filter=IsDefaultOrder eq true",
+      "description": "Get the default dosage order for this medication.",
+      "method": "GET" 
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProvideriagnosisCategory.json",
+  "title": "providerDiagnosisCategory",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "icd_category_id",
+          "name": "icd_category_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "icd_category_mstr"
+        }
+      }
+    },
+    "shortDescription": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "short_description",
+          "name": "icd_category_mstr"
+        }
+      }
+    },
+    "sequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_nbr",
+          "name": "provider_icd_category_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "icd_category_mstr"
+        }
+      }
+    },
+    "fromKbm": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "kbm_ind",
+          "name": "icd_category_mstr"
+        }
+      }
+    },
+    "showInEpm": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "show_in_epm_ind",
+          "name": "icd_category_mstr"
+        }
+      }
+    },
+    "showInEhr": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "show_in_ehr_ind",
+          "name": "icd_category_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "providerId",
+    "id",
+    "sequenceNumber",
+    "isDeleted",
+    "fromKbm",
+    "showInEpm",
+    "showInEhr"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{providerId}/diagnosis-categories",
+      "description": "Gets a provider's diagnosis categories",
+      "method": "GET"
+    }
+  ]
+}

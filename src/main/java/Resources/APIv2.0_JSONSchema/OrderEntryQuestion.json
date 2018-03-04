@@ -1,0 +1,242 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "OrderEntryQuestion.json",
+  "title": "OrderEntryQuestion",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "question_code",
+            "name": "lab_aoe_questions_mstr"
+          },
+          {
+            "type": "table",
+            "field": "aoe_question_code",
+            "name": "lab_test_aoe_xref"
+          }
+        ]
+      }
+    },
+    "systemId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "system_id",
+          "name": "lab_test_aoe_xref"
+        }
+      }
+    },
+    "answerCodeId": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "answer_code_id",
+          "name": "lab_test_aoe_xref"
+        }
+      }
+    },
+    "tableName": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "table_name",
+          "name": "lab_test_aoe_xref"
+        }
+      }
+    },
+    "fieldName": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "field_name",
+          "name": "lab_test_aoe_xref"
+        }
+      }
+    },
+    "testId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "labtest_key",
+          "name": "lab_test_aoe_xref"
+        }
+      }
+    },
+    "sequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sequence_number",
+          "name": "lab_test_aoe_xref"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "isGlobal": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "global_ind",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "needAnswer": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "need_answer_ind",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "answerTypeMode": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "answer_type_mode",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_system",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "answerUnits": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "answer_units",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "dataType": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "data_type",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "labNativeDataType": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lab_native_data_type",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "dataFormat": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "data_format",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "lab_aoe_questions_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "systemId",
+    "testId",
+    "isGlobal",
+    "needAnswer",
+    "answerTypeMode",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/lab-tests/{testId}/order-entry-questions",
+      "description": "Gets Questions Needed To Be Asked When Adding An Order",
+      "method": "GET"
+    },
+    {
+      "name": "lab-test",
+      "href": "/master/lab-tests?$filter=Id eq '{testId}'",
+      "description": "Return the specified test.",
+      "method": "GET"
+    }
+  ]
+}

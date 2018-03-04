@@ -1,0 +1,100 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TelephoneCallSummary.json",
+  "title": "telephoneCallSummary",
+  "description": "Telephone call summary for a given patient",
+  "type": "object",
+  "identifier": "encounterId",
+  "properties": {
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "takenBy": {
+      "type": "string",
+      "maxlength": 25,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "taken_by",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "callDetails": {
+      "type": "string",
+      "maxlength": 1000,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "call_details",
+          "name": "telephone_call_"
+        }
+      }
+    }
+  },
+  "required": [
+    "encounterId",
+    "personId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/telephone-calls",
+      "description": "Get all telephone calls (odata for search criteria)",
+      "method": "GET"
+    },
+    {
+      "name": "telephone-call",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/telephone-call",
+      "description": "Get other call detail",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Get encounter for a given patient and encounter id",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "communications",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/telephone-communications",
+      "description": "Get all telephone communications for a given patient and encounter id (odata for search criteria)",
+      "method": "GET"
+    }
+  ]
+}

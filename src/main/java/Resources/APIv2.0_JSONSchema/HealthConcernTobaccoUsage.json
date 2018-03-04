@@ -1,0 +1,206 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "HealthConcernTobaccoUsage.json",
+  "title": "HealthConcernTobaccoUsage",
+  "description": "Model object that contains a health concern Tobacco usage category",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "encounterDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "tobaccoType": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_tobacco_type",
+          "name": "tobacco_usage_"
+        }
+      }
+    },
+    "tobaccoStatus": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_tobacco_status",
+          "name": "tobacco_usage_"
+        }
+      }
+    },
+    "smokingStatus": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_smoking_status",
+          "name": "tobacco_usage_"
+        }
+      }
+    },
+    "usagePerDay": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_usage_per_day",
+          "name": "tobacco_usage_"
+        }
+      }
+    },
+    "packYears": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_pack_years",
+          "name": "tobacco_usage_"
+        }
+      }
+    },
+    "dateQuit": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_date_stopped",
+          "name": "tobacco_usage_"
+        }
+      }
+    },
+    "tobaccoHealthConcern": {
+      "type": "string",
+      "description": "Description to create tobacco health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "tobaccoCategory": {
+      "type": "string",
+      "description": "Calculated column based on Health Concerns Category",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "smokingHealthConcern": {
+      "type": "string",
+      "description": "Description to create smoking health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "smokingCategory": {
+      "type": "string",
+      "description": "Calculated column based on Health Concerns Category",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "tobacco_usage_"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "personId",
+    "enterpriseId",
+    "practiceId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/health-concerns/tobacco-smoking-usage-status",
+      "description": "Get List of patient Health Concerns Tobacco and Smoking Uses Status",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

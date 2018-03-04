@@ -1,0 +1,288 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "RecallPlan.json",
+  "title": "recallPlan",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recall_plan_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "eventId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_event_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "allowEventOverride": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_prompt_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "resourceId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resource_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "allowResourceOverride": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resource_prompt_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "allowLocationOverride": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_prompt_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "eventScheduleDays": {
+      "type": "integer",
+      "description": "The default number of days away to schedule the event.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_sched_days",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "cancelPlanStatus": {
+      "type": "string",
+      "description": "The appointment status that should discontinue the patient's recall plan.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cancel_plan_status",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "firstFormId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_form_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "firstFormInterval": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_form_interval",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "firstLabelIndicator": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_label_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "secondFormId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "second_form_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "secondFormInterval": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "second_form_interval",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "secondLabelIndicator": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "second_label_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "thirdFormId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "third_form_id",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "thirdFormInterval": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "third_form_interval",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "thirdLabelIndicator": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "third_label_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "recall_plan_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "recall_plan_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "isDeleted",
+    "description",
+    "firstLabelIndicator",
+    "secondLabelIndicator",
+    "thirdLabelIndicator",
+    "allowEventOverride",
+    "allowLocationOverride",
+    "allowResourceOverride"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/recall-plans",
+      "description": "Get a list of recall plans",
+      "method": "GET"
+    }
+  ]
+}

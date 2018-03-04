@@ -1,0 +1,220 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProblemSummary.json",
+  "title": "problemSummary",
+  "description": "Model object that contains problem summary.",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "fullySpecifiedName": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "fully_specified_name",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isChronic": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chronic_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "hasSecondaryCondition": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "secondary_condition_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "problemStatusId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "problem_status_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "problemStatus": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "ConceptId value for the problem's status."
+    },
+    "recentNoteId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recent_note_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "lastAddressedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_addressed_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "onsetDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "onset_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedReason": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_reason",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "conceptId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "concept_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isComorbid": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comorbid_condition_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "patient_problems"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "personId",
+    "isChronic",
+    "hasSecondaryCondition",
+    "isComorbid",
+    "isDeleted",
+    "conceptId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/problems",
+      "description": "Get summary on all the problems for the given person",
+      "method": "GET"
+    },
+    {
+      "name": "problem",
+      "href": "/persons/{personId}/chart/problems/{id}",
+      "description": "Get particular problems details based on problem id",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F129D55-DD35-4655-BD43-EC3E22AD4216}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NextGen.Api.Edge.Model</RootNamespace>
+    <AssemblyName>NextGen.Api.Edge.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Build\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Generated\DiagnosisSearchResult.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\GoalRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationWastedVaccine.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcern.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ObservationPanel.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\FavoriteDiagnosesGroup.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernPut.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernSocialHistory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernVitalSign.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\InterventionRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationRefillRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientProcedureRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\RefillDenialReason.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientProblemRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProblemNoteRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TimeZoneDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VaccineManufacturer.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderEntryAnswer.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\RouteStatistic.cs" />
+    <Compile Include="Internal\SystemStatistics.cs" />
+    <Compile Include="Requests\NewDiagnosisRequest.cs" />
+    <Compile Include="Requests\CustomDosageRequest.cs" />
+    <Compile Include="Requests\NewFavoriteDiagnosesGroupRequest.cs" />
+    <Compile Include="Requests\NewFavoriteDiagnosisRequest.cs" />
+    <Compile Include="Requests\ObservationPanelRequest.cs" />
+    <Compile Include="Requests\ObservationResultRequest.cs" />
+    <Compile Include="Requests\PersonRequest.cs" />
+    <Compile Include="Requests\PrescriptionNoteRequest.cs" />
+    <Compile Include="Requests\UpdateDiagnosisRequest.cs" />
+    <Compile Include="Results\DiagnosisResult.cs" />
+    <Compile Include="Requests\MedicationRefillRequest.cs" />
+    <Compile Include="Results\PatientRecallPlanResult.cs" />
+    <EmbeddedResource Include="FdbDosageOrder.json" />
+    <Compile Include="Generated\DiagnosisCategory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProviderDiagnosisCategory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersonGenderIdentity.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\NewChartRequest.cs" />
+    <Compile Include="Requests\StopMedicationRequest.cs" />
+    <Compile Include="Generated\AlertMessage.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AlertType.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AllergyMasterFile.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AllergyReactionMaster.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Appointment.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AppointmentStatusColor.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AppointmentStatusHistory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AppointmentSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ApprovalQueueCustomRule.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ApprovalQueueItem.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ApprovalQueueQuickComment.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AssessmentPlan.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditAccountDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditAllergyDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditApplicationAccessDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditChartSummaryDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditDataTrailItem.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditDiagnosisDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditEncounterDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditEvent.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditIcsDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditInterfaceHoldingTankDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditInteroperabilityDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditMedicationDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditOrderDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditPaqDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditPatientEducationDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditProcedureDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditRosettaDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditSecurityDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\AuditTemplateDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\CareTeamMemberRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\CareTeamMemberSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ChartDemographics.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\CheckVaccineInteraction.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\CodeTable.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\CustomDosageOrder.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Diagnosis.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DiagnosisStatus.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DiagnosisSeverity.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DocumentDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DocumentPostRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DocumentSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DosageOrder.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DosageQuantityUnit.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DrugInteractionProblem.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Enterprise.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\EpcsSigningCertificate.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ErxPharmacy.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Event.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ExcludedVaccine.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ExternalSystem.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ExternalViewCategory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ExternalVocabularyLink.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\FdbDosageOrder.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\FdbMedication.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\FdbMedicationNameSearch.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\FdbMedicationSingle.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Goal.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernAllergy.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernAssessmentScale.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernEncounterDiagnosis.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernFamilyHistoryOrganizer.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernPost.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernProblemObservation.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\HealthConcernTobaccoUsage.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationFundingSource.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationOrder.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationOrderInsurance.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationOrderSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationOrderTrackingComment.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationSeriesCompletion.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationVaccineComponentLot.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationVaccineVis.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ImmunizationVaccineVisHistory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Intervention.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LabComponent.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LabOrder.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LabOrderInsurance.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LabOrderSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LabOrderTrackingComment.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LabTest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Location.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\LoginDefaults.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MasterListItem.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationFormulary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationFormularyCopay.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationFormularyCoverage.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationMasterDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationMasterSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MedicationReason.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ModelTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ObservationPanelSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ObservationResult.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderableVaccine.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderedTest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderedTestDiagnosis.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderedTestSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderedVaccine.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderedVaccineDiagnosis.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderedVaccineSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderEntryQuestion.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Outcome.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OutcomeRequest.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PaqSignoffComment.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientAlert.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OrderSchedule.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientAllergy.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientAllergyReaction.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientAllergySummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientDevice.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientDiagnosis.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientDiagnosisSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientEncounter.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientEncounterSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientMedication.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientMedicationSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientPharmacy.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientProcedure.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientProcedureSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PatientRecallPlan.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PediatricDosageOrder.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Permission.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Person.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersonDemographics.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersonEligibility.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersonEthnicity.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersonInsurance.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersonRace.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Pharmacy.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PharmacySummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Practice.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PrescriptionNote.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Procedure.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProblemDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProblemNote.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProblemSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProcedureGroup.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Provider.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProviderDelegate.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProviderEncounter.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProviderErxDetails.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProviderFavoriteMedication.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ProviderSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\RecallPlan.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\RelatedVaccine.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Resource.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ResourceSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\SimpleSig.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\SnomedSearch.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\SocialHistory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Specialty.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\SupportRole.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskAssignee.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskAssignmentFavorite.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskCategory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskPriority.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskSet.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskWorkgroup.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TaskWorkgroupUser.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TelephoneCall.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TelephoneCallSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TelephoneCommunication.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\TobaccoUsage.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\User.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\UserEpcs.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\UserLocation.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\UserOptions.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\UserPhrase.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\UserProvider.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\UserProviderRelationship.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VaccineDoseValidation.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VaccineGroupStatus.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VaccineSchedule.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VaccineSearchResult.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VfcReason.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ViewCategory.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ViewCategorySummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VitalSignsDetail.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\VitalSignsSummary.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\RetrieveCodeTableCriteria.cs" />
+    <Compile Include="Helpers\RetrieveVaccineRelationCriteria.cs" />
+    <Compile Include="Internal\DiagnosticStatistic.cs" />
+    <Compile Include="Internal\Template.cs" />
+    <Compile Include="Internal\LogEntry.cs" />
+    <Compile Include="Requests\EncounterUpdateRequest.cs" />
+    <Compile Include="Requests\GenericAuditEventRequest.cs" />
+    <Compile Include="Requests\NewAlertMessageRequest.cs" />
+    <Compile Include="Overrides\DocumentPostRequest.cs" />
+    <Compile Include="Options\Option.cs" />
+    <Compile Include="Overrides\DrugInteractionProblemComparer.cs" />
+    <Compile Include="Overrides\OrderedVaccine.cs" />
+    <Compile Include="Overrides\Person.cs" />
+    <Compile Include="Overrides\RelatedVaccine.cs" />
+    <Compile Include="Overrides\TaskAssignee.cs" />
+    <Compile Include="Overrides\VaccineSearchResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\NewEncounterRequest.cs" />
+    <Compile Include="Requests\NewImmunizationOrderRequest.cs" />
+    <Compile Include="Requests\NewImmunizationVaccineVisHistoryRequest.cs" />
+    <Compile Include="Requests\NewImmunizationWastedVaccineRequest.cs" />
+    <Compile Include="Requests\NewOrderedVaccineRequest.cs" />
+    <Compile Include="Requests\NewOrderScheduleRequest.cs" />
+    <Compile Include="Requests\NewOrderTrackingCommentRequest.cs" />
+    <Compile Include="Requests\NewImmunizationSeriesCompletionRequest.cs" />
+    <Compile Include="Requests\NewPaqSignoffCommentRequest.cs" />
+    <Compile Include="Requests\PatientRecallPlanRequest.cs" />
+    <Compile Include="Requests\NewTelephoneCallRequest.cs" />
+    <Compile Include="Requests\NewVaccineExclusionRequest.cs" />
+    <Compile Include="Requests\UpdateDemographicsRequest.cs" />
+    <Compile Include="Requests\UpdatePatientAlertRequest.cs" />
+    <Compile Include="Requests\NewPatientAlertRequest.cs" />
+    <Compile Include="Requests\NewLabOrderRequest.cs" />
+    <Compile Include="Requests\PatientDocumentRequest.cs" />
+    <Compile Include="Requests\PersonLookupRequest.cs" />
+    <Compile Include="Requests\PrescribeMedicationRequest.cs" />
+    <Compile Include="Requests\SearchAuditEvents.cs" />
+    <Compile Include="Requests\SendErxRequest.cs" />
+    <Compile Include="Requests\NewTaskRequest.cs" />
+    <Compile Include="Requests\UpdatePaqRequest.cs" />
+    <Compile Include="Requests\VaccineSearchRequest.cs" />
+    <Compile Include="Results\PersonUpdateResult.cs" />
+    <Compile Include="Results\PersonAddResult.cs" />
+    <Compile Include="Results\AuditReportResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChartDemographics.json" />
+    <EmbeddedResource Include="PatientAllergy.json" />
+    <EmbeddedResource Include="AllergyReactionMaster.json" />
+    <EmbeddedResource Include="AllergyMasterFile.json" />
+    <EmbeddedResource Include="app.config" />
+    <EmbeddedResource Include="SupportRole.json" />
+    <EmbeddedResource Include="PersonDemographics.json" />
+    <EmbeddedResource Include="PatientPharmacy.json" />
+    <EmbeddedResource Include="Appointment.json" />
+    <EmbeddedResource Include="AppointmentStatusColor.json" />
+    <EmbeddedResource Include="AppointmentStatusHistory.json" />
+    <EmbeddedResource Include="AppointmentSummary.json" />
+    <EmbeddedResource Include="LoginDefaults.json" />
+    <EmbeddedResource Include="AuditDataTrailItem.json" />
+    <EmbeddedResource Include="AuditDiagnosisDetail.json" />
+    <EmbeddedResource Include="AuditEncounterDetail.json" />
+    <EmbeddedResource Include="AuditSecurityDetail.json" />
+    <EmbeddedResource Include="AuditPatientEducationDetail.json" />
+    <EmbeddedResource Include="AuditProcedureDetail.json" />
+    <EmbeddedResource Include="AuditTemplateDetail.json" />
+    <EmbeddedResource Include="AuditRosettaDetail.json" />
+    <EmbeddedResource Include="AuditInteroperabilityDetail.json" />
+    <EmbeddedResource Include="AuditMedicationDetail.json" />
+    <EmbeddedResource Include="AuditOrderDetail.json" />
+    <EmbeddedResource Include="AuditPaqDetail.json" />
+    <EmbeddedResource Include="AuditInterfaceHoldingTankDetail.json" />
+    <EmbeddedResource Include="AuditIcsDetail.json" />
+    <EmbeddedResource Include="AuditChartSummaryDetail.json" />
+    <EmbeddedResource Include="AuditApplicationAccessDetail.json" />
+    <EmbeddedResource Include="AuditAllergyDetail.json" />
+    <EmbeddedResource Include="AuditAccountDetail.json" />
+    <EmbeddedResource Include="AuditEvent.json" />
+    <EmbeddedResource Include="DocumentDetail.json" />
+    <EmbeddedResource Include="DocumentSummary.json" />
+    <EmbeddedResource Include="ExternalSystem.json" />
+    <EmbeddedResource Include="Enterprise.json" />
+    <EmbeddedResource Include="MedicationMasterDetail.json" />
+    <EmbeddedResource Include="MedicationMasterSummary.json" />
+    <EmbeddedResource Include="PatientEncounterSummary.json" />
+    <EmbeddedResource Include="PatientEncounter.json" />
+    <EmbeddedResource Include="PatientMedicationSummary.json" />
+    <EmbeddedResource Include="Diagnosis.json" />
+    <EmbeddedResource Include="EpcsSigningCertificate.json" />
+    <EmbeddedResource Include="ErxPharmacy.json" />
+    <EmbeddedResource Include="ExternalVocabularyLink.json" />
+    <EmbeddedResource Include="FdbMedication.json" />
+    <EmbeddedResource Include="FdbMedicationNameSearch.json" />
+    <EmbeddedResource Include="FdbMedicationSingle.json" />
+    <EmbeddedResource Include="Pharmacy.json" />
+    <EmbeddedResource Include="PharmacySummary.json" />
+    <EmbeddedResource Include="Provider.json" />
+    <EmbeddedResource Include="LabOrderSummary.json" />
+    <EmbeddedResource Include="LabOrder.json" />
+    <EmbeddedResource Include="DocumentPostRequest.json" />
+    <EmbeddedResource Include="DosageQuantityUnit.json" />
+    <EmbeddedResource Include="Location.json" />
+    <EmbeddedResource Include="CodeTable.json" />
+    <EmbeddedResource Include="DrugInteractionProblem.json" />
+    <EmbeddedResource Include="Person.json" />
+    <EmbeddedResource Include="PersonInsurance.json" />
+    <EmbeddedResource Include="Practice.json" />
+    <EmbeddedResource Include="Resource.json" />
+    <EmbeddedResource Include="User.json" />
+    <EmbeddedResource Include="PatientAllergyReaction.json" />
+    <EmbeddedResource Include="Permission.json" />
+    <EmbeddedResource Include="PatientAllergySummary.json" />
+    <EmbeddedResource Include="PatientMedication.json" />
+    <EmbeddedResource Include="ProviderDelegate.json" />
+    <EmbeddedResource Include="ProviderEncounter.json" />
+    <EmbeddedResource Include="UserEpcs.json" />
+    <EmbeddedResource Include="UserProvider.json" />
+    <EmbeddedResource Include="UserProviderRelationship.json" />
+    <EmbeddedResource Include="ViewCategorySummary.json" />
+    <EmbeddedResource Include="ExternalViewCategory.json" />
+    <EmbeddedResource Include="ViewCategory.json" />
+    <EmbeddedResource Include="VitalSignsDetail.json" />
+    <EmbeddedResource Include="VitalSignsSummary.json" />
+    <EmbeddedResource Include="ProviderSummary.json" />
+    <EmbeddedResource Include="ProviderFavoriteMedication.json" />
+    <EmbeddedResource Include="ProviderErxDetails.json" />
+    <EmbeddedResource Include="UserOptions.json" />
+    <EmbeddedResource Include="TaskDetail.json" />
+    <EmbeddedResource Include="TaskSummary.json" />
+    <EmbeddedResource Include="ExcludedVaccine.json" />
+    <EmbeddedResource Include="ImmunizationFundingSource.json" />
+    <EmbeddedResource Include="ImmunizationOrder.json" />
+    <EmbeddedResource Include="ImmunizationOrderTrackingComment.json" />
+    <EmbeddedResource Include="MasterListItem.json" />
+    <EmbeddedResource Include="OrderableVaccine.json" />
+    <EmbeddedResource Include="OrderedVaccine.json" />
+    <EmbeddedResource Include="ApprovalQueueItem.json" />
+    <EmbeddedResource Include="OrderEntryQuestion.json" />
+    <EmbeddedResource Include="DiagnosisStatus.json" />
+    <EmbeddedResource Include="LabComponent.json" />
+    <EmbeddedResource Include="LabTest.json" />
+    <EmbeddedResource Include="OrderedVaccineSummary.json" />
+    <EmbeddedResource Include="TobaccoUsage.json" />
+    <EmbeddedResource Include="OrderedTest.json" />
+    <EmbeddedResource Include="OrderedTestSummary.json" />
+    <EmbeddedResource Include="OrderSchedule.json" />
+    <EmbeddedResource Include="AlertMessage.json" />
+    <EmbeddedResource Include="AlertType.json" />
+    <EmbeddedResource Include="ImmunizationVaccineVisHistory.json" />
+    <EmbeddedResource Include="ImmunizationOrderSummary.json" />
+    <EmbeddedResource Include="LabOrderTrackingComment.json" />
+    <EmbeddedResource Include="ImmunizationOrderInsurance.json" />
+    <EmbeddedResource Include="CheckVaccineInteraction.json" />
+    <EmbeddedResource Include="ImmunizationVaccineComponentLot.json" />
+    <EmbeddedResource Include="LabOrderInsurance.json" />
+    <EmbeddedResource Include="OrderedTestDiagnosis.json" />
+    <EmbeddedResource Include="TaskAssignmentFavorite.json" />
+    <EmbeddedResource Include="TaskCategory.json" />
+    <EmbeddedResource Include="TaskSet.json" />
+    <EmbeddedResource Include="TaskWorkgroup.json" />
+    <EmbeddedResource Include="TaskWorkgroupUser.json" />
+    <EmbeddedResource Include="TaskPriority.json" />
+    <EmbeddedResource Include="TaskAssignee.json" />
+    <EmbeddedResource Include="CustomDosageOrder.json" />
+    <EmbeddedResource Include="DosageOrder.json" />
+    <EmbeddedResource Include="PediatricDosageOrder.json" />
+    <EmbeddedResource Include="PatientProcedure.json" />
+    <EmbeddedResource Include="PatientProcedureSummary.json" />
+    <EmbeddedResource Include="Procedure.json" />
+    <EmbeddedResource Include="SimpleSig.json" />
+    <EmbeddedResource Include="VaccineSchedule.json" />
+    <EmbeddedResource Include="UserPhrase.json" />
+    <EmbeddedResource Include="VaccineSearchResult.json" />
+    <EmbeddedResource Include="ImmunizationSeriesCompletion.json" />
+    <EmbeddedResource Include="VfcReason.json" />
+    <EmbeddedResource Include="RelatedVaccine.json" />
+    <EmbeddedResource Include="ResourceSummary.json" />
+    <EmbeddedResource Include="PatientDiagnosis.json" />
+    <EmbeddedResource Include="Specialty.json" />
+    <EmbeddedResource Include="SocialHistory.json" />
+    <EmbeddedResource Include="PatientDiagnosisSummary.json" />
+    <EmbeddedResource Include="OrderedVaccineDiagnosis.json" />
+    <EmbeddedResource Include="ProblemDetail.json" />
+    <EmbeddedResource Include="ProblemNote.json" />
+    <EmbeddedResource Include="ProblemSummary.json" />
+    <EmbeddedResource Include="PatientAlert.json" />
+    <EmbeddedResource Include="SnomedSearch.json" />
+    <EmbeddedResource Include="UserLocation.json" />
+    <EmbeddedResource Include="PatientDevice.json" />
+    <EmbeddedResource Include="VaccineGroupStatus.json" />
+    <EmbeddedResource Include="VaccineDoseValidation.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NextGen.Api.Edge.Common\NextGen.Api.Edge.Common.csproj">
+      <Project>{524a3b62-bc2d-448e-98b0-f3b82730eabf}</Project>
+      <Name>NextGen.Api.Edge.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Generated\ModelTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelTemplate.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TelephoneCallSummary.json" />
+    <EmbeddedResource Include="Intervention.json" />
+    <EmbeddedResource Include="HealthConcern.json" />
+    <EmbeddedResource Include="TelephoneCall.json" />
+    <EmbeddedResource Include="MedicationReason.json" />
+    <EmbeddedResource Include="ObservationPanel.json" />
+    <EmbeddedResource Include="ObservationResult.json" />
+    <EmbeddedResource Include="HealthConcernAllergy.json" />
+    <EmbeddedResource Include="Outcome.json" />
+    <EmbeddedResource Include="AssessmentPlan.json" />
+    <EmbeddedResource Include="CareTeamMemberSummary.json" />
+    <EmbeddedResource Include="HealthConcernProblemObservation.json" />
+    <EmbeddedResource Include="ApprovalQueueQuickComment.json" />
+    <EmbeddedResource Include="PrescriptionNote.json" />
+    <EmbeddedResource Include="HealthConcernAssessmentScale.json" />
+    <EmbeddedResource Include="HealthConcernPost.json" />
+    <EmbeddedResource Include="HealthConcernEncounterDiagnosis.json" />
+    <EmbeddedResource Include="CareTeamMemberRequest.json" />
+    <EmbeddedResource Include="HealthConcernFamilyHistoryOrganizer.json" />
+    <EmbeddedResource Include="ApprovalQueueCustomRule.json" />
+    <EmbeddedResource Include="MedicationFormulary.json" />
+    <EmbeddedResource Include="MedicationFormularyCopay.json" />
+    <EmbeddedResource Include="MedicationFormularyCoverage.json" />
+    <EmbeddedResource Include="HealthConcernTobaccoUsage.json" />
+    <EmbeddedResource Include="Event.json" />
+    <EmbeddedResource Include="HealthConcernVitalSign.json" />
+    <EmbeddedResource Include="ImmunizationVaccineVis.json" />
+    <EmbeddedResource Include="DiagnosisSeverity.json" />
+    <EmbeddedResource Include="DiagnosisCategory.json" />
+    <EmbeddedResource Include="InterventionRequest.json" />
+    <EmbeddedResource Include="FavoriteDiagnosesGroup.json" />
+    <EmbeddedResource Include="HealthConcernPut.json" />
+    <EmbeddedResource Include="DiagnosisSearchResult.json" />
+    <EmbeddedResource Include="OrderEntryAnswer.json" />
+    <EmbeddedResource Include="HealthConcernSocialHistory.json" />
+    <EmbeddedResource Include="MedicationRefillRequest.json" />
+    <EmbeddedResource Include="ImmunizationWastedVaccine.json" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Goal.json" />
+    <EmbeddedResource Include="GoalRequest.json" />
+    <EmbeddedResource Include="ObservationPanelSummary.json" />
+    <EmbeddedResource Include="PersonEthnicity.json" />
+    <EmbeddedResource Include="PersonRace.json" />
+    <EmbeddedResource Include="TelephoneCommunication.json" />
+    <EmbeddedResource Include="PaqSignoffComment.json" />
+    <EmbeddedResource Include="PersonEligibility.json" />
+    <EmbeddedResource Include="ProcedureGroup.json" />
+    <EmbeddedResource Include="RecallPlan.json" />
+    <EmbeddedResource Include="OutcomeRequest.json" />
+    <EmbeddedResource Include="PatientRecallPlan.json" />
+    <EmbeddedResource Include="ProviderDiagnosisCategory.json" />
+    <EmbeddedResource Include="VaccineManufacturer.json" />
+    <EmbeddedResource Include="PersonGenderIdentity.json" />
+    <EmbeddedResource Include="RefillDenialReason.json" />
+    <EmbeddedResource Include="TimeZoneDetail.json" />
+    <EmbeddedResource Include="PatientProblemRequest.json" />
+    <EmbeddedResource Include="ProblemNoteRequest.json" />
+    <EmbeddedResource Include="PatientProcedureRequest.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

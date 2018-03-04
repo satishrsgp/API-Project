@@ -1,0 +1,71 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Procedure.json",
+  "title": "Procedure",
+  "description": "Model object that contains the information about a procedure.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "code": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cpt4_code_id",
+          "name": "service_item_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "service_item_mstr"
+        }
+      }
+    },
+    "serviceItemId": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_id",
+          "name": "service_item_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "service_item_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "code",
+    "description",
+    "serviceItemId",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "description": "Get master list of procedures",
+      "href": "/master/procedures",
+      "method": "GET"
+    }
+  ]
+}

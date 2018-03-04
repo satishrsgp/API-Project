@@ -1,0 +1,190 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PrescriptionNote.json",
+  "title": "prescriptionNote",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id for the prescription note.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note_id",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "noteType": {
+      "type": "string",
+      "description": "The type of note.",
+      "enum": [
+        "None",
+        "General",
+        "Stop",
+        "Patient",
+        "Prescribe"
+      ],
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note_type",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 1024,
+      "description": "The note text.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the patient this prescription note is for.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "person"
+        }
+      }
+    },
+    "medicationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the patient medication this note is tied to.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medication_id",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "The id of the user that created the note.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "The id of the user that last modified the note.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of when this prescription note is created.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "description": "The time zone reference id for when this prescription note was created.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of when this prescription note was last modified.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "med_rx_notes"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "integer",
+      "description": "The time zone reference id for when this prescription note was last modified.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "med_rx_notes"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "noteType",
+    "note",
+    "personId",
+    "medicationId",
+    "createdBy",
+    "modifiedBy",
+    "createTimestamp",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/medications/{medicationId}/notes",
+      "description": "Gets a list of prescription notes.",
+      "method": "GET"
+    },
+    {
+      "name": "details",
+      "href": "/persons/{personId}/chart/medications/{medicationId}/notes/{id}",
+      "description": "Get the prescription note details.",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "patient-medication",
+      "href": "/persons/{personId}/chart/medications/{medicationId}",
+      "description": "Gets medication details",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "providerId": "#providerId#",
+    "firstName": "#firstName#",
+    "lastName": "#lastName#",
+    "email": "#email#",  
+ "activeDate": "#activeDate#",
+    "address": "#address#",
+    "agencyName": "#agencyName#",
+    "agencyType": "#agencyType#",
+     "cellPhone": "#cellPhone#",
+    "city": "#city#",
+    "fax": "#fax#",
+  "homePhone": "#homePhone#",
+     "inactiveDate": "#inativeDate#",
+    "patientRelationship": "#patientRelationship#",
+    "state": "#state#",
+ "supportRole": "#supportRole#",
+    "zip": "#zip#"
+}

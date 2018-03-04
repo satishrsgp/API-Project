@@ -1,0 +1,217 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "CareTeamMemberRequest.json",
+  "title": "careTeamMemberRequest",
+  "description": "Request object for care team member",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_provider_id",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_first_name",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_last_name",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "email": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_email",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "activeDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_active_date",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "address": {
+      "type": "string",
+      "maxlength": 150,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_address",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "agencyName": {
+      "type": "string",
+      "maxlength": 500,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_agency_name",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "agencyType": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_agency_type",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "cellPhone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "Numeric without any special character is accepted",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_cell_phone",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_city",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "fax": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "Numeric without any special character is accepted",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_fax",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "homePhone": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "Numeric without any special character is accepted",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_home_phone",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "inactiveDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_inactive_date",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "patientRelationship": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_patient_relationship",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_state",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "supportRole": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_support_role",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "Numeric without any special character is accepted",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_zip",
+          "name": "patient_care_team_memb_ext_"
+        }
+      }
+    }
+  },
+  "links": [
+  ]
+}

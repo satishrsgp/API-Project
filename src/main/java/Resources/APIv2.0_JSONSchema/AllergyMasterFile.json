@@ -1,0 +1,59 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AllergyMasterFile.json",
+  "title": "allergyMasterFile",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "allergyId": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "allergy_id",
+          "name": "allergy_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "allergy_mstr"
+        }
+      }
+    },
+    "allergyType": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "fdb_allergy_type_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "allergyId",
+    "description",
+    "allergyType"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/allergies",
+      "description": "Get All Allergies",
+      "method": "GET"
+    }
+  ]
+}

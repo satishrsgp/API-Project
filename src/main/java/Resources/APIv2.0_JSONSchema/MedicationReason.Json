@@ -1,0 +1,47 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationReason.json",
+  "title": "medicationReason",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medication_reason_id",
+          "name": "medication_reasons"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medication_reason_desc",
+          "name": "medication_reasons"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "description"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/medications/dosage-reason-options",
+      "description": "Gets list of dosage reason options",
+      "method": "GET"
+    }
+  ]
+}

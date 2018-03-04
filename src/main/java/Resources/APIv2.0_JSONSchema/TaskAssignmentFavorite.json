@@ -1,0 +1,120 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskAssignmentFavorite.json",
+  "title": "taskAssignmentFavorite",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "enterprise_id",
+            "name": "task_workgroup_mstr"
+          },
+          {
+            "type": "table",
+            "field": "enterprise_id",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "practice_id",
+            "name": "task_workgroup_mstr"
+          },
+          {
+            "type": "table",
+            "field": "practice_id",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "id": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "workgroup_id",
+            "name": "task_workgroup_mstr"
+          },
+          {
+            "type": "table",
+            "field": "user_id",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "workgroup_name",
+            "name": "task_workgroup_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "isGroup": {
+      "type": "boolean",
+      "description": ""
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "id",
+    "name",
+    "isGroup"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/tasks/favorite-assignees",
+      "description": "Get list of favorite users/groups to assign tasks",
+      "method": "GET"
+    },
+    {
+      "name": "tasks",
+      "href": "/users/{userId}/tasks",
+      "description": "Gets a list of tasks",
+      "method": "GET"
+    },
+    {
+      "name": "add-task",
+      "href": "/users/{userId}/tasks",
+      "description": "Adds a new task",
+      "method": "POST"
+    }
+  ]
+}

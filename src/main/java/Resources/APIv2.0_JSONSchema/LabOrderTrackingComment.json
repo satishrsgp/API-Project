@@ -1,0 +1,274 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "LabOrderTrackingComment.json",
+	"title": "LabOrderTrackingComment",
+	"description": "",
+	"type": "object",
+	"identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "signoff_id",
+            "name": "lab_order_signoff"
+          },
+          {
+            "type": "table",
+            "field": "seq_no",
+            "name": "order_management_data_"
+          }
+        ]
+      }
+    },
+    "orderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "order_id",
+            "name": "lab_order_signoff"
+          },
+          {
+            "type": "table",
+            "field": "order_module_order_num",
+            "name": "order_"
+          }
+        ]
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "lab_order_signoff"
+        }
+      }
+    },
+    "authorName": {
+      "type": "string",
+      "maxlength": 90,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "author_name",
+          "name": "lab_order_signoff"
+        }
+      }
+    },
+    "authorDisplayName": {
+      "type": "string",
+      "description": "Calculated based on whether the comment was made by a delegate.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "author_name",
+            "name": "lab_order_signoff"
+          },
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "userName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "isDelegate": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delegate_ind",
+          "name": "lab_order_signoff"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "lab_order_signoff"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "order_management_data_"
+          }
+        ]
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "lab_order_signoff"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "order_management_data_"
+          }
+        ]
+      }
+    },
+    "comment": {
+      "type": "string",
+      "maxlength": 4000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "signoff_comment",
+            "name": "lab_order_signoff"
+          },
+          {
+            "type": "table",
+            "field": "txt_act_text_display",
+            "name": "order_management_data_"
+          },
+          {
+            "type": "table",
+            "field": "txt_action",
+            "name": "order_management_data_"
+          }
+        ]
+      }
+    },
+    "type": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "Possible values are Tracking or SignOff",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tracking_type",
+          "name": "lab_order_signoff"
+        }
+      }
+    },
+    "generatedBy": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generated_by",
+          "name": "lab_order_signoff"
+        }
+      }
+    },
+    "isAutoGenerated": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "auto_generated",
+          "name": "lab_order_signoff"
+        }
+      }
+    }
+  },
+	"required": [
+    "id",
+    "orderId",
+    "authorName",
+    "authorDisplayName",
+		"isDelegate",
+		"createTimestamp",
+		"comment",
+		"type",
+		"generatedBy",
+		"isAutoGenerated"
+	],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}/tracking-comments",
+      "description": "Get an lab order's tracking comments",
+      "method": "GET"
+    },
+    {
+      "name": "add",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}/tracking-comments",
+      "description": "Add a tracking comment to an lab order",
+      "method": "POST"
+    },
+    {
+      "name": "order",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}",
+      "description": "Get lab order detail",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/provider/{providerId}",
+      "description":  "Gets the provider details", 
+       "method": "GET"
+    }
+  ]
+}

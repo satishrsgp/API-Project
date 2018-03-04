@@ -1,0 +1,196 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskWorkgroup.json",
+  "title": "taskWorkgroup",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workgroup_id",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 32,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workgroup_name",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workgroup_desc",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "formerGroupId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "former_group_id",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    },
+    "type": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "workgroup_type",
+          "name": "task_workgroup_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "id",
+    "isDeleted",
+    "createTimestamp",
+    "createdBy",
+    "modifyTimestamp",
+    "modifiedBy"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/tasks/workgroups",
+      "description": "Get tasking workgroups",
+      "method": "GET"
+    },
+    {
+      "name": "workgroup-users",
+      "href": "/master/tasks/workgroups/{workgroupId}/workgroup-users",
+      "description": "Get tasking workgroup users",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "/master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practice",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "RecallPlanId": "#RecallPlanId#",
+    "LastDate": "#LastDate#",
+    "ReturnDate": "#ReturnDate#",
+    "EventId": "#EventId#",  
+ "activeDate": "#activeDate#",
+    "ResourceId": "#ResourceId#",
+    "LocationId": "#LocationId#",
+    "Note": "#Note#"
+
+}

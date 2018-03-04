@@ -1,0 +1,44 @@
+{
+    "RxQuantity": #RxQuantity#,
+    "RxRefills": #RxRefills#,
+    "DispenseAsWritten": "#DispenseAsWritten#",
+    "IsPrescribedElsewhere": "#IsPrescribedElsewhere#",
+    
+     "PrivacyIndicator": "#PrivacyIndicator#",
+    "PrescribedElsewhereLocation": "#PrescribedElsewhereLocation#",
+    "RxComment": "#RxComment#",
+    "RxSpecialInstruction": "#RxSpecialInstruction#",
+    
+     "StartDate": "#StartDate#",
+    "StopDate": "#StopDate#",
+    "ProviderId": "#ProviderId#",
+    "LocationId": "#LocationId#",
+    
+     "DiagnosisCode": "#DiagnosisCode#",
+    "SecondaryDiagnosisCode": "#SecondaryDiagnosisCode#",
+    "TertiaryDiagnosisCode": "#TertiaryDiagnosisCode#",
+    "IsPrn": "#IsPrn#",
+    
+     "PrnReason": "#PrnReason#",
+    "RxUnits": "#RxUnits#",
+    "FdbDosageId": "#FdbDosageId#",
+    "CustomDosageId": "#CustomDosageId#",
+    
+     "PedOrderId": #PedOrderId#,
+    "MedicationId": #MedicationId#,
+    "IsRepresentativeNdc": "#IsRepresentativeNdc#",
+    "SigCode": "#SigCode#",
+    
+    "SigDescription": "#SigDescription#",
+    
+    "AcknowledgedProblems": #AcknowledgedProblems#,
+    
+    "SupervisingProviderId": "#SupervisingProviderId#",
+    "PriorAuthorizationIndicator": "#PriorAuthorizationIndicator#",
+    
+    "PriorAuthorizationDate": "#PriorAuthorizationDate#",
+    "ByPassDeaRefillLimitCheck": "#ByPassDeaRefillLimitCheck#",
+    "SamplesIndicator": "#SamplesIndicator#",
+    "SampleLotNumber": #SampleLotNumber#,
+     "SampleExpirationDate": "#SampleExpirationDate#"
+}

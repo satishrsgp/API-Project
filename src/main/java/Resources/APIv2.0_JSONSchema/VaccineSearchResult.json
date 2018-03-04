@@ -1,0 +1,158 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "VaccineSearchResult.json",
+  "title": "vaccineSearchResult",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "name": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cvx_cd_desc_long",
+            "name": "REVDNCM0"
+          },
+          {
+            "type": "table",
+            "field": "evd_cvx_cd_desc_long",
+            "name": "revdcvx0"
+          },
+          {
+            "type": "table",
+            "field": "user_vaccine_name",
+            "name": "imm_custom_vaccine_names"
+          },
+          {
+            "type": "table",
+            "field": "vaccine_name",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "cvxCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cvx_cd",
+            "name": "REVDNCM0"
+          },
+          {
+            "type": "table",
+            "field": "evd_cvx_cd",
+            "name": "revdcvx0"
+          },
+          {
+            "type": "table",
+            "field": "cvx",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "cptCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cpt_cd",
+            "name": "revdcpt0"
+          },
+          {
+            "type": "table",
+            "field": "cpt",
+            "name": "ng_vaccines_xref"
+          },
+          {
+            "type": "table",
+            "field": "cpt",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "cptDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cpt_cd_desc",
+            "name": "revdcpt0"
+          },
+          {
+            "type": "table",
+            "field": "cpt_description",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "brandName": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "bn",
+            "name": "REVDNCM0"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "vaccine_orders"
+          }
+        ]
+      }
+    },
+    "isFromInventory": {
+      "type": "boolean"
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "vaccine_orders"
+        }
+      }
+    }
+  },
+  "required": [
+    "cptCode",
+    "cvxCode",
+    "isFromInventory"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/vaccines",
+      "description": "Get a list of vaccines based on search criteria",
+      "method": "GET"
+    },
+    {
+      "name": "related",
+      "href": "/master/vaccines/{cvxCode}/related",
+      "description": "Get a list of vaccines related to the vaccine with the given cvx code",
+      "method": "GET"
+    }
+  ]
+}

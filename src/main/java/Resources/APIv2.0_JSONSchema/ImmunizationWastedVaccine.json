@@ -1,0 +1,340 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "ImmunizationWastedVaccine.json",
+	"title": "immunizationWastedVaccine",
+	"description": "",
+	"type": "object",
+	"identifier": "",
+	"properties": {
+		"id": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "vaccine_waste_id",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"vaccineId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "order_vaccine_id",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"cvxCode": {
+			"type": "integer",
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "cvx_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"vaccineDescription": {
+			"type": "string",
+			"maxlength": 255,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "vaccine_desc",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"lotNumber": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "lot_num",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"cptCode": {
+			"type": "string",
+			"maxlength": 10,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "cpt4_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"mvxCode": {
+			"type": "string",
+			"maxlength": 20,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "mvx_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"manufacturerName": {
+			"type": "string",
+			"maxlength": 100,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "manufacturer_name",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"manufacturerNumber": {
+			"type": "integer",
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "manufacturer_nbr",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"strength": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "strength",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"units": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "units",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"unitsCode": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "units_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"dose": {
+			"type": "number",
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "dose",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"route": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "route",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"routeCode": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "route_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"side": {
+			"type": "string",
+			"maxlength": 200,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "side",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"sideCode": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "side_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"site": {
+			"type": "string",
+			"maxlength": 200,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "site",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"siteCode": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "site_code",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"brandName": {
+			"type": "string",
+			"maxlength": 50,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "brand_name",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"purchaseType": {
+			"type": "string",
+			"maxlength": 10,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "purchase_type",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"wastedReason": {
+			"type": "string",
+			"maxlength": 250,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "wasted_reason",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"wastedDate": {
+			"type": "string",
+			"format": "date-time",
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "wasted_date",
+					"name": "imm_vaccine_waste"
+				}
+			}
+		},
+		"orderId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "order_num",
+					"name": "imm_nor"
+				}
+			}
+		},
+		"personId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "person_id",
+					"name": "imm_nor"
+				}
+			}
+		}
+	},
+	"required": [
+		"id",
+		"vaccineId",
+		"cvxCode",
+		"vaccineDescription",
+		"wastedDate",
+		"orderId",
+		"personId"
+	],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/immunizations/orders/{orderId}/vaccines/{vaccineId}/wasted-vaccines",
+      "description": "Get list of wasted vaccines for an ordered vaccine",
+      "method": "GET"
+    },
+    {
+      "name": "wasted-vaccine",
+      "href": "/persons/{personId}/chart/immunizations/orders/{orderId}/vaccines/{vaccineId}/wasted-vaccines/{id}",
+      "description": "Get the details of a wasted vaccine",
+      "method": "GET"
+    },
+    {
+      "name": "vaccine",
+      "href": "/persons/{personId}/chart/immunizations/orders/{orderId}/vaccines/{vaccineId}",
+      "description": "Get the details of an ordered vaccine",
+      "method": "GET"
+    }
+  ]
+}

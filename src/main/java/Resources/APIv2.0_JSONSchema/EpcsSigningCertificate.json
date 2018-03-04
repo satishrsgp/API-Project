@@ -1,0 +1,42 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "EpcsSigningCertificate.json",
+  "title": "epcsSigningCertificate",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "certificate": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "certificate",
+          "name": "epcs_signing_certificate"
+        }
+      }
+    },
+    "password": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "password",
+          "name": "epcs_signing_certificate"
+        }
+      }
+    }
+  },
+  "required": [
+    "userId",
+    "enterpriseId",
+    "certificate",
+    "password"
+  ],
+  "links": [
+  ]
+}

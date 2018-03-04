@@ -1,0 +1,76 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "FavoriteDiagnosesGroup.json",
+  "title": "favoriteDiagnosesGroup",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "diagnosis_favorite_mstr"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diag_favorite_id",
+          "name": "diagnosis_favorite_mstr"
+        }
+      }
+    },
+    "groupName": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diag_favorite_name",
+          "name": "diagnosis_favorite_mstr"
+        }
+      }
+    },
+    "sequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "diagnosis_favorite_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "groupName",
+    "userId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/favorites/diagnosis-groups",
+      "description": "Gets a user's groups of favorite diagnoses",
+      "method": "GET"
+    },
+    {
+      "name": "group",
+      "href": "/users/{userId}/favorites/diagnosis-groups/{id}",
+      "description": "Gets a user's group of favorite diagnoses",
+      "method": "GET"
+    }
+  ]
+}

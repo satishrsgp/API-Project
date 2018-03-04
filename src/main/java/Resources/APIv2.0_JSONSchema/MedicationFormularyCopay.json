@@ -1,0 +1,264 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationFormularyCopay.json",
+  "title": "MedicationFormularyCopay",
+  "description": "copayId",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "outOfPocketRangeStart": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "out_of_pocket_range_start",
+          "name": "ng_rxh_copay_summary"
+        }
+      }
+    },
+    "outOfPocketRangeEnd": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "out_of_pocket_range_end",
+          "name": "ng_rxh_copay_summary"
+        }
+      }
+    },
+    "flatCopayAmount": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "flat_copay_amount",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "flat_copay_amount",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "percentCopayRate": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "percent_copay_rate",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "percent_copay_rate",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "firstCopayTerm": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "first_copay_term",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "first_copay_term",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "maximumCopay": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "maximum_copay",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "maximum_copay",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "minimumCopay": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "minimum_copay",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "minimum_copay",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "daysSupplyPerCopay": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "days_supply_per_copay",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "days_supply_per_copay",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "copayTier": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "copay_tier",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "copay_tier",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "maximumCopayTier": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "maximum_copay_tier",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "maximum_copay_tier",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "pharmacyType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "pharmacy_type",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "pharmacy_type",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "sourceId": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "source_id",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "source_id",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "copayId": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "copay_id",
+            "name": "ng_rxh_copay_summary"
+          },
+          {
+            "type": "table",
+            "field": "copay_id",
+            "name": "ng_rxh_copay_drug_specific"
+          }
+        ]
+      }
+    },
+    "copayDescription": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    }
+  },
+  "required": [
+    "sourceId",
+    "copayId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/formularies/medications/{medicationId}/copays/{copayId}",
+      "description": "Gets copay data for a formulary medication",
+      "method": "GET"
+    }
+  ]
+}

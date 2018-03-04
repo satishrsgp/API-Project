@@ -1,0 +1,274 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "OrderSchedule.json",
+  "title": "OrderSchedule",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the order schedule.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "schedule_id",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the person.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "The enterprise id.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "The practice id.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "orderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_id",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "orderType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "The type of order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_type",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "isFutureOrder": {
+      "type": "boolean",
+      "description": "A flag indicating if the order is a future order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "scheduleType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "The type of schedule, Future or Recurring.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "future_ind",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The schedule start date.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_date",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The schedule end date.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "end_date",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "interval": {
+      "type": "integer",
+      "description": "The interval between recurrences.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "timespan": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "The interval mode, e.g. Days, Months, Weeks or Years.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "timespan",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "nextDueDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The next due date for the order.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "nextdue_date",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "isAutoReleasable": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "A flag indicating if the order should automatically be released.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "auto_release_ind",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "maxOccurrence": {
+      "type": "integer",
+      "description": "The maximum occurrence for the schedule.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "max_occurrence",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "stopDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The schedule stop date.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "stop_date",
+          "name": "order_schedule"
+        }
+      }
+    },
+    "stopReason": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "The reason the schedule was stopped.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "stop_reason",
+          "name": "order_schedule"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "orderId",
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "orderType",
+    "isFutureOrder",
+    "startDate",
+    "createdBy",
+    "createTimestamp",
+    "modifiedBy",
+    "isAutoReleasable"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}/schedules",
+      "description": "Get the schedules for a lab order.",
+      "method": "GET"
+    },
+    {
+      "name": "lab-order",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}",
+      "description": "Get the detailed lab order for the specified person.",
+      "method": "GET"
+    }
+  ]
+}

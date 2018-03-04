@@ -1,0 +1,275 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "MedicationDosageRange.json",
+  "title": "medicationDosageRange",
+  "description": "",
+  "type": "object",
+  "identifier": "minimumAge",
+  "properties": {
+    "gcnSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "minimumAge": {
+      "type": "number",
+      "description": "Minimum age of patient for dose range. For an adult patient, this is set to -1",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pdm_mnage",
+          "name": "ped_dosing"
+        }
+      }
+    },
+    "maximumAge": {
+      "type": "number",
+      "description": "Maximum age of patient for dose range",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pdm_mxage",
+          "name": "ped_dosing"
+        }
+      }
+    },
+    "ageUnit": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "minimumQuantity": {
+      "type": "number",
+      "description": "Minimum dose quantity",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "pdm_mnd",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "mmg_mnd",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "mma_mnd",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "maximumQuantity": {
+      "type": "number",
+      "description": "Maximum dose quantity",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "pdm_mnd",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "mmg_mxd",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "mma_mxd",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "doseQuantityDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "Dose quantity unit description",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "doseu_desc",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "mmg_mndu",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "mma_mndu",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "minimumUnits": {
+      "type": "number",
+      "description": "Minimum number of units of drug",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "pdm_mnu",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "mmg_mnu",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "mma_mnu",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "maximumUnits": {
+      "type": "number",
+      "description": "Maximum number of units of drug",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "pdm_mxu",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "mmg_mxu",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "mma_mxu",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "drugFormDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "Drug form description",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "unitf_desc",
+            "name": "ped_dosing"
+          },
+          {
+            "type": "table",
+            "field": "mmg_mnuf",
+            "name": "RMMGDMA0"
+          },
+          {
+            "type": "table",
+            "field": "mma_mnuf",
+            "name": "RMMADMA1"
+          }
+        ]
+      }
+    },
+    "notToExceedQuantity": {
+      "type": "number",
+      "description": "Not-to-Exceed dose quantity. This is applicable to pediatric patients",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pdm_nted",
+          "name": "ped_dosing"
+        }
+      }
+    },
+    "notToExceedQuantityDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "Not-to-Exceed dose quantity unit description.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ntedu_desc",
+          "name": "ped_dosing"
+        }
+      }
+    },
+    "notToExceedUnits": {
+      "type": "number",
+      "description": "Not-to-Exceed dose units. This is applicable to pediatric patients",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pdm_nteu",
+          "name": "ped_dosing"
+        }
+      }
+    },
+    "notToExceedDrugFormDescription": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "Not-to-Exceed drug form unit description.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "nteuf_desc",
+          "name": "ped_dosing"
+        }
+      }
+    }
+  },
+  "required": [
+    "gcnSequenceNumber",
+    "minimumAge"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/medications/{gcnSequenceNumber}/dosage-range",
+      "description": "Get the dosage range of a medication for a given person id and gcn sequence number",
+      "method": "GET"
+    },
+    {
+      "name": "demographics",
+      "href": "/persons/{personId}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}
+

@@ -1,0 +1,9 @@
+{
+    "comments": "#comments#",
+    "category": "#category#",
+    "description": "#description#",
+    "secondaryTo": #secondaryTo#,
+    "identifiedDate": "#identifiedDate#",
+    "resolvedDate": "#resolvedDate#",
+    "status": "#status#"
+}

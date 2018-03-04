@@ -1,0 +1,476 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "OrderedTest.json",
+  "title": "OrderedTest",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_test_id",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "orderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_num",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "testCodeId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_code_id",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "testCodeText": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_code_text",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "testCodeSystem": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_code_system",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "collectionTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "collection_time",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "volumeQuantity": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "volume_quantity",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "volumeUnits": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "volume_units",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcCode": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_code",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcDesc": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_desc",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcAdditives": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_additives",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "scheduledTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "scheduled_time",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "generatedBy": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generated_by",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "loincCode": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "loinc_code",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "snomedCode": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_code",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcBodySite": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_body_site",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcSiteModifier": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_site_modifier",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcRole": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_role",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcStorage": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_storage",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "specSrcCollectionMethod": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "spec_src_coll_method",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "collectorId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "collector_id",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "testComment": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_comment",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "expectedResultDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "expected_rslt_date",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "collectionTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "collection_time_tz",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "scheduledTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "scheduled_time_tz",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "chargeId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "charge_id",
+          "name": "lab_order_tests"
+        }
+      }
+    },
+    "orderingReason": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ordering_reason",
+          "name": "lab_order_tests"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "orderId",
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "createdBy",
+    "createTimestamp",
+    "modifiedBy",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}/tests/{id}",
+      "description": "Get ordered test details by order id.",
+      "method": "GET"
+    },
+    {
+      "name": "tests",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}/tests",
+      "description": "Get the list of tests for the order",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ImmunizationSeriesCompletion.json",
+  "title": "ImmunizationSeriesCompletion",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "series_complete_id",
+          "name": "imm_series_complete"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "imm_series_complete"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "imm_series_complete"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "imm_series_complete"
+        }
+      }
+    },
+    "seriesName": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "series_name",
+          "name": "imm_series_complete"
+        }
+      }
+    },
+    "isComplete": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "series_complete_ind",
+          "name": "imm_series_complete"
+        }
+      }
+    },
+    "comment": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comment",
+          "name": "imm_series_complete"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "personId",
+    "enterpriseId",
+    "practiceId",
+    "seriesName",
+    "isComplete"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/immunizations/series-completions",
+      "description": "Get a patient's immunization series completion records",
+      "method": "GET"
+    },
+    {
+      "name": "add",
+      "href": "/persons/{personId}/chart/immunizations/series-completions",
+      "description": "Add a patient's immunization series completion",
+      "method": "POST"
+    },
+    {
+      "name": "update",
+      "href": "/persons/{personId}/chart/immunizations/series-completions/{id}",
+      "description": "Update a patient's immunization series completion record",
+      "method": "PUT"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}
+

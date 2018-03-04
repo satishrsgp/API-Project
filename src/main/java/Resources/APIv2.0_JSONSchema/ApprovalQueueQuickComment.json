@@ -1,0 +1,85 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ApprovalQueueQuickComment.json",
+  "title": "approvalQueueQuickComment",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unique_id",
+          "name": "paq_quick_comments"
+        }
+      }
+    },
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "paq_quick_comments"
+        }
+      }
+    },
+    "eventType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_type",
+          "name": "paq_quick_comments"
+        }
+      }
+    },
+    "itemType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "item_type",
+          "name": "paq_quick_comments"
+        }
+      }
+    },
+    "commentText": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comment_text",
+          "name": "paq_quick_comments"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "userId",
+    "eventType",
+    "itemType",
+    "commentText"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/approval-queue-quick-comments",
+      "description": "Gets a list of a user's quick comments for approving, rejecting, or reassigning an approval queue item",
+      "method": "GET"
+    }
+  ]
+}

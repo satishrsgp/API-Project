@@ -1,0 +1,281 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "LabDocumentResult.json",
+  "title": "LabDocumentResult",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unique_obr_num",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "orderNumber": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_num",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "obsBattId": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obs_batt_id",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "testDescription": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "test_desc",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "collectionDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "coll_date_time",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "obrComment": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obr_comment",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "orderResultStat": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_result_stat",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "collectionDateTimeTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "coll_date_time_tz",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+    "obxSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obx_seq_num",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "obsId": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obs_id",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "observationValue": {
+      "type": "string",
+      "maxlength": 608,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "observ_value",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "observationResultStat": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "observ_result_stat",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "documentFile": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "document_file",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "documentDescription": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "document_desc",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "fileFormat": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "file_format",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "serviceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_date",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "serviceDateTimezone": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_date_tz",
+          "name": "patient_documents"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "orderNumber",
+    "createTimestamp",
+    "documentFile"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/orders/{orderNumber}/results/documents",
+      "description": "Gets The Lab Document Results",
+      "method": "GET"
+    },
+    {
+      "name": "lab-results",
+      "href": "/persons/{personId}/chart/lab/orders/{orderNumber}/results",
+      "description": "Gets A List Of Lab Results",
+      "method": "GET"
+    }
+  ]
+}

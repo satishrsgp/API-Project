@@ -1,0 +1,455 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "FdbDosageOrder.json",
+  "title": "FdbDosageOrder",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "poeostrid",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "adminDirection": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "admin_direction",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "adminDirection2": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "admin_direction2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "routeDescriptionCode": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "route_description_code",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "route": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "route",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageFormAmountUnitLow": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_form_amount_unit_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageFormAmountUnitHigh": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_form_amount_unit_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageFormAmountLow": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_form_amount_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageFormAmountHigh": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_form_amount_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageUnitLow": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_unit_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageUnitHigh": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_unit_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageLow": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "dosageHigh": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dosage_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "frequencyLow": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "frequency_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "frequencyHigh": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "frequency_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "frequencyLow2": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "frequency_low2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "frequencyHigh2": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "frequency_high2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalUnitLow": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_unit_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalUnitHigh": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_unit_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalUnitLow2": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_unit_low2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalUnitHigh2": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_unit_high2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalLow": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalHigh": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalLow2": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_low2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "intervalHigh2": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interval_high2",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "durationUnitLow": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration_unit_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "durationUnitHigh": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration_unit_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "durationLow": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration_low",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "durationHigh": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration_high",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "textCode": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "text_code",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "doseCalculationUnit": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dose_calculation_unit",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "calculationRequired": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "calc_required",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "perDayCalculation": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "per_day_calc",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "durationAdditionalDays": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration_additional_days",
+          "name": "fdb_med_dosage_order_def"
+        }
+      }
+    },
+    "additionalText": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "text",
+          "name": "fdb_med_dosage_default_text"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gcn_seqno",
+          "name": "fdb_med_dxid_gcn_xref"
+        }
+      }
+    },
+    "sigDescription": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "isDefaultOrder": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    }
+
+  },
+  "required": [
+    "routeDescriptionCode",
+    "id",
+    "textCode",
+    "isDefaultOrder",
+    "gcnSequenceNumber"
+  ],
+  "links": [
+    {
+      "name":"self",
+      "href":"/master/medications/{gcnSeqNo}/fdb-dosage-orders",
+      "description":"Get FDB dosage orders for a medication",
+      "method": "GET"
+    }
+  ]
+}

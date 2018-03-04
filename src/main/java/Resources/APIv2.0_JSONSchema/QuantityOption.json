@@ -1,0 +1,68 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "QuantityOption.json",
+  "title": "quantityOption",
+  "description": "Model object that contains a quantity option for custom dosage",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "quantity_qualifier_id",
+          "name": "fdb_ncpdp_potency_mstr"
+        }
+      }
+    },
+    "code": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "quantity_qualifier_code",
+          "name": "fdb_ncpdp_potency_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "quantity_qualifier_desc",
+          "name": "fdb_ncpdp_potency_mstr"
+        }
+      }
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "available_ind",
+          "name": "fdb_ncpdp_potency_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "isAvailable"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "master/custom-dosage-quantity-options",
+      "description": "Get custom dosage quantity options",
+      "method": "GET"
+    }
+  ]
+}

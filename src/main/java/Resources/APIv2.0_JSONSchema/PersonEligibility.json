@@ -1,0 +1,768 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PersonEligibility.json",
+  "title": "personEligibility",
+  "description": "",
+  "type": "object",
+  "identifier": "erxId",
+  "properties": {
+    "erxId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "erx_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "erxType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "erx_type",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "eligibilityId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "eligibility_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "personCode": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_code",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "requestTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "request_timestamp",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "expiryTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "eligibleStatusCode": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "eligible_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "eligibleStatus": {
+      "type": "string",
+      "description": "Status calculated from eligibile indicator",
+      "enum": [
+        "Eligible",
+        "NotEligible",
+        "Pending"
+      ],
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "pbmId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pbm_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "pbmName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pbm_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "providerLastName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_last_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "providerFirstName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_first_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "providerMiddleName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_middle_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "planId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "plan_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "planName": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "plan_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "groupId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "groupName": {
+      "type": "string",
+      "maxlength": 85,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "pbmMemberId": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pbm_member_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "cardholderId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cardholder_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "cardholderFirstName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cardholder_first_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "cardholderMiddleName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cardholder_middle_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "cardholderLastName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cardholder_last_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "cardholderSuffix": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cardholder_suffix",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "cardholderMemberId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cardholder_member_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientFirstName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_first_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientMiddleName": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_middle_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientLastName": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_last_name",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientSuffix": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_suffix",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientAddressLine1": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_adders_1",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientAddressLine2": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_adders_2",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientCity": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_city",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientState": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_state",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientZip": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_zip",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientDateOfBirth": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_dob",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "patientGender": {
+      "type": "string",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "patient_gender",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "formularyId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "formulary_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "alternativeFormularyId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alt_formulary_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "transactionId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "trans_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "binLocationNumber": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bin_location_number",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isErrorMessageInResponse": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "error_message_in_response_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "serviceTypeCode": {
+      "type": "string",
+      "maxlength": 128,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_type_code",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isMailOrderAuthorized": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "mail_order_authorized_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isRetailAuthorized": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "retail_authorized_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "coverageId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "coverage_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "copayId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "copay_id",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "errorDescription": {
+      "type": "string",
+      "maxlength": 500,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "error_description",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isDemographicChange": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "demographic_change_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isHealthAuthorized": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "health_authorized_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isSpecialtyAuthorized": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "specialty_authorized_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "specialtyDescription": {
+      "type": "string",
+      "maxlength": 264,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "specialty_description",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "healthDescription": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "health_description",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isLtcAuthorized": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ltc_authorized_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "ltcDescription": {
+      "type": "string",
+      "maxlength": 264,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ltc_description",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "isAllowResend": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "allow_resend_ind",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "interchangeControlNumber": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "interchange_control_number",
+          "name": "patient_eligibility"
+        }
+      }
+    },
+    "processorControlNumber": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "processor_control_number",
+          "name": "patient_eligibility"
+        }
+      }
+    }
+  },
+  "required": [
+    "erxId",
+    "erxType",
+    "personId",
+    "requestTimestamp",
+    "eligibleStatusCode",
+    "isErrorMessageInResponse",
+    "createdBy",
+    "modifiedBy",
+    "createTimestamp",
+    "modifyTimestamp",
+    "isMailOrderAuthorized",
+    "isRetailAuthorized",
+    "isDemographicChange",
+    "isHealthAuthorized",
+    "isSpecialtyAuthorized",
+    "isLtcAuthorized",
+    "isAllowResend"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/eligibilities",
+      "description": "Get Eligibilities for a person",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    }
+  ]
+}

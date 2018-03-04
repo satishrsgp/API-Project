@@ -1,0 +1,327 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ChartDemographics.json",
+  "title": "chartDemographics",
+  "description": "Model object that contains the demographics of a patient",
+  "type": "object",
+  "identifier": "",
+  "ignore": false,
+  "required": [
+    "personId",
+    "enterpriseId",
+    "practiceId"
+  ],
+  "properties": {
+    "personId": {
+      "type": "string",
+      "description": "Primary identifier of the patient and therefore the demographics object.",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "patient"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient"
+        }
+      }
+    },
+    "medicalRecordNumber": {
+      "type": "string",
+      "maxlength": 9,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_rec_nbr",
+          "name": "patient"
+        }
+      }
+    },
+    "primaryPharmacyId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharmacy_code_1_id",
+          "name": "patient"
+        }
+      }
+    },
+    "secondaryPharmacyId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharmacy_code_2_id",
+          "name": "patient"
+        }
+      }
+    },
+    "mailOrderPharmacyId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharmacy_code_mo_id",
+          "name": "patient"
+        }
+      }
+    },
+    "bloodType": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "The patients blood type",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "blood_type",
+          "name": "patient_"
+        }
+      }
+    },
+    "hasNoActiveDevices": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_active_devices_ind",
+          "name": "patient"
+        }
+      }
+    },
+    "hasNoActiveMedications": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_active_medications_ind",
+          "name": "patient"
+        }
+      }
+    },
+    "hasNoActiveProblems": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_active_problems",
+          "name": "patient"
+        }
+      }
+    },
+    "hasNoActiveProblemsSnomed": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_active_problems_snomed",
+          "name": "patient"
+        }
+      }
+    },
+    "hasNoKnownImmunizationHistory": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_known_imm_history_ind",
+          "name": "patient"
+        }
+      }
+    },
+    "hasNoKnownProcedures": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_known_procedures_ind",
+          "name": "patient"
+        }
+      }
+    },
+    "hasNoUnresolvedAllergies": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "no_unresolved_allergies_ind",
+          "name": "patient"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "alerts",
+      "href": "/persons/{personId}/chart/alerts",
+      "description": "Get alerts for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "allergies",
+      "href": "/persons/{personId}/chart/allergies",
+      "description": "Get allergies for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "devices",
+      "href": "/persons/{personId}/chart/devices",
+      "description": "Get all devices for person",
+      "method": "GET"
+    },
+    {
+      "name": "diagnoses",
+      "href": "/persons/{personId}/chart/diagnoses",
+      "description": "Get diagnoses for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "documents",
+      "href": "/persons/{personId}/chart/documents",
+      "description": "Get documents for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "encounters",
+      "href": "/persons/{personId}/chart/encounters",
+      "description": "Get encounters for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "immunizations",
+      "href": "/persons/{personId}/chart/immunizations",
+      "description": "Get immunizations for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "immunization-interactions",
+      "href": "/persons/{personId}/chart/immunizations/interactions",
+      "description": "Get immunization interactions for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "immunization-exclusions",
+      "href": "/persons/{personId}/chart/immunizations/exclusions",
+      "description": "Get immunization exclusions for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "immunization-series-completions",
+      "href": "/persons/{personId}/chart/immunizations/series-completions",
+      "description": "Get immunization series completions for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "lab-orders",
+      "href": "/persons/{personId}/chart/lab/orders",
+      "description": "Get lab orders for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "medications",
+      "href": "/persons/{personId}/chart/medications",
+      "description": "Get medications for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "pharmacies",
+      "href": "/persons/{personId}/chart/pharmacies",
+      "description": "Get pharmacies for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "problems",
+      "href": "/persons/{personId}/chart/problems",
+      "description": "Get problems for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "procedures",
+      "href": "/persons/{personId}/chart/procedures",
+      "description": "Get procedures for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "social-history",
+      "href": "/persons/{personId}/chart/social-history",
+      "description": "Get social history for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "support-roles",
+      "href": "/persons/{personId}/chart/support-roles",
+      "description": "Get support roles for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "telephone-calls",
+      "href": "/persons/{personId}/chart/telephone-calls",
+      "description": "Gets telephone calls for a patient",
+      "method": "GET"
+    },
+    {
+      "name": "tobacco-usage",
+      "href": "/persons/{personId}/chart/tobacco-usage",
+      "description": "Get tobacco usage for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "vitals",
+      "href": "/persons/{personId}/chart/vitals",
+      "description": "Get vitals for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "/master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    }
+  ]
+}

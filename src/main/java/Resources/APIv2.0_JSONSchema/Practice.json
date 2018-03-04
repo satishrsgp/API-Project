@@ -1,0 +1,110 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Practice.json",
+  "title": "practice",
+  "description": "Model object that contains the practice details",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "practice"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "practice"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_name",
+          "name": "practice"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "practice"
+        }
+      }
+    },
+    "defaultLabId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "def_lab_id",
+          "name": "practice_defaults"
+        }
+      }
+    },
+    "defaultRadiologyId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "def_rad_id",
+          "name": "practice_defaults"
+        }
+      }
+    },
+    "defaultRegistryId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "def_registry_id",
+          "name": "practice_defaults"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "enterpriseId",
+    "name",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/practices?$filter=Id eq '{id}'",
+      "description": "Gets practices",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "/master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    }
+  ]
+}

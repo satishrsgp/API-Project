@@ -1,0 +1,341 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AuditProcedureDetail.json",
+  "title": "auditProcedureDetail",
+  "description": "Detail item for audit events with type 'procedure'",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceItemDesc": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_desc",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_date",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "locationName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_name",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "providerFirstName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerLastName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "modifierId1": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_1",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId2": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId3": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId4": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId1": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_1",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId2": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId3": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId4": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId5": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_5",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId6": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_6",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId7": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_7",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId8": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_8",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId9": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_9",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId10": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_10",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId11": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_11",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId12": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_12",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "placeOfService": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "place_of_service",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "units": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "units",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "amount": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "amount",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_procedure"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/audit/events/{eventId}/procedure"
+    }
+  ]
+}

@@ -1,0 +1,2371 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "TelephoneCall.json",
+	"title": "telephoneCall",
+	"description": "",
+	"type": "object",
+	"identifier": "encounterId",
+  "properties": {
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "enc_id",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "enc_id",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "enc_id",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "enc_id",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "contactType": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_contact_type",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_contact_type",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_contact_type",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_contact_type",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "time": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_call_time",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_time",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_time",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_time",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "spokeWithPatient": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_patient",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "chk_patient",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "chk_patient",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_patient",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 45,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_name",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_name",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_name",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_name",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "relationship": {
+      "type": "string",
+      "maxlength": 45,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_relationship",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_relationship",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_relationship",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_relationship",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "urgency": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_urgency",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_urgency",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_urgency",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_urgency",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "comment": {
+      "type": "string",
+      "maxlength": -1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_comment",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_comment",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_comment",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "isPreferredContact": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "opt_preferred_contact",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "telephone_med_quest_",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "opt_preferred_contact",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "opt_preferred_contact",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "taskPriority": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_task_priority",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_task_priority",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_task_priority",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_task_priority",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_call_date",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_date",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_date",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_date",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "phoneOther": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_phone_other",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_phone_other",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_phone_other",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_phone_other",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "phoneOtherExt": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_phone_other_ext",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_phone_other_ext",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_phone_other_ext",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_phone_other_ext",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "takenByUserName": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_call_takenby",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_takenby",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_takenby",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_takenby",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "takenByUserId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_call_takenby_uid",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_takenby_uid",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_takenby_uid",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_takenby_uid",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "taskedToUserName": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_tasked_to",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_tasked_to",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_tasked_to",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_tasked_to",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "taskedToUserId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_tasked_to_uid",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_tasked_to_uid",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_tasked_to_uid",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_tasked_to_uid",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "type": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_call_type",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_type",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_type",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_call_type",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+
+    // ********************************************
+    // --------------------------------------------
+    // DISTINCT FIELDS
+    // --------------------------------------------
+    // ********************************************
+
+    // ********************************************
+    // Medical Question, Outgoing, Other
+    // ********************************************
+    "isAlreadySaved": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_already_saved",
+            "name": "telephone_med_quest_"
+          },
+          {
+            "type": "table",
+            "field": "chk_already_saved",
+            "name": "telephoneother_"
+          },
+          {
+            "type": "table",
+            "field": "chk_already_saved",
+            "name": "telephone_outgoing_"
+          }
+        ]
+      }
+    },
+
+    // ********************************************
+    // Medication Management & Medical Question
+    // ********************************************
+    "concern": {
+      "type": "string",
+      "maxlength": 45,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_concern",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_concern",
+            "name": "telephone_med_quest_"
+          }
+        ]
+      }
+    },
+    "duration": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_duration",
+            "name": "Telephone_med_mngt_"
+          },
+          {
+            "type": "table",
+            "field": "txt_duration",
+            "name": "telephone_med_quest_"
+          }
+        ]
+      }
+    },
+
+    // ********************************************
+    // Outgoing and Other
+    // ********************************************
+    "isAction1": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_action_1",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_action_1",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "actions1": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_actions_1",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_actions_1",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "isAction2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_action_2",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_action_2",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "actions2": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_actions_2",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_actions_2",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "isAction3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_action_3",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_action_3",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "actions3": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_actions_3",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_actions_3",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "isAction4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_action_4",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_action_4",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "actions4": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_actions_4",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_actions_4",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "isAction5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_action_5",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_action_5",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "actions5": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_actions_5",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_actions_5",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "isAction6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "chk_action_6",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "chk_action_6",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+    "actions6": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "txt_actions_6",
+            "name": "telephone_outgoing_"
+          },
+          {
+            "type": "table",
+            "field": "txt_actions_6",
+            "name": "telephoneother_"
+          }
+        ]
+      }
+    },
+
+    // ********************************************
+    // Medication Management only
+    // ********************************************
+
+    "selectedPharmacy": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "RxRefill_PharSelect",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+
+    "contactTypeHeld": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_contact_type_hld",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+
+    "relationshipHeld": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_relationship_hld",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+
+    "initialUserName": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_initial_user_name",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "prePharmacy": {
+      "type": "string",
+      "maxlength": 125,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pre_pharmacy",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isNotificationRequired": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_req_notification",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "notification": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_notification",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "returnCall": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_return_call",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "extension": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_ext",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "email": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_email",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medication": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_med",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medication2": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_med2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medication3": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_med3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medication4": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_med4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medication5": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_med5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medication6": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_med6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationStrength1": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_strength1",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationStrength2": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_strength2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationStrength3": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_strength3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationStrength4": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_strength4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationStrength5": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_strength5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationStrength6": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_strength6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationComments1": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_com_qu_ref1",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationComments2": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_com_qu_ref2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationComments3": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_com_qu_ref3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationComments4": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_com_qu_ref4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationComments5": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_com_qu_ref5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "medicationComments6": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_com_qu_ref6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationNotApproved": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_not_approved",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationNotApproved2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_not_approved2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationNotApproved3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_not_approved3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationNotApproved4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_not_approved4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationNotApproved5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_not_approved5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationNotApproved6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_not_approved6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationErx": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_e_rx",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationErx2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_e_rx2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationErx3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_e_rx3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationErx4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_e_rx4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationErx5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_e_rx5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationErx6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_e_rx6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationPrinted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_printed",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationPrinted2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_printed2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationPrinted3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_printed3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationPrinted4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_printed4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationPrinted5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_printed5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationPrinted6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_printed6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationApproved": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_approved",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationApproved2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_approved2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationApproved3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_approved3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationApproved4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_approved4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationApproved5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_approved5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationApproved6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_approved6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isAppointmentScheduled": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_appt_sched",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isAppointmentScheduled2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_appt_sched2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isAppointmentScheduled3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_appt_sched3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isAppointmentScheduled4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_appt_sched4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isAppointmentScheduled5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_appt_sched5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isAppointmentScheduled6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_appt_sched6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "IsMedicationCalled": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_call",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "IsMedicationCalled2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_call2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "IsMedicationCalled3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_call3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "IsMedicationCalled4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_call4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "IsMedicationCalled5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_call5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "IsMedicationCalled6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_call6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationFaxed": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_fax",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationFaxed2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_fax2",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationFaxed3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_fax3",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationFaxed4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_fax4",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationFaxed5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_fax5",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "isMedicationFaxed6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_fax6",
+          "name": "Telephone_med_mngt_"
+        }
+      }
+    },
+    "sigDescription1": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_sig_desc1",
+          "name": "telephone_med_prescribe_"
+        }
+      }
+    },
+    "sigDescription2": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_sig_desc2",
+          "name": "telephone_med_prescribe_"
+        }
+      }
+    },
+    "sigDescription3": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_sig_desc3",
+          "name": "telephone_med_prescribe_"
+        }
+      }
+    },
+    "sigDescription4": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_sig_desc4",
+          "name": "telephone_med_prescribe_"
+        }
+      }
+    },
+    "sigDescription5": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_sig_desc5",
+          "name": "telephone_med_prescribe_"
+        }
+      }
+    },
+    "sigDescription6": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_sig_desc6",
+          "name": "telephone_med_prescribe_"
+        }
+      }
+    },
+    "pharmacy1": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharm_1",
+          "name": "patient_"
+        }
+      }
+    },
+    "pharmacyPhone1": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharm_phone1",
+          "name": "patient_"
+        }
+      }
+    },
+    "pharmacyFax1": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharm1Fax",
+          "name": "patient_"
+        }
+      }
+    },
+    "pharmacy2": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharm_2",
+          "name": "patient_"
+        }
+      }
+    },
+    "pharmacyPhone2": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharm_phone2",
+          "name": "patient_"
+        }
+      }
+    },
+    "pharmacyFax2": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharm2Fax",
+          "name": "patient_"
+        }
+      }
+    },
+
+    // ********************************************
+    // Medical Question Only
+    // ********************************************
+
+    "isScheduledAppointment": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_sched_appt",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "appointmentWhen": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_appt_when",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isReferral": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_referral",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "sendRef": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_send_ref",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isNewMed": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_new_med",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "newMed": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_new_med",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isAdjustedMed": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_adjust_med",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "adjustedMed": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_adjust_med",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "sendResults": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_send_results",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "testResults": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_test_resul",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isCounselPt": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_counsel_pt",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "counselPt": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_counsel_pt",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isOtherAction": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_other_action",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "otherAction": {
+      "type": "string",
+      "maxlength": 75,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_other",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+
+    "isComAppointment": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_appt",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isComReferral": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_referral",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isComNewMed": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_new_med",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isComAdjust": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_adjust",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isComSendRes": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_send_res",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isComCounsel": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_counsel",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+    "isComOther": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_other",
+          "name": "telephone_med_quest_"
+        }
+      }
+    },
+
+    // ********************************************
+    // Other call only
+    // ********************************************
+    "isAction7": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_action_7",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "actions7": {
+      "type": "string",
+      "maxlength": 120,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_actions_7",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct1": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act1",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct2": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act2",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct3": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act3",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct4": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act4",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct5": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act5",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct6": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act6",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "isComAct7": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_com_act7",
+          "name": "telephoneother_"
+        }
+      }
+    },
+    "assignedUserIds": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "maxlength": 100
+      }
+    },
+    "assignedGroupIds": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "maxlength": 100
+      }
+    },
+    "isMedicationManagement": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_rx_renewal_dp",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "medicationManagementStatus": {
+      "type": "string",
+      "maxlength": "1",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_medmngt_status",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "isMedicalQuestion": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_med_quest_dp",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "medicalQuestionStatus": {
+      "type": "string",
+      "maxlength": "1",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_medquest_status",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "isOutgoing": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_outgoing_call_dp",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "outgoingStatus": {
+      "type": "string",
+      "maxlength": "1",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_outgoingcall_status",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "isOther": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chk_other_dp",
+          "name": "telephone_call_"
+        }
+      }
+    },
+    "otherStatus": {
+      "type": "string",
+      "maxlength": "1",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "opt_other_status",
+          "name": "telephone_call_"
+        }
+      }
+    }
+  },
+  "required": [
+    "encounterId",
+    "personId",
+    "spokeWithPatient",
+    "isReferral",
+    "isPreferredContact",
+    "isAlreadySaved",
+    "selectedPharmacy",
+    "isNotificationRequired",
+    "isScheduledAppointment",
+    "isMedicationNotApproved",
+    "isMedicationNotApproved2",
+    "isMedicationNotApproved3",
+    "isMedicationNotApproved4",
+    "isMedicationNotApproved5",
+    "isMedicationNotApproved6",
+    "isMedicationErx",
+    "isMedicationErx2",
+    "isMedicationErx3",
+    "isMedicationErx4",
+    "isMedicationErx5",
+    "isMedicationErx6",
+    "isMedicationPrinted",
+    "isMedicationPrinted2",
+    "isMedicationPrinted3",
+    "isMedicationPrinted4",
+    "isMedicationPrinted5",
+    "isMedicationPrinted6",
+    "isMedicationApproved",
+    "isMedicationApproved2",
+    "isMedicationApproved3",
+    "isMedicationApproved4",
+    "isMedicationApproved5",
+    "isMedicationApproved6",
+    "isAppointmentScheduled",
+    "isAppointmentScheduled2",
+    "isAppointmentScheduled3",
+    "isAppointmentScheduled4",
+    "isAppointmentScheduled5",
+    "isAppointmentScheduled6",
+    "IsMedicationCalled",
+    "IsMedicationCalled2",
+    "IsMedicationCalled3",
+    "IsMedicationCalled4",
+    "IsMedicationCalled5",
+    "IsMedicationCalled6",
+    "isMedicationFaxed",
+    "isMedicationFaxed2",
+    "isMedicationFaxed3",
+    "isMedicationFaxed4",
+    "isMedicationFaxed5",
+    "isMedicationFaxed6",
+    "isNewMed",
+    "isAdjustedMed",
+    "sendResults",
+    "isCounselPt",
+    "isComAppointment",
+    "isComReferral",
+    "isComNewMed",
+    "isComAdjust",
+    "isComSendRes",
+    "isComCounsel",
+    "isComOther",
+    "isOtherAction",
+    "isAction1",
+    "isAction2",
+    "isAction3",
+    "isAction4",
+    "isAction5",
+    "isAction6",
+    "isAction7",
+    "isComAct1",
+    "isComAct2",
+    "isComAct3",
+    "isComAct4",
+    "isComAct5",
+    "isComAct6",
+    "isComAct7"
+  ],
+    "links": [
+      {
+        "name": "self",
+        "href": "/persons/{personId}/chart/encounters/{encounterId}/telephone-call",
+        "description": "Get other call detail",
+        "method": "GET"
+      },
+      {
+        "name": "encounter",
+        "href": "/persons/{personId}/chart/encounters/{encounterId}",
+        "description": "Get encounter for a given patient and encounter id",
+        "method": "GET"
+      },
+      {
+        "name": "person",
+        "href": "/persons/{personId}",
+        "description": "The demographics of the person",
+        "method": "GET"
+      },
+      {
+        "name": "chart",
+        "href": "/persons/{personId}/chart",
+        "description": "Get demographics for a given patient",
+        "method": "GET"
+      }
+    ]
+  }

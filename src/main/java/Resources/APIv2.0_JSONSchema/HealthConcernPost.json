@@ -1,0 +1,181 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "HealthConcernPost.json",
+  "title": "healthConcernPost",
+  "description": "Model object that contains an health concern object.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "category": {
+      "description": "Enumeration for healthconcern category",
+      "type": "string",
+      "enum": [
+        "Allergy",
+        "AssessmentScale",
+        "ProblemObservation",
+        "EncounterDiagnosis",
+        "FamilyHistoryOrganizer",
+        "SmokingStatus",
+        "TobaccoUseStatus",
+        "SocialHistoryTobaccoUseAndExposure",
+        "SocialHistoryExercise",
+        "SocialHistoryAlcoholIntake",
+        "SocialHistoryEmploymentDetails",
+        "SocialHistoryDrugMisuseBehavior",
+        "SocialHistoryEducationalAchievement",
+        "VitalsBloodPressure",
+        "VitalsHeadCircumference",
+        "VitalsHeartRate",
+        "VitalsHeight",
+        "VitalsWeight",
+        "VitalsBMI",
+        "VitalsO2BldCOximetry",
+        "VitalsRespiratoryRate",
+        "VitalsBodyTemperature",
+        "Other"
+      ]
+    },
+    "otherCategory": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "Name of the category in case of non listed catagory is selected",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "category",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "comments": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comments",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "healthConcern": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "health_concern",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "secondaryTo": {
+      "type": "integer",
+      "description": "parent health concern id",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "parent_health_concern_nbr",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "identifiedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "identified_date",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "categoryId": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pointer_value",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "resolvedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_date",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "codeDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_description",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_system",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "codeValue": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_value",
+          "name": "health_concern_ext_"
+        }
+      }
+    },
+    "status": {
+      "enum": [ "Active", "Inactive", "Resolved" ],
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "status",
+          "name": "health_concern_ext_"
+        }
+      }
+    }
+  },
+  "required": [
+    "category",
+    "healthConcern",
+    "status",
+    "identifiedDate"
+  ],
+  "links": [
+  ]
+}

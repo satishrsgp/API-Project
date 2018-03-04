@@ -1,0 +1,62 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "OutcomeRequest.json",
+  "title": "OutcomeRequest",
+  "description": "Model object for Create and Update outcome.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "outcome": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "outcome",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "goalAchieved": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_achieved",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "goalAchievedDetails": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "goal_achieved_details",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    },
+    "outcomeDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "outcome_date",
+          "name": "care_plan_outcomes_ext_"
+        }
+      }
+    }
+  },
+  "required": [
+    "outcome"
+  ],
+  "links": [
+  ]
+}

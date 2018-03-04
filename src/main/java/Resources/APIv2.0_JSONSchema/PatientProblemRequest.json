@@ -1,0 +1,322 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientProblemRequest.json",
+  "title": "patientProblemRequest",
+  "description": "Model object that contains a patient problem object.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "conceptId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "SNOMED concept id",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "concept_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "Side": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "ConceptId value for the problem side.",
+      "enum": [
+        "Left",
+        "Right",
+        "Bilateral"
+      ]
+    },
+    "site": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "site",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "onsetDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "Provides the date of problem first faced by the patient",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "onset_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "lastAddressedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "Provides the date of problem last faced by the patient",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_addressed_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "Provides the resolved date",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_date",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "resolvedReason": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "Gives the resolved reason",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "resolved_reason",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "problemStatus": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "ConceptId value for the problem's status.",
+      "enum": [
+        "Active",
+        "Inactive",
+        "Resolved"
+      ]
+    },
+    "clinicalStatusId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_status_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isChronic": {
+      "type": "boolean",
+      "description": "Show whether the problem is chronic",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chronic_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "hasSecondaryCondition": {
+      "type": "boolean",
+      "description": "Show whether the problem has any other secondary conditions",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "secondary_condition_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isRecordedElsewhere": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recorded_elsewhere_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "recordedElsewhereSource": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "recorded_elsewhere_source",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "responsibleProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "responsible_provider_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "isComorbid": {
+      "type": "boolean",
+      "description": "Show whether the problem is additional to an existing problem",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comorbid_condition_ind",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "interactions": {
+      "type": "array",
+      "items": {
+        "type": "DrugInteractionProblem",
+        "properties": {
+          "isRequired": {
+            "type": "boolean",
+            "description": "Flag indicating if a reason is required to acknowledge the drug interaction."
+          },
+          "acknowledged": {
+            "type": "boolean",
+            "description": "Flag indicating whether this drug interaction has been acknowledged."
+          },
+          "severityLevel": {
+            "type": "integer",
+            "description": ""
+          },
+          "description": {
+            "type": "string",
+            "description": ""
+          },
+          "entityName": {
+            "type": "string",
+            "description": ""
+          },
+          "eventType": {
+            "type": "integer",
+            "description": ""
+          },
+          "sourceId": {
+            "type": "integer",
+            "description": ""
+          },
+          "cause": {
+            "type": "string",
+            "description": ""
+          },
+          "warningDetail": {
+            "type": "string",
+            "description": ""
+          },
+          "warningType": {
+            "type": "integer",
+            "description": ""
+          },
+          "warning": {
+            "type": "string",
+            "description": ""
+          },
+          "causeText": {
+            "type": "string",
+            "description": ""
+          },
+          "overrideText": {
+            "type": "string",
+            "description": ""
+          },
+          "durAuditKey": {
+            "type": "string",
+            "description": ""
+          },
+          "isSuppressed": {
+            "type": "boolean",
+            "description": ""
+          },
+          "isRecordedElseWhere": {
+            "type": "boolean",
+            "description": ""
+          },
+          "practiceId": {
+            "type": "string",
+            "description": ""
+          },
+          "display": {
+            "type": "boolean",
+            "description": ""
+          }
+        },
+        "required": [
+          "acknowledged",
+          "cause",
+          "causeText",
+          "description",
+          "display",
+          "durAuditKey",
+          "eventType",
+          "isRecordedElseWhere",
+          "isRequired",
+          "isSuppressed",
+          "severityLevel",
+          "sourceId",
+          "warning",
+          "warningDetail",
+          "warningType",
+          "locationId",
+          "providerId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "conceptId",
+    "isChronic",
+    "hasSecondaryCondition",
+    "isRecordedElsewhere",
+    "isComorbid"
+  ],
+  "links": [
+
+  ]
+}

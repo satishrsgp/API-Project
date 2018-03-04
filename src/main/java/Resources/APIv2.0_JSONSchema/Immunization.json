@@ -1,0 +1,137 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "Immunization.json",
+  "title": "immunization",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "orderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_num",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "orderedVaccineId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_vaccine_id",
+          "name": "imm_order_vaccines"
+        }
+      }
+    }
+  },
+  "required": [
+    "personId",
+    "enterpriseId",
+    "practiceId",
+    "orderId",
+    "orderedVaccineId"
+  ],
+  "links": [
+    {
+      "name": "immunizations-exclusions",
+      "href": "persons/{personId}/chart/immunizations/exclusions",
+      "description": "Gets Excluded Immunizations",
+      "method": "GET"
+    },
+    {
+      "name": "get-series-completion",
+      "href": "persons/{personId}/chart/immunizations/series-completions",
+      "description": "Gets Patient's Immunization Series",
+      "method": "GET"
+    },
+    {
+      "name": "add-series-completion",
+      "href": "persons/{personId}/chart/immunizations/series-completions",
+      "description": "Adds Patient's Immunization Series",
+      "method": "POST"
+    },
+    {
+      "name": "orders",
+      "href": "persons/{personId}/chart/immunizations/orders",
+      "description": "Gets Immunization Orders",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets The Encounter Details",
+      "method": "GET"
+    },
+    {
+      "name": "enterprise",
+      "href": "master/enterprises?$filter=Id eq '{enterpriseId}'",
+      "description": "Gets enterprise details",
+      "method": "GET"
+    },
+    {
+      "name": "practices",
+      "href": "master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    }
+  ]
+}

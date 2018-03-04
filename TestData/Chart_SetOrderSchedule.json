@@ -1,0 +1,9 @@
+{
+    "ScheduleType": "#ScheduleType#",
+    "StartDate": "#StartDate#",
+    "EndDate": "#EndDate#",
+    "Interval": #Interval#,  
+ "IntervalMode": "#IntervalMode#",
+    "IsAutoReleasable": "#IsAutoReleasable#"
+
+}

@@ -1,0 +1,9 @@
+{
+    "CvxCode": #CvxCode#,
+    "Reasons": [
+        "#Reasons#"
+    ],
+    "StartDate": "#StartDate#",
+    "EndDate": "#EndDate#",
+    "Comment": "#Comment#"
+}

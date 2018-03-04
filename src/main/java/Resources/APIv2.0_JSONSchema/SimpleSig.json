@@ -1,0 +1,51 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "SimpleSig.json",
+  "title": "SimpleSig",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sig_key",
+          "name": "sig_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 512,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "sig_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "sig_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "isDeleted"
+  ],
+  "links": [
+  ]
+}

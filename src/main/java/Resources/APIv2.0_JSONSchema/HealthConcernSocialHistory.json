@@ -1,0 +1,660 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "HealthConcernSocialHistory.json",
+  "title": "HealthConcernSocialHistory",
+  "description": "Model object that contains social history information for health concern category",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "exerciseType": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exercise_type",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseType2": {
+      "type": "string",
+      "maxlength": 26,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exerciseType2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseType3": {
+      "type": "string",
+      "maxlength": 26,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exerciseType3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseFrequency": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exercise_freq",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "exerciseHoursWork": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "exerciseHrsWK",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholUsage": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alcohol_yes",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholType": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alcoholtype",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "alcoholFrequency": {
+      "type": "string",
+      "maxlength": 35,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "etohfrequency",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "amountPerDay": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "amount_per_day",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "lastAlcoholicBeverage": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_alcoholic_bev",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugs": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugs",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugAge": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugAge",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugType1": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drug_type1",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugFrequency1": {
+      "type": "string",
+      "maxlength": 22,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drug_freq1",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugRoute": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugRoute",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugType2": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drug_type2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugFrequency2": {
+      "type": "string",
+      "maxlength": 22,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drug_freq2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugRoute2": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugRoute2",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugType3": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drug_type3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugFrequency3": {
+      "type": "string",
+      "maxlength": 22,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drug_freq3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugRoute3": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugRoute3",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugTreatment": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugTreatment",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugTreatmentCount": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_drug_treattime",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugMedicalAttention": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugMedAttention",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "drugMedicalAttentionCount": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "drugAttentNumber",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "educationLevel": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "education_level",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "degree": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_bh_degree",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "passiveSmoker": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "passiveSmoke",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "Social_Hx_"
+        }
+      }
+    },
+    "encounterTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "tobaccoUserProfile": {
+      "type": "string",
+      "maxlength": 300,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_tobacco_user_profile",
+          "name": "soc_hx_tob_use_"
+        }
+      }
+    },
+    "passiveTobaccoType": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_passive_tob_type",
+          "name": "soc_hx_tob_use_"
+        }
+      }
+    },
+    "passiveLengthExposure": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_passive_ength_exposure",
+          "name": "soc_hx_tob_use_"
+        }
+      }
+    },
+    "passiveLevelExposure": {
+      "type": "string",
+      "maxlength": 8,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_passive_level_exposure",
+          "name": "soc_hx_tob_use_"
+        }
+      }
+    },
+
+    "employmentName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "name",
+          "name": "employment_dmp_"
+        }
+      }
+    },
+    "employmentStatus": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "employment_dmp_"
+        }
+      }
+    },
+    "employmentRestrictions": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "txt_restrictions",
+          "name": "employment_dmp_"
+        }
+      }
+    },
+    "occupation": {
+      "type": "string",
+      "maxlength": 112,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "mstr_list_item_desc",
+          "name": "employment_dmp_"
+        }
+      }
+    },
+    "employmentRetireDate": {
+      "type": "string",
+      "format": "date-time",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "retire_date",
+          "name": "employment_dmp_"
+        }
+      }
+    },
+    "employmentId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "employment_dmp_"
+        }
+      }
+    },
+    "tobaccoUseHealthConcern": {
+      "type": "string",
+      "description": "Description to create social history tobacco use health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "tobaccoUseCategory": {
+      "type": "string",
+      "description": "Health Concern category for social history tobacco use",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "exerciseHealthConcern": {
+      "type": "string",
+      "description": "Description to create social history exercise health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "exerciseCategory": {
+      "type": "string",
+      "description": "Health Concern category for exercise",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "alcoholIntakeHealthConcern": {
+      "type": "string",
+      "description": "Description to create social history alcohol intake health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "alcoholIntakeCategory": {
+      "type": "string",
+      "description": "Health Concern category for alcohol intake",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "employmentDetailHealthConcern": {
+      "type": "string",
+      "description": "Description to create social history employment detail health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "employmentDetailCategory": {
+      "type": "string",
+      "description": "Health Concern category for employment detail",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "drugMisuseBehaviorHealthConcern": {
+      "type": "string",
+      "description": "Description to create social history drug misuse behavior health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "drugMisuseBehaviorCategory": {
+      "type": "string",
+      "description": "Health Concern category for drug misuse behavior",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "educationalAchievementHealthConcern": {
+      "type": "string",
+      "description": "Description to create social history educational achievement health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "educationalAchievementCategory": {
+      "type": "string",
+      "description": "Health Concern category for educational achievements",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    }
+  },
+  "required": [
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "encounterTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/health-concerns/social-history",
+      "description": "Get List of patient Health Concerns social history",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

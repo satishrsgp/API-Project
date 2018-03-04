@@ -1,0 +1,55 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TimeZoneDetail.json",
+  "title": "timeZoneDetail",
+  "description": "Model object that contains the time zone details",
+  "type": "object",
+  "identifier": "zoneName",
+  "properties": {
+    "zoneName": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "The Olson time zone name.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zone_name",
+          "name": "timezone_reference"
+        }
+      }
+    },
+    "utcOffset": {
+      "type": "integer",
+      "description": "The time zone's standard offset from UTC in minutes.",
+      "vendorExtensions": {
+        "storage": {
+	        "type": "table",
+	        "field": "utc_offset",
+	        "name": "timezone_reference"
+        }
+      }
+    },
+    "utcOffsetDisplay": {
+      "type": "string",
+      "pattern": "^UTC[+-][0-9]{1,}:[0-9]{2}(:[0-9]{2})?$",
+      "description": "The time zone's standard offset from UTC as a displayable string.",
+      "vendorExtensions": {
+        "storage": {
+	        "type": "calculated"
+        }
+      }
+    }
+  },
+  "required": [
+		"zoneName",
+		"utcOffset"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/time-zones?$filter=ZoneName eq '{zoneName}'",
+      "description": "Gets time zones",
+      "method": "GET"
+    }
+  ]
+}

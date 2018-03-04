@@ -1,0 +1,107 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "VaccineSchedule.json",
+  "title": "vaccineSchedule",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    },
+    "vaccineGroup": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vaccine_group",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    },
+    "startAge": {
+      "type": "integer",
+      "description": "The start of the age range in months",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_age",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    },
+    "endAge": {
+      "type": "integer",
+      "description": "The end of the age range in months",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "end_age",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    },
+    "sex": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sex",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 15,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "imm_cdc_schedule"
+        }
+      }
+    }
+  },
+  "required": [
+    "practiceId",
+    "vaccineGroup",
+    "startAge",
+    "endAge",
+    "isDeleted",
+    "sex"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/vaccine-schedules",
+      "description": "Get a list of vaccine schedules recommended by the cdc",
+      "method": "GET"
+    }
+  ]
+}

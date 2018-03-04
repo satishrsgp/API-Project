@@ -1,0 +1,278 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "DocumentDetail.json",
+  "title": "documentDetail",
+  "description": "Model object that contains the detailed information about a document.",
+  "type": "object",
+  "identifier": "id",
+  "ignore": false,
+  "required": [
+    "id",
+    "createTimestamp",
+    "modifyTimestamp"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Primary identifier of the patient document.",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "document_id",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_images"
+          }
+        ]
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 40,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "document_desc",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "itemType": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "itemTypeDescription": {
+      "type": "string",
+      "maxLength": 40,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "totalPages": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "signoff_status",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "icsDateOfService": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "encounterTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "appCreatedBy": {
+      "type": "string",
+      "maxLength": 8,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "app_created_by",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "docTypeId": {
+      "type": "string",
+      "description": "Document type for Ics Documents",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "doc_type_id",
+          "name": "documents"
+        }
+      }
+    },
+    "isRestricted": {
+      "type": "boolean",
+      "description": "Indicates whether the user has access to this document item. This property is not OData compatible.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "signoffStatus": {
+      "type": "string",
+      "description": "The current sign-off status of the document relating to the Provider Approval Queue. This does not apply to Patient Emails and will be null.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "signoff_status",
+            "name": "patient_ics_images"
+          }
+        ]
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/documents/{id}",
+      "description": "Gets Document Details",
+      "method": "GET"
+    },
+    {
+      "name": "documents",
+      "href": "/persons/{personId}/chart/documents",
+      "description": "Gets List Of Documents",
+      "method": "GET"
+    },
+    {
+      "name": "add-document",
+      "href": "/persons/{personId}/chart/documents",
+      "description": "Adds A Document",
+      "method": "POST"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets The Encounter Details",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskAssignee.json",
+  "title": "taskAssignee",
+  "description": "An assignee to a task",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "taskId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "task_id",
+          "name": "user_todo_list"
+        }
+      }
+    },
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "assigned_to",
+            "name": "todo_assign"
+          },
+          {
+            "type": "table",
+            "field": "user_id",
+            "name": "task_workgroup_user_xref"
+          }
+        ]
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "middleName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "mi",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "user_mstr"
+        }
+      }
+    },
+    "response": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "responce_flag",
+            "name": "todo_assign"
+          },
+          {
+            "type": "table",
+            "field": "response",
+            "name": "user_response"
+          }
+        ]
+      }
+    },
+    "responseDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "responce_date",
+            "name": "todo_assign"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "user_response"
+          }
+        ]
+      }
+    },
+    "isAssignedAsIndividual": {
+      "type": "boolean",
+      "description": "A boolean for whether or not the user was assigned as an individual. If groupIds has an values as well, the user was assigned individually and as part of a group."
+    },
+    "groupIds": {
+      "type": "array",
+      "description": "A list of group ids that the task was assigned to that the user belongs to. If this has values and isAssignedAsIndividual is true, the user was assigned individually and as part of a group.",
+      "items": {
+        "type": "integer"
+      }
+    }
+  },
+  "required": [
+    "taskId",
+    "userId",
+    "groupIds",
+    "isAssignedAsIndividual"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/tasks/{taskId}/assignees",
+      "description": "Gets the assignees of a task",
+      "method": "GET"
+    },
+    {
+      "name": "task-details",
+      "href": "/users/{userId}/tasks/{taskId}",
+      "description": "Gets task details",
+      "method": "GET"
+    },
+    {
+      "name": "assignee-details",
+      "href": "/users/{userId}/tasks/{taskId}/assignees/{userId}",
+      "description": "Gets the assignees details",
+      "method": "GET"
+    },
+    {
+      "name": "update-assignee-task",
+      "href": "/users/{userId}/tasks/{taskId}/assignees/{userId}",
+      "description": "Accepts or rejects a task",
+      "method": "PUT"
+    },
+    {
+      "name": "update-task",
+      "href": "/users/{userId}/tasks/{taskId}",
+      "description": "Updates a task",
+      "method": "PUT"
+    },
+    {
+      "name": "delete-task",
+      "href": "/users/{userId}/tasks/{taskId}",
+      "description": "Permanently deletes a task",
+      "method": "DELETE"
+    }
+  ]
+}

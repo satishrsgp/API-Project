@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" name="Failed suite [API-v2.0_Suite]" parallel="classes">
+  <test name="API-v2.0_Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.testscripts.Chart_GetSocialHistory_TC1">
+        <methods>
+          <include name="createDetailedTestLog"/>
+          <include name="beforeTest"/>
+          <include name="chart_GetSocialHistory_TC1"/>
+          <include name="testCleanUp"/>
+          <include name="tearDown"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- com.testscripts.Chart_GetSocialHistory_TC1 -->
+    </classes>
+  </test> <!-- API-v2.0_Test(failed) -->
+</suite> <!-- Failed suite [API-v2.0_Suite] -->

@@ -1,0 +1,38 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "UserEpcs.json",
+  "title": "userEpcs",
+  "description": "",
+  "type": "object",
+  "identifier": "userId",
+  "properties": {
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "user_epcs"
+        }
+      }
+    },
+    "prescriber": {
+      "type": "string",
+      "description": "This is the decrypted value from the prescriber column",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "prescriber",
+          "name": "user_epcs"
+        }
+      }
+    }
+  },
+  "required": [
+    "userId",
+    "prescriber"
+  ],
+  "links": [
+  ]
+}

@@ -1,0 +1,85 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "TaskSet.json",
+  "title": "taskSet",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "todo_tabs"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 36,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tab_id",
+          "name": "todo_tabs"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tab_name",
+          "name": "todo_tabs"
+        }
+      }
+    },
+    "order": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tab_order",
+          "name": "todo_tabs"
+        }
+      }
+    },
+    "assignedCategoryIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "order",
+    "userId",
+    "assignedCategoryIds"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/task-sets",
+      "description": "Gets a user's task sets",
+      "method": "GET"
+    },
+    {
+      "name": "categories",
+      "href": "/master/tasks/categories",
+      "description": "Gets all of the task categories",
+      "method": "GET"
+    }
+  ]
+}

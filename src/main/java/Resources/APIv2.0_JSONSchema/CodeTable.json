@@ -1,0 +1,90 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "CodeTable.json",
+  "title": "CodeTable",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "codeType": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code_type",
+          "name": "code_tables"
+        }
+      }
+    },
+    "code": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "code",
+          "name": "code_tables"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "code_tables"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "code_tables",
+          "default": ""
+        }
+      }
+    },
+    "additionalAttribute": {
+      "type": "string",
+      "maxlength": 3,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "attribute1",
+          "name": "code_tables"
+        }
+      }
+    }
+  },
+  "required": [
+    "codeType",
+    "code",
+    "description"
+  ],
+  "links": [
+    {
+      "name": "types",
+      "href": "/master/codes",
+      "description": "Get distinct code type",
+      "method": "GET"
+    },
+    {
+      "name": "self",
+      "href": "/master/codes/{codeType}",
+      "description": "Get details for specific codes type",
+      "method": "GET"
+    }
+  ]
+}
+

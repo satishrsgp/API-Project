@@ -1,0 +1,330 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "OrderedVaccineSummary.json",
+  "title": "orderedVaccineSummary",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_vaccine_id",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "imm_nor"
+        }
+      }
+    },
+    "orderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_num",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "cvxCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cvx_code",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vaccine_desc",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "cptCode": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cpt4_code",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "sequenceNumber": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_nbr",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vaccine_status",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "lotNumber": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "lot_num",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "administeredYear": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "administer_year",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "administeredMonth": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "administer_month",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "administeredDay": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "administer_day",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "administeredDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Calculated based on administered year, month and day. Any null component defaults to 01. If the calculated date is before person's date of birth, returns date of birth.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "administer_year",
+            "name": "imm_order_vaccines"
+          },
+          {
+            "type": "table",
+            "field": "administer_month",
+            "name": "imm_order_vaccines"
+          },
+          {
+            "type": "table",
+            "field": "administer_day",
+            "name": "imm_order_vaccines"
+          },
+          {
+            "type": "table",
+            "field": "date_of_birth",
+            "name": "person"
+          }
+        ]
+      }
+    },
+    "administeredTimestamp": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "administer_time",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "administeredByUserId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "administer_by",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "administeredByName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "first_name",
+            "name": "user_mstr"
+          },
+          {
+            "type": "table",
+            "field": "last_name",
+            "name": "user_mstr"
+          }
+        ]
+      }
+    },
+    "isVfc": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vfc_ind",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "vfcCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vfc_code",
+          "name": "imm_order_vaccines"
+        }
+      }
+    },
+    "fundingSourceCode": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "funding_src_code",
+          "name": "imm_order_vaccines"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "personId",
+    "enterpriseId",
+    "practiceId",
+    "orderId",
+    "cvxCode",
+    "description",
+    "sequenceNumber",
+    "isVfc"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/immunizations/orders/{orderId}/vaccines",
+      "description": " Get Vaccines",
+      "method": "GET"
+    },
+    {
+      "name": "vaccine",
+      "href": "/persons/{personId}/chart/immunizations/orders/{orderId}/vaccines/{id}",
+      "description": " Get Vaccine Details",
+      "method": "GET"
+    },
+    {
+      "name": "vfc-codes",
+      "href": "/master/vfc-codes?$filter=VfcCode eq '{vfcCode}'",
+      "description": "Get a list of vfc reasons for ordering immunizations",
+      "method": "GET"
+    },
+    {
+      "name": "funding-sources",
+      "href": "/master/immunization-funding-sources?$filter=FundingSourceCode eq '{fundingSourceCode}'",
+      "description": "Get a list of immunization funding sources",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

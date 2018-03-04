@@ -1,0 +1,126 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AuditTemplateDetail.json",
+  "title": "auditTemplateDetail",
+  "description": "Detail item for audit events with type 'template'",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "templateId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "templateId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "template_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "encounter_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "caseId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "case_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "groupId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "groupEncounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_encounter_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "extendedPopupId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "extended_popup_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "sequenceId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sequence_id",
+          "name": "event_template"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "event_template"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/audit/events/{id}/template"
+    }
+  ]
+}

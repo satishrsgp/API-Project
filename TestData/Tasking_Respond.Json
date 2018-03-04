@@ -1,0 +1,11 @@
+{
+    "taskId": "#taskId#",
+    "userId": "#userId#",
+    "firstName": "#firstName#",
+    "middleName": "#middleName#",
+    "lastName": "#lastName#",
+    "response": "#response#",
+    "responseDate": "#responseDate#",
+    "isAssignedAsIndividual": "#isAssignedAsIndividual#",
+    "groupIds": [#groupIds#]
+}

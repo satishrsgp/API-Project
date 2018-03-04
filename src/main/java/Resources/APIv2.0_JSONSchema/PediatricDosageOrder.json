@@ -1,0 +1,249 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PediatricDosageOrder.json",
+  "title": "PediatricDosageOrder",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "full_order_id",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "doseAmount": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dose_amount",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "doseUomId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dose_uom_id",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "frequencyIntervalId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "freq_int_id",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "durationAmount": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "duration_amount",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "ageDaysLow": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "age_days_low",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "ageDaysHigh": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "age_days_high",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "doseAsHicSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dose_as_hic_seqn",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "doseStrengthTypeCode": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dose_strength_type_cd",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "genericOrderableMedicationId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "generic_ord_med_id",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "notToExceedDose": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "not_to_exceed_dose",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "notToExceedDoseUomId": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "not_to_exceed_dose_uom_id",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "isCommonOrder": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "common_order_ind",
+          "name": "fdb_ped_full_order"
+        }
+      }
+    },
+    "sigDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_text_long",
+          "name": "fdb_ped_full_order_text"
+        }
+      }
+    },
+    "uomAbbreviation": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uom_abbr",
+          "name": "fdb_ped_unit_of_measure"
+        }
+      }
+    },
+    "uomTypeCode": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uom_type_cd",
+          "name": "fdb_ped_unit_of_measure"
+        }
+      }
+    },
+    "uomStdsOrgDesc": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uom_stds_org_desc",
+          "name": "fdb_ped_unit_of_measure"
+        }
+      }
+    },
+    "prnIdText": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "prn_id_text",
+          "name": "fdb_ped_prn_text"
+        }
+      }
+    },
+    "additionalInstructionsText": {
+      "type": "string",
+      "maxlength": 150,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "additional_instructions_text",
+          "name": "fdb_ped_addnl_instruct"
+        }
+      }
+    },
+    "clinicalRouteDescription": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_rt_desc_long",
+          "name": "fdb_ped_clinical_rt"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "doseAmount",
+    "doseUomId",
+    "ageDaysLow",
+    "ageDaysHigh",
+    "doseStrengthTypeCode",
+    "genericOrderableMedicationId",
+    "isCommonOrder",
+    "sigDescription"
+  ],
+  "links": [
+  ]
+}

@@ -1,0 +1,252 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "VaccineGroupStatus.json",
+    "title": "VaccineGroupStatus",
+    "description": "",
+    "type": "object",
+    "identifier": "",
+    "properties": {
+        "groupName": {
+            "type": "string",
+            "maxlength": 255,
+            "description": "",
+            "vendorExtensions": {
+                "storage": [
+                    {
+                        "type": "table",
+                        "field": "vaccine_group",
+                        "name": "imm_cdc_schedule"
+                    },
+                    {
+                        "type": "table",
+                        "field": "display_name",
+                        "name": "ng_vaccines_xref"
+                    },
+                    {
+                        "type": "table",
+                        "field": "vaccine_desc",
+                        "name": "imm_order_vaccines"
+                    }
+                ]
+            }
+        },
+        "personId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+            "maxlength": 16,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "person_id",
+                    "name": "person"
+                }
+            }
+        },
+        "isStatusProcessedSuccessfully": {
+            "type": "boolean",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "isRuleFound": {
+            "type": "boolean",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "referenceDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "personDateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "date_of_birth",
+                    "name": "person"
+                }
+            }
+        },
+        "cdcStartMonth": {
+            "type": "string",
+            "format": "date-time",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "start_age",
+                    "name": "imm_cdc_schedule"
+                }
+            }
+        },
+        "cdcEndMonth": {
+            "type": "string",
+            "format": "date-time",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "end_age",
+                    "name": "imm_cdc_schedule"
+                }
+            }
+        },
+        "nextDueDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "status": {
+            "type": "string",
+            "maxlength": 250,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "statusCalculationCode": {
+            "type": "string",
+            "maxlength": 100,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "doseSequenceStatusCalulatedFor": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "groupMinimumAgeInDays": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "groupMaximumAgeInDays": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "doseMinimumAgeInDays": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "doseMaximumAgeInDays": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "cvxToAdminister": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "vaccineToAdminister": {
+            "type": "string",
+            "maxlength": 30,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "totalDoses": {
+            "type": "integer",
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "statusCalculationMessage": {
+            "type": "string",
+            "maxlength": 500,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        },
+        "nextDueDateCalculationMessage": {
+            "type": "string",
+            "maxlength": 500,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "calculated"
+                }
+            }
+        }
+    },
+    "required": [
+        "groupName",
+        "personId"
+    ],
+    "links": [
+        {
+            "name": "self",
+            "href": "/persons/{personId}/chart/immunizations/group-status",
+            "description": "Get status information of vaccine groups for the person",
+            "method": "GET"
+        },
+        {
+            "name": "immunizations",
+            "href": "/persons/{personId}/chart/immunizations",
+            "description": "Get ordered vaccines for the person",
+            "method": "GET"
+        }
+    ]
+}

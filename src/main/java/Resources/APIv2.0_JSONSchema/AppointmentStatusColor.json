@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AppointmentStatusColor.json",
+  "title": "appointmentStatusColor",
+  "description": "Model object that maps a status to a color in R,G,B format.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "The appointment status."
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}$",
+      "maxLength": 11,
+      "description": "The color for the appointment status in R,G,B format."
+    }
+  },
+  "required": 
+  [
+    "status",
+    "color"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{id}/appointment-status-colors",
+      "description": "Returns List Of Appointment Status Colors",
+      "method": "GET"
+    }
+  ]
+}

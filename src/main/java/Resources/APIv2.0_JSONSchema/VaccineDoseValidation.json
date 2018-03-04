@@ -1,0 +1,130 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "VaccineDoseValidation.json",
+    "title": "VaccineDoseValidation",
+    "description": "",
+    "type": "object",
+    "identifier": "",
+    "properties": {
+        "personId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+            "maxlength": 16,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "person_id",
+                    "name": "person"
+                }
+            }
+        },
+        "administeredDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "",
+            "vendorExtensions": {
+                "storage": [
+                    {
+                        "type": "table",
+                        "field": "administer_year",
+                        "name": "imm_order_vaccines"
+                    },
+                    {
+                        "type": "table",
+                        "field": "administer_month",
+                        "name": "imm_order_vaccines"
+                    },
+                    {
+                        "type": "table",
+                        "field": "administer_day",
+                        "name": "imm_order_vaccines"
+                    },
+                    {
+                        "type": "table",
+                        "field": "administer_time",
+                        "name": "imm_order_vaccines"
+                    }
+                ]
+            }
+        },
+        "groupName": {
+            "type": "string",
+            "maxlength": 100,
+            "description": "",
+            "vendorExtensions": {
+                "storage": [
+                    {
+                        "type": "table",
+                        "field": "vaccine_group",
+                        "name": "imm_cdc_schedule"
+                    },
+                    {
+                        "type": "table",
+                        "field": "display_name",
+                        "name": "ng_vaccines_xref"
+                    },
+                    {
+                        "type": "table",
+                        "field": "vaccine_desc",
+                        "name": "imm_order_vaccines"
+                    }
+                ]
+            }
+        },
+        "statusCode": {
+            "type": "string",
+            "maxlength": 1000,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "DoseSanitizationCode",
+                    "name": "VaccineGroupValidation"
+                }
+            }
+        },
+        "statusMessage": {
+            "type": "string",
+            "maxlength": 2000,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "DoseSanitizationMsg",
+                    "name": "VaccineGroupValidation"
+                }
+            }
+        },
+        "orderVaccineId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+            "maxlength": 16,
+            "description": "",
+            "vendorExtensions": {
+                "storage": {
+                    "type": "table",
+                    "field": "order_vaccine_id",
+                    "name": "imm_order_vaccines"
+                }
+            }
+        }
+    },
+    "required": [
+        "personId"
+    ],
+    "links": [
+        {
+            "name": "self",
+            "href": "/persons/{personId}/chart/immunizations/dose-validation",
+            "description": "Get dose validation information of all ordered vaccines for the person",
+            "method": "GET"
+        },
+        {
+            "name": "immunizations",
+            "href": "/persons/{personId}/chart/immunizations",
+            "description": "Get ordered vaccines for the person",
+            "method": "GET"
+        }
+    ]
+}

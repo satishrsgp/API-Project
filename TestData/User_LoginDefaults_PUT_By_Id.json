@@ -1,0 +1,8 @@
+{
+	"id": #id#,
+	"enterpriseId": "#enterpriseId#",
+	"practiceId": "#practiceId#",
+	"locationId": "#locationId#",
+	"providerId": "#providerId#",
+	"timeZone": "#timeZone#"
+}

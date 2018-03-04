@@ -1,0 +1,208 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "DiagnosisSearchResult.json",
+  "title": "diagnosisSearchResult",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "icdCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id",
+          "name": "diagnosis_favorite_xref"
+        }
+      }
+    },
+    "clinicalDescription": {
+      "type": "string",
+      "maxlength": 400,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "term",
+          "name": "diag_search"
+        }
+      }
+    },
+    "billingDescription": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "icd_description",
+          "name": "diag_search"
+        }
+      }
+    },
+    "hccId": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hcc_id",
+          "name": "diag_search"
+        }
+      }
+    },
+    "ngHccId": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "nghcc_id",
+          "name": "diag_search"
+        }
+      }
+    },
+    "hccDescription": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hcc_description",
+          "name": "diag_search"
+        }
+      }
+    },
+    "hccCommunityCoefficient": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comm_coefficient",
+          "name": "diag_search"
+        }
+      }
+    },
+    "hccInstitutionalCoefficient": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "hcc_inst_coefficient",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccId": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rxhcc_id",
+          "name": "diag_search"
+        }
+      }
+    },
+    "ngRxHccId": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ngrxhcc_id",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccDescription": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rxhcc_description",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccInstitutionalCoefficient": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rxhcc_inst_coefficient",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccCoefficientLowIncomeUnder65": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "LowIncome_under65",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccCoefficientLowIncomeOver65": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "LowIncome_over65",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccCoefficientNonLowIncomeUnder65": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "under65",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rxHccCoefficientNonLowIncomeOver65": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "over65",
+          "name": "diag_search"
+        }
+      }
+    },
+    "rank": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    }
+  },
+  "required": [
+    "icdCode",
+    "rank"
+  ],
+  "links": [
+  ]
+}

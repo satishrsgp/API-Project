@@ -1,0 +1,47 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "DocumentPostRequest.json",
+  "title": "documentPostRequest",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "fileDescription": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "image_desc",
+          "name": "patient_images"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "documentType": {
+      "type": "string",
+      "enum": [
+        "ICS",
+        "EHRDocument",
+        "EHRImage",
+        "EHRAudio",
+        "EHREmail",
+        "EHREquipment",
+        "EHRNote",
+        "EPM",
+        "None"
+      ]
+    }
+  },
+
+  "required": [
+    "encounterId"
+  ]
+}

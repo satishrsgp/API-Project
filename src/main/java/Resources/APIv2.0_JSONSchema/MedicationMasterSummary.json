@@ -1,0 +1,189 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "medicationMasterSummary.json",
+  "title": "medicationMasterSummary",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "brandId": {
+      "type": "number",
+      "description": "The brand id of a medication. For user-defined medications, this is -1.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "med_name_id",
+          "name": "fdb_med_name_search_mstr"
+        }
+      }
+    },
+    "medicationName": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "The medication name. For user-defined medications, this is the given brand name. For all others, if tall man casing is enabled and there is a tall man name available, this value will be the tall man name.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "med_name",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "tm_alt_med_name_desc",
+            "name": "fdb_tall_man_name_mstr"
+          },
+          {
+            "type": "table",
+            "field": "tm_alt_medid_desc",
+            "name": "fdb_tall_man_name_mstr"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "medid",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "medid",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "medicationIdDescription": {
+      "type": "string",
+      "maxlength": 70,
+      "description": "For user-defined medications, this is pieced together from the brand name or generic name, dose, route description, and dose form.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "medid_desc",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "brand_name",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "generic_name",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "dose",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "route_desc",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "dose_form_desc",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "gcn_Seqno",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "gcn_seqno",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "isGeneric": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "generic_medid",
+            "name": "fdb_med_name_search_mstr"
+          },
+          {
+            "type": "table",
+            "field": "generic_indicator",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    },
+    "isHidden": {
+      "type": "boolean",
+      "description": "For user-defined medications, this is true if the medication is either deleted or not available.",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "hidden_flag",
+            "name": "medication_hidden"
+          },
+          {
+            "type": "table",
+            "field": "delete_ind",
+            "name": "fdb_medication"
+          },
+          {
+            "type": "table",
+            "field": "available_ind",
+            "name": "fdb_medication"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "brandId",
+    "medicationName",
+    "medicationId",
+    "medicationIdDescription",
+    "isGeneric",
+    "isHidden"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/medications",
+      "description": "Get summary of searched medication",
+      "method": "GET"
+    },
+    {
+      "name": "medications",
+      "href": "/master/medications/{medicationId}",
+      "description": "Get Details Of Specific Medication",
+      "method": "GET"
+    }
+  ]
+}
+

@@ -1,0 +1,467 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "HealthConcernVitalSign.json",
+  "title": "healthConcernVitalSign",
+  "description": "Model object that contains vital signs information for health concern category",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "bloodPressureHealthConcern": {
+      "type": "string",
+      "description": "Description to create blood pressure vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bloodPressureCategory": {
+      "type": "string",
+      "description": "Health Concern category for blood pressure vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bloodPressureSystolicValue": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_systolic",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureDiastolicValue": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "bp_diastolic",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bloodPressureUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bodyTemperatureHealthConcern": {
+      "type": "string",
+      "description": "Description to create body temperature vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bodyTemperatureCategory": {
+      "type": "string",
+      "description": "Health Concern category for blood pressure vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bodyTemperatureValue": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "temp_deg_C",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bodyTemperatureUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "headCircumferenceHealthConcern": {
+      "type": "string",
+      "description": "Description to create head circumference vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "headCircumferenceCategory": {
+      "type": "string",
+      "description": "Health Concern category for head circumference vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "headCircumferenceValue": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "head_circ_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "headCircumferenceUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "heartRateHealthConcern": {
+      "type": "string",
+      "description": "Description to create heart rate vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "heartRateCategory": {
+      "type": "string",
+      "description": "Health Concern category for heart rate vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "heartRateValue": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pulse_rate",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heartRateUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "heightHealthConcern": {
+      "type": "string",
+      "description": "Description to create height vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "heightCategory": {
+      "type": "string",
+      "description": "Health Concern category for height vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "heightValue": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "height_cm",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "heightUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "weightHealthConcern": {
+      "type": "string",
+      "description": "Description to create weight vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "weightCategory": {
+      "type": "string",
+      "description": "Health Concern category for weight vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "weightValue": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "weight_kg",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "weightUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bmiHealthConcern": {
+      "type": "string",
+      "description": "Description to create bmi vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "BMI_calc",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "bmiCategory": {
+      "type": "string",
+      "description": "Health Concern category for bmi vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "bmiValue": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "BMI_calc",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "o2BldCOximetryHealthConcern": {
+      "type": "string",
+      "description": "Description to create o2BldCOximetry vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "o2BldCOximetryCategory": {
+      "type": "string",
+      "description": "Health Concern category for o2BldCOximetry vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "o2BldCOximetryValue": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "sp_o2_dtl",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "o2BldCOximetryUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "respiratoryRateHealthConcern": {
+      "type": "string",
+      "description": "Description to create respiratory rate vitals health concern",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "respiratoryRateCategory": {
+      "type": "string",
+      "description": "Health Concern category for respiratory rate vitals",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "respiratoryRateValue": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "respiration_rate",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "respiratoryRateUnit": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "seq_no",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "vital_signs_"
+        }
+      }
+    },
+    "encounterTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "encounterId",
+    "enterpriseId",
+    "practiceId",
+    "personId",
+    "encounterTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/health-concerns/vitals",
+      "description": "Get List of patient Health Concern vitals",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get chart for a given patient",
+      "method": "GET"
+    }
+  ]
+}

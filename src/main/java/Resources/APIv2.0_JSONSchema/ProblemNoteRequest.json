@@ -1,0 +1,25 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProblemNoteRequest.Json",
+  "title": "problemNoteRequest",
+  "description": "Model object that contains a patient problem note object.",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "Provides note details for the problem",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "problem_note_xref"
+        }
+      }
+    }
+  },
+  "links": [
+
+  ]
+}

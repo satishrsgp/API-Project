@@ -1,0 +1,125 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ApprovalQueueCustomRule.json",
+  "title": "approvalQueueCustomRule",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unique_id",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "userId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "user_id",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "eventType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_type",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "itemType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "item_type",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "itemDescription": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "item_desc",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "actionType": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "action_type",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "actionDescription": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "action_desc",
+          "name": "paq_custom_rules"
+        }
+      }
+    },
+    "encounterType": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "encounter_type",
+          "name": "paq_custom_rules"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "practiceId",
+    "userId",
+    "eventType",
+    "itemType",
+    "itemDescription",
+    "actionType",
+    "actionDescription",
+    "encounterType"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/users/{userId}/approval-queue-custom-rules",
+      "description": "Gets a list of a user's custom rules for approving, rejecting, or reassigning an approval queue item",
+      "method": "GET"
+    }
+  ]
+}

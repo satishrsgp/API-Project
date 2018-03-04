@@ -1,0 +1,84 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ViewCategorySummary.json",
+  "title": "ViewCategorySummary",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cat_id",
+          "name": "view_categories_mstr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cat_desc",
+          "name": "view_categories_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "view_categories_mstr"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "view_categories_mstr"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "description",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/view-categories",
+      "description": "Get all view categories",
+      "method": "GET"
+    },
+    {
+      "name": "item-types",
+      "href": "/master/view-categories/{id}/items-types",
+      "description": "Get view categories items",
+      "method": "GET"
+    },
+    {
+      "name": "external-items",
+      "href": "/master/view-categories/{id}/items-external",
+      "description": "Get view categories external items",
+      "method": "GET"
+    }
+  ]
+}

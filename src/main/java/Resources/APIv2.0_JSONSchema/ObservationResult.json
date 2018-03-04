@@ -1,0 +1,363 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ObservationResult.json",
+  "title": "observationResult",
+  "description": "",
+  "type": "object",
+  "identifier": "panelId",
+  "properties": {
+    "panelId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the lab results panel.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unique_obr_num",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the person this result is for.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "orderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "The id of the order that is result is for.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "order_num",
+          "name": "lab_nor"
+        }
+      }
+    },
+    "observationSequenceNumber": {
+      "type": "integer",
+      "description": "The sequence in which the result was entered.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obx_seq_num",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "The enterprise id.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "The practice id.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "observationId": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "A '^' delimited string containing the result code, result description and result coding system.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obs_id",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "resultCode": {
+      "type": "string",
+      "description": "The component code of this lab result. This property is not OData compatible.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "resultDescription": {
+      "type": "string",
+      "maxlength": 200,
+      "description": "The description for the component of this lab result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "result_desc",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "codeSystem": {
+      "type": "string",
+      "description": "The code system for this component of this lab result. This property is not OData compatible.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "observationValue": {
+      "type": "string",
+      "maxlength": 608,
+      "description": "The observation value for this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "observ_value",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "abnormalityCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "The abnormality code for this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "abnorm_flags",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "abnormality": {
+      "type": "string",
+      "description": "Enumeration calculated from abnormalityCode",
+      "enum": [
+        "Normal",
+        "High",
+        "VeryHigh",
+        "GreaterThan",
+        "Low",
+        "VeryLow",
+        "LessThan",
+        "Abnormal",
+        "VeryAbnormal",
+        "SignificantChangeUp",
+        "SignificantChangeDown",
+        "Better",
+        "Worse",
+        "Resistant",
+        "Intermediate",
+        "Susceptible",
+        "ModeratelySusceptible",
+        "VerySusceptible",
+        "Unknown"
+      ],
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "resultType": {
+      "type": "string",
+      "description": "The type of result.",
+      "enum": [
+        "Component",
+        "EhrDocument",
+        "EhrImage",
+        "IcsDocument"
+      ],
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "units": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "The unit for the value of this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "units",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "referenceRange": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "The range for the value of this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ref_range",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "observationResultStatus": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "The status of this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "observ_result_stat",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "clinicalName": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "The clinical name for this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "clinical_name",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "observationDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date time when this result was collected.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obs_date_time",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "observationDateTimeTimezone": {
+      "type": "number",
+      "description": "The time zone in which this result was collected.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "obs_date_time_tz",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "loincCode": {
+      "type": "string",
+      "maxlength": 36,
+      "description": "The loinc code for this result.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "loinc_code",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "resultSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "result_seq_num",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "hasComment": {
+      "type": "boolean",
+      "description": "An indicator of whether this result contains a comment.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comment_ind",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "An indicator of whether this result has been deleted.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "lab_results_obx"
+        }
+      }
+    },
+    "isSignedOff": {
+      "type": "boolean",
+      "description": "An indicator whether the observation result was signed off.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "signed_off_ind",
+          "name": "lab_results_obx"
+        }
+      }
+    }
+  },
+  "required": [
+    "panelId",
+    "observationSequenceNumber",
+    "hasComment",
+    "isDeleted",
+    "isSignedOff",
+    "orderId",
+    "personId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/panels/{panelId}/results",
+      "description": "Gets a list of observation results.",
+      "method": "GET"
+    },
+    {
+      "name": "observation-panel",
+      "href": "/persons/{personId}/chart/lab/panels/{panelId}",
+      "description": "Get observation panel details for by panel id.",
+      "method": "GET"
+    },
+    {
+      "name": "order",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}",
+      "description": "Get order details for person by order id.",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

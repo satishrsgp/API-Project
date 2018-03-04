@@ -1,0 +1,55 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "refillDenialReason.json",
+  "title": "refillDenialReason",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "code": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "denialReason": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage":  [
+          {
+            "type": "calculated"
+          },
+          {
+            "type": "table",
+            "field": "mstr_list_item_desc",
+            "name": "mstr_lists"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/medications/refill-denial-reasons",
+      "description": "Gets list of medication refill denial reasons",
+      "method": "GET"
+    }
+  ]
+}

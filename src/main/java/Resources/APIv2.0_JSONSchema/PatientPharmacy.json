@@ -1,0 +1,288 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientPharmacy.json",
+  "title": "patientPharmacy",
+  "description": "Model object that contains the default pharmacy information for patient",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "personId",
+    "practiceId",
+    "allowsRxByFax",
+    "hasActiveErx",
+    "pharmacyType",
+    "isDeleted"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharmacy_id",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "description": "Primary identifier of the person.",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "person"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient"
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "maxlength": 35,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "name",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "addressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_1",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "addressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_2",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 35,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 9,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "maxlength": 10,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "phone",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "alternatePhone": {
+      "type": "string",
+      "maxlength": 10,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alternate_phone",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "alternatePhoneDescription": {
+      "type": "string",
+      "maxlength": 25,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alt_phone_desc",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "fax": {
+      "type": "string",
+      "maxlength": 10,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "fax",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "chiefPharmacistName": {
+      "type": "string",
+      "maxlength": 25,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "chief_pharm_name",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "allowsRxByFax": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_by_fax_ind",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "hasActiveErx": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "active_erx_ind",
+          "name": "pharmacy_mstr"
+        }
+      }
+    },
+    "ncpdpId": {
+      "type": "string",
+      "maxlength": 7,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ncpdp_id",
+          "name": "erx_pharmacy_mstr"
+        }
+      }
+    },
+    "surescriptsEnrollDate": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surescripts_enroll_date",
+          "name": "erx_pharmacy_mstr"
+        }
+      }
+    },
+    "surescriptsUnenrollDate": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surescripts_unenroll_date",
+          "name": "erx_pharmacy_mstr"
+        }
+      }
+    },
+    "serviceLevel": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_level",
+          "name": "erx_pharmacy_mstr"
+        }
+      }
+    },
+    "pharmacyModel": {
+      "type": "string",
+      "maxlength": 2,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "pharmacy_model",
+          "name": "erx_pharmacy_mstr"
+        }
+      }
+    },
+    "pharmacyType": {
+      "type": "integer",
+      "description": "This value is 1 for primary pharmacy, 2 for secondary pharmacy, 3 for mail order pharmacy"
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "pharmacy_mstr"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/pharmacies",
+      "description": "Get pharmacies for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "Get demographics for a given person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Gets chart demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    }
+  ]
+}

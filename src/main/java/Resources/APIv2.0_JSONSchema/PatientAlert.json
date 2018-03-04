@@ -1,0 +1,231 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientAlert.json",
+  "title": "patientAlert",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alert_id",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "messageId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "message_id",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "alertTypeId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alert_type_id",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "alertTypeDescription": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alert_type_description",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "comment": {
+      "type": "string",
+      "maxlength": 1000,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "comment",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "description",
+            "name": "ehr_alerts_mstr"
+          },
+          {
+            "type": "table",
+            "field": "user_description",
+            "description": "",
+            "name": "patient_alerts_ehr"
+          }
+        ]
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "isFlagged": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "flagged_ind",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "shouldBeAcknowledgedBy": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "acknowledge_by",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "acknowledgedByUserIds": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "patient_alerts_ehr_audit"
+        }
+      }
+    },
+    "sourceName": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "source_name",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "sourceDescription": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "source_desc",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    },
+    "snoozeHours": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snooze_hours",
+          "name": "patient_alerts_ehr_snooze"
+        }
+      }
+    },
+    "snoozeDateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "patient_alerts_ehr_snooze"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "personId",
+    "messageId",
+    "isFlagged",
+    "isDeleted",
+    "shouldBeAcknowledged",
+    "alertTypeId",
+    "alertTypeDescription",
+    "acknowledgedByUserIds"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/alerts",
+      "description": "Get alerts for person",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

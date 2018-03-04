@@ -1,0 +1,44 @@
+<configuration debug="true">
+  <property name="LOGS_HOME" value="./Logs" />
+  <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
+  <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+  	<filter class="com.utils.LoggerFilter" />
+    <discriminator>
+         <Key>testname</Key>
+         <DefaultValue>Main</DefaultValue>
+    </discriminator>
+    <sift>
+      <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- <file>${LOGS_HOME}/${testname}${bySecond}.log</file>  --> <!-- this will append timestamp to file name -->
+        <file>${LOGS_HOME}/${testname}.log</file>
+        <append>false</append>
+        <encoder>
+          <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+      </appender>
+    </sift>
+  </appender>
+  
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+  	<filter class="com.utils.LoggerFilter" />
+  <!-- <file>${LOGS_HOME}/$mylog.txt</file>  -->
+    <file>${LOGS_HOME}/mylog.txt</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>${LOGS_HOME}/mylog-%d{yyyy-MM-DD}.%i.txt</fileNamePattern>
+       <!-- each file should be at most 100MB, keep 60 days worth of history, but at most 20GB -->
+       <maxFileSize>1MB</maxFileSize>    
+       <maxHistory>1</maxHistory>
+       <totalSizeCap>10MB</totalSizeCap>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+
+  <root level="TRACE">
+    <appender-ref ref="SIFT" />
+    <appender-ref ref="ROLLING" />
+  </root>
+</configuration>

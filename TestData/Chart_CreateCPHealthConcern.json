@@ -1,0 +1,13 @@
+{
+    "category": "#category#",
+    "otherCategory": "#otherCategory#",
+    "comments": "#comments#",
+    "healthConcern": "#healthConcern#",
+    "identifiedDate": "#identifiedDate#",
+  	"categoryId": "#categoryId#",
+  	"resolvedDate": "#resolvedDate#",
+    "codeDescription": "#codeDescription#",
+    "codeSystem": "#codeSystem#",
+    "codeValue": "#codeValue#",
+     "status": "#status#"
+}

@@ -1,0 +1,168 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ProblemNote.Json",
+  "title": "problemNote",
+  "description": "Shows notes for the problems",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note_id",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "problemId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "problem_id",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_problems"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "maxlength": 8,
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "maxlength": 8,
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "problem_note_xref"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "problem_note_xref"
+        }
+      }
+    }
+  },
+
+  "required": [
+    "id",
+    "problemId",
+    "personId",
+    "isDeleted",
+    "createdBy",
+    "createTimestamp",
+    "modifiedBy",
+    "modifyTimestamp"
+
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/problems/{problemId}/notes",
+      "description": "Get problem notes text based on problem id",
+      "method": "GET"
+    },
+    {
+      "name": "problem",
+      "href": "/persons/{personId}/chart/problems/{problemId}",
+      "description": "Get particular problems details based on problem id",
+      "method": "GET"
+    }
+  ]
+}

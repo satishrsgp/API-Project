@@ -1,0 +1,83 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AuditSecurityDetail.json",
+  "title": "auditSecurityDetail",
+  "description": "Detail item for audit events with type 'security'",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_id",
+          "name": "event_security"
+        }
+      }
+    },
+    "permPos": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "perm_pos",
+          "name": "event_security"
+        }
+      }
+    },
+    "itemType": {
+      "type": "string",
+      "maxlength": 1,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "item_type",
+          "name": "event_security"
+        }
+      }
+    },
+    "groupId": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "group_id",
+          "name": "event_security"
+        }
+      }
+    },
+    "permissionType": {
+      "type": "string",
+      "maxlength": 10,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "permission_type",
+          "name": "event_security"
+        }
+      }
+    },
+    "isAllowed": {
+      "type": "boolean",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "allowed_ind",
+          "name": "event_security"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/audit/events/{id}/security"
+    }
+  ]
+}

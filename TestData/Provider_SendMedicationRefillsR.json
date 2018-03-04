@@ -1,0 +1,10 @@
+{
+    "NotesToPharmacy": "#NotesToPharmacy#",
+    "TotalRefills": #TotalRefills#,
+     "IsApproved": "#IsApproved#",
+    "DenialReasonCode": "#DenialReasonCode#",
+      "EncounterId": "#EncounterId#",
+    "SupervisingProviderId": "#SupervisingProviderId#",
+ "AcknowledgedProblems": #AcknowledgedProblems#
+ 
+}

@@ -1,0 +1,199 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "SupportRole.json",
+  "title": "supportRole",
+  "description": "Model object that contains the support roles of a patient",
+  "type": "object",
+  "identifier": "",
+  "ignore": false,
+  "required": [
+    "personId",
+    "practiceId",
+    "firstName",
+    "lastName"
+  ],
+  "properties": {
+    "personId": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "firstName": {
+      "type": "string",
+      "maxlength": 60,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "maxlength": 60,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "middleName": {
+      "type": "string",
+      "maxlength": 25,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "middle_name",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "addressLine1": {
+      "type": "string",
+      "maxlength": 55,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_1",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "addressLine2": {
+      "type": "string",
+      "maxlength": 55,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "address_line_2",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "city": {
+      "type": "string",
+      "maxlength": 35,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "city",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "maxlength": 3,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "state",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "zip": {
+      "type": "string",
+      "maxlength": 9,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "zip",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "format": "phone",
+      "maxlength": 10,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "home_phone",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "alternatePhone": {
+      "type": "string",
+      "format": "phone",
+      "maxlength": 10,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cell_phone",
+          "name": "person_support_role"
+        }
+      }
+    },
+    "relation": {
+      "type": "string",
+      "maxlength": 200,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "code_tables"
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "maxlength": 200,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "code_tables"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/support-roles",
+      "description": "Get support roles for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    },
+    {
+      "name": "practice",
+      "href": "/master/practices?$filter=Id eq '{practiceId}'",
+      "description": "Gets practices",
+      "method": "GET"
+    }
+  ]
+}

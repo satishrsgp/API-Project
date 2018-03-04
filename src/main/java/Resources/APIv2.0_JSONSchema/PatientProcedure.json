@@ -1,0 +1,1135 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "PatientProcedure.json",
+  "title": "patientProcedure",
+  "description": "",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceItemLibraryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "person_id",
+          "name": "service_item_lib_id"
+        }
+      }
+    },
+    "serviceItemGroupName": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_group_name",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceItemGroupSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_group_seq_num",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceItemId": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceItemDescription": {
+      "type": "string",
+      "maxlength": 80,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_item_desc",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "cpt4Code": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "cpt4_code_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "serviceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "service_date",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "provider_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "referringProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "referring_provider_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "referringProviderName": {
+      "type": "string",
+      "maxlength": 30,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "referring_provider_name",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "assistingProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "assisting_provider_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "dateResolved": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_resolved",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId1": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_1",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId2": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId3": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifierId4": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modifier_id_4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId1": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_1",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId1": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_1",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId2": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId2": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId3": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId3": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId4": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId4": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "placeOfService": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "place_of_service",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "hasAcceptedAssignment": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "accept_assign_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "units": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "units",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "payerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "payer_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "amount": {
+      "type": "number",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "amount",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isBillingSuppressed": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "suppress_billing_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "tooth": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "tooth",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "surface": {
+      "type": "string",
+      "maxlength": 12,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surface",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "quadrant": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "quadrant",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "maxlength": 255,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "startTime": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "start_time",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "stopTime": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "stop_time",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "totalTime": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "total_time",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "baseUnit": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "base_unit",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "alternateCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alt_code",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isAnesthesiaBilling": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "anesthesia_billing_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId5": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_5",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId5": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_5",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId6": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_6",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId6": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_6",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId7": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_7",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId7": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_7",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId8": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_8",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId8": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_8",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "sourceProductId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "source_product_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isRxOnFile": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rx_on_file_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "nationalDrugCode": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "national_drug_code",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isBehavioralBilling": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "behavioral_billing_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId9": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_9",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId9": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_9",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId10": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_10",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId10": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_10",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId11": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_11",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId11": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_11",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeId12": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_id_12",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "diagnosisCodeLibraryId12": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "diagnosis_code_lib_id_12",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "snomedConceptId": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_concept_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "snomedConceptId2": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_concept_id2",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "snomedConceptId3": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_concept_id3",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "snomedConceptId4": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_concept_id4",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isDental": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dental_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isSupernumerary": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "supernumerary_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "surfaceDescriptor": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surface_descriptor",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isDefective": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "defective_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "notApplicableDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "not_applicable_date",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "approvalDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "approval_date",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "medicalDirectorId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medical_director_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "asaCrosswalkLibraryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "asa_crosswalk_lib_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "surgicalProcedureCodeId": {
+      "type": "string",
+      "maxlength": 13,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surgical_proc_code_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "surgicalProcedureDescription": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "surgical_proc_desc",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "basisOfMeasure": {
+      "type": "string",
+      "maxlength": 2,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "basis_of_measure",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "nationalDrugUnits": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "national_drug_units",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "teeth": {
+      "type": "string",
+      "maxlength": 64,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "teeth",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "created_by",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "create_timestamp_tz",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modified_by",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_procedure"
+        }
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp_tz",
+          "name": "patient_procedure"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "serviceItemId",
+    "serviceItemDescription",
+    "hasAcceptedAssignment",
+    "isBillingSuppressed",
+    "isAnesthesiaBilling",
+    "isRxOnFile",
+    "isBehavioralBilling",
+    "isDental",
+    "isSupernumerary",
+    "isDefective",
+    "isDeleted",
+    "enterpriseId",
+    "practiceId",
+    "createdBy",
+    "modifiedBy",
+    "createTimestamp",
+    "modifyTimestamp"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "description": "Get specific procedure attached to patient's encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}/procedures/{id}",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "description": "Get specific patient encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

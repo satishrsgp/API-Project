@@ -1,0 +1,81 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AuditInterfaceHoldingTankDetail.json",
+  "title": "auditInterfaceHoldingTankDetail",
+  "description": "Detail item for audit events with type 'interface holding tank'",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "queueEntryId",
+    "matchType",
+    "messageType",
+    "holdingTankReason"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "event_id",
+          "name": "event_interface_holding_tank"
+        }
+      }
+    },
+    "queueEntryId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "queue_entry_id",
+          "name": "event_interface_holding_tank"
+        }
+      }
+    },
+    "matchType": {
+      "type": "string",
+      "maxlength": 50,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "match_type",
+          "name": "event_interface_holding_tank"
+        }
+      }
+    },
+    "messageType": {
+      "type": "string",
+      "maxlength": 50,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "message_type",
+          "name": "event_interface_holding_tank"
+        }
+      }
+    },
+    "holdingTankReason": {
+      "type": "string",
+      "maxlength": 1000,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "holding_tank_reason",
+          "name": "event_interface_holding_tank"
+        }
+      }
+    }
+
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/audit/events/{id}/interface-holding-tank"
+    }
+  ]
+}

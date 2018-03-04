@@ -1,0 +1,150 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AuditAllergyDetail.json",
+  "title": "auditAllergyDetail",
+  "description": "Detail item for audit events with type 'allergy'",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "locationName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_name",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "providerFirstName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerLastName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "allergyId": {
+      "type": "string",
+      "maxLength": 12,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "allergy_id",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "reaction": {
+      "type": "string",
+      "maxLength": 1250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "rxn_desc",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "allergyType": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "allergy_type",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "dateOnset": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_onset",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "dateResolved": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_resolved",
+          "name": "patient_allergy"
+        }
+      }
+    },
+    "comments": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "allergy_type",
+          "name": "patient_allergy"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/audit/events/{eventId}/allergy"
+    }
+  ]
+}

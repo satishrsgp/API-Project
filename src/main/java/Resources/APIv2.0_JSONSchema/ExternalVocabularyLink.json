@@ -1,0 +1,76 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ExternalVocabularyLink.json",
+  "title": "externalVocabularyLink",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "evdFdbVocabId": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "evd_fdb_vocab_id",
+          "name": "revdel0"
+        }
+      }
+    },
+    "evdFdbVocabTypeId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "evd_fdb_vocab_type_id",
+          "name": "revdel0"
+        }
+      }
+    },
+    "evdExtVocabId": {
+      "type": "string",
+      "maxlength": 50,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "evd_ext_vocab_id",
+          "name": "revdel0"
+        }
+      }
+    },
+    "evdExtVocabTypeId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "evd_ext_vocab_type_id",
+          "name": "revdel0"
+        }
+      }
+    },
+    "evdLinkTypeId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "evd_link_type_id",
+          "name": "revdel0"
+        }
+      }
+    }
+  },
+  "required": [
+    "evdFdbVocabId",
+    "evdFdbVocabTypeId",
+    "evdExtVocabId",
+    "evdExtVocabTypeId",
+    "evdLinkTypeId"
+  ],
+  "links": [
+  ]
+}

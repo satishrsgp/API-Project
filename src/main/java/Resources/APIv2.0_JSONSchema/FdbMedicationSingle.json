@@ -1,0 +1,90 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "FdbMedicationSingle.json",
+  "title": "fdbMedicationSingle",
+  "description": "",
+  "type": "object",
+  "identifier": "ndcId",
+  "properties": {
+    "ndcId": {
+      "type": "string",
+      "maxlength": 11,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ndc_id",
+          "name": "fdb_med_single"
+        }
+      }
+    },
+    "medicationId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "medid",
+          "name": "fdb_med_single"
+        }
+      }
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "available_ind",
+          "name": "fdb_med_single"
+        }
+      }
+    },
+    "deaId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "dea_id",
+          "name": "fdb_med_single"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "fdb_med_single"
+        }
+      }
+    },
+    "gcnSequenceNumber": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "gcn_seqno",
+          "name": "fdb_med_single"
+        }
+      }
+    }
+  },
+  "required": [
+    "isAvailable",
+    "ndcId",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "medications",
+      "href": "/persons/{personId}/chart/medications/{medicationId}/send-erx",
+      "description": "Adds An Electronic Prescription",
+      "method": "POST"
+    }
+  ]
+}

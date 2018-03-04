@@ -1,0 +1,45 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ExternalSystem.json",
+  "title": "externalSystem",
+  "description": "Model object that contains the external system details",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "externalSystemName"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_system_id",
+          "name": "external_system"
+        }
+      }
+    },
+    "externalSystemName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_system_name",
+          "name": "external_system"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/external-systems",
+      "description": "Gets External Systems",
+      "method": "GET"
+    }
+  ]
+}

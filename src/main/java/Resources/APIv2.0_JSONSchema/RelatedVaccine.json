@@ -1,0 +1,110 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "RelatedVaccine.json",
+  "title": "relatedVaccine",
+  "description": "",
+  "type": "object",
+  "identifier": "cvxCode",
+  "properties": {
+    "cvxCode": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage":
+        {
+          "type": "table",
+          "field": "primary_cvx",
+          "name": "imm_vaccine_relations"
+        }
+      }
+    },
+    "cvxName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "evd_cvx_cd_desc_long",
+            "name": "REVDNCM0"
+          }
+        ]
+      }
+    },
+    "displayName": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "display_name",
+            "name": "ng_vaccines_xref"
+          },
+          {
+            "type": "table",
+            "field": "evd_cvx_cd_desc_long",
+            "name": "REVDNCM0"
+          }
+        ]
+      }
+    },
+    "relationType": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "relation_type",
+            "name": "imm_vaccine_relations"
+          }
+        ]
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "delete_ind",
+            "name": "imm_vaccine_relations"
+          }
+        ]
+      }
+    },
+    "isContainedInSourceVaccine": {
+      "type": "boolean",
+      "description":
+        "This flag is a boolean for whether or not the vaccine for which we are finding relations contains this vaccine."
+    },
+    "containsSourceVaccine": {
+      "type": "boolean",
+      "description":
+        "This flag is a boolean for whether or not this vaccine contains the vaccine for which we are finding relations."
+    }
+  },
+  "required": [
+    "cvxCode",
+    "relationType",
+    "isDeleted",
+    "isContainedInSourceVaccine",
+    "containsSourceVaccine"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/vaccines/{cvxCode}/related",
+      "description": "Get a list of vaccines related to the vaccine with the given cvx code",
+      "method": "GET"
+    },
+    {
+      "name": "vaccines",
+      "href": "/master/vaccines",
+      "description": "Get a list of vaccines based on search criteria",
+      "method": "GET"
+    }
+  ]
+}

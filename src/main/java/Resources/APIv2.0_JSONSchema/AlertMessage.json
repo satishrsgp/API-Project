@@ -1,0 +1,98 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AlertMessage.json",
+  "title": "alertMessage",
+  "description": "Alert Message",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "enterpriseId",
+    "practiceId",
+    "messageDescription",
+    "alertTypeId",
+    "isDeleted"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "message_id",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "enterpriseId": {
+      "type": "string",
+      "maxlength": 5,
+      "description": "The enterprise id in which the alert was created. 00000 is a global record.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enterprise_id",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "practiceId": {
+      "type": "string",
+      "maxlength": 4,
+      "description": "The practice id in which the alert was created. 0000 is a global record.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "practice_id",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "messageDescription": {
+      "type": "string",
+      "maxlength": 50,
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "alertTypeId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "alerttype_id",
+          "name": "ehr_alerts_mstr"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "patient_alerts_ehr"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/alert-messages",
+      "description": "Get all alert messages (odata for search criteria)",
+      "method": "GET"
+    }
+  ]
+}

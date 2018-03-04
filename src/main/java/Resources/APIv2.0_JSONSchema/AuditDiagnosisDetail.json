@@ -1,0 +1,163 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "AuditDiagnosisDetail.json",
+  "title": "auditDiagnosisDetail",
+  "description": "Detail item for audit events with type 'diagnosis'",
+  "type": "object",
+  "identifier": "id",
+  "required": [
+    "id",
+    "timestamp"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "uniq_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "diagnosisCodeId": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "icd9cm_code_id",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "modify_timestamp",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "locationName": {
+      "type": "string",
+      "maxlength": 40,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "location_name",
+          "name": "location_mstr"
+        }
+      }
+    },
+    "providerFirstName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "first_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "providerLastName": {
+      "type": "string",
+      "maxlength": 25,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "last_name",
+          "name": "provider_mstr"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "diagnosis_status_mstr"
+        }
+      }
+    },
+    "severity": {
+      "type": "string",
+      "maxlength": 60,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "description",
+          "name": "diagnosis_severity_mstr"
+        }
+      }
+    },
+    "dateOnset": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_onset_sympt",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "dateDiagnosed": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_diagnosed",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "dateResolved": {
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "date_resolved",
+          "name": "patient_diagnosis"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "note",
+          "name": "patient_diagnosis"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "name": "self",
+      "href": "/audit/events/{eventId}/diagnosis"
+    }
+  ]
+}

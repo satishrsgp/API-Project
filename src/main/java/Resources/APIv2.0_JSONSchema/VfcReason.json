@@ -1,0 +1,82 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "VfcReason.json",
+  "title": "vfcReason",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "externalSystemId": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "external_system_id",
+          "name": "imm_registry_vfc_xref"
+        }
+      }
+    },
+    "vfcCode": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vfc_code",
+          "name": "imm_registry_vfc_xref"
+        }
+      }
+    },
+    "vfcDescription": {
+      "type": "string",
+      "maxlength": 100,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vfc_desc",
+          "name": "imm_registry_vfc_xref"
+        }
+      }
+    },
+    "vfcCodingSystem": {
+      "type": "string",
+      "maxlength": 10,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "vfc_coding_system",
+          "name": "imm_registry_vfc_xref"
+        }
+      }
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "delete_ind",
+          "name": "imm_registry_vfc_xref"
+        }
+      }
+    }
+  },
+  "required": [
+    "externalSystemId",
+    "vfcCode",
+    "vfcDesc",
+    "isDeleted"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/vfc-codes",
+      "description": "Get a list of vfc reasons for ordering immunizations",
+      "method": "GET"
+    }
+  ]
+}

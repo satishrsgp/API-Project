@@ -1,0 +1,282 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "ObservationPanelSummary.json",
+	"title": "observationPanelSummary",
+	"description": "",
+	"type": "object",
+	"identifier": "id",
+	"properties": {
+		"id": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "The id of the lab results panel.",
+			"vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unique_obr_num",
+          "name": "lab_results_obr_p"
+        }
+			}
+		},
+		"enterpriseId": {
+			"type": "string",
+			"maxlength": 5,
+			"description": "The enterprise id.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "enterprise_id",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"practiceId": {
+			"type": "string",
+			"maxlength": 4,
+			"description": "The practice id.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "practice_id",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"personId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "The id of the person.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "person_id",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"orderId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "The id of the lab order.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "ngn_order_num",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"collectionDateTime": {
+			"type": "string",
+			"format": "date-time",
+			"description": "The date time of when the lab results were collected for this panel.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "coll_date_time",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"collectionDateTimeTimezone": {
+			"type": "number",
+			"description": "The time zone of the collection date time.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "coll_date_time_tz",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+    "orderingProviderId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 36,
+      "description": "The id of the provider that ordered the tests.",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "ord_phys_code",
+          "name": "lab_results_obr_p"
+        }
+      }
+    },
+		"resultStatus": {
+			"type": "string",
+			"maxlength": 2,
+			"description": "The status of the lab order results.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "order_result_stat",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"testDescription": {
+			"type": "string",
+			"maxlength": 200,
+			"description": "The name of the lab order test for this panel.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "test_desc",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"isDeleted": {
+			"type": "boolean",
+			"description": "A flag indicating whether this lab panel was deleted.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "delete_ind",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"createTimestamp": {
+			"type": "string",
+			"format": "date-time",
+			"description": "The date time when this lab panel was created.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "create_timestamp",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"createTimestampTimezone": {
+			"type": "number",
+			"description": "The time zone in which this lab panel was created.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "create_timestamp_tz",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"locationId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "The id of the location that produced the results for this panel.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "location_id",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"obrComment": {
+			"type": "string",
+			"maxlength": 16,
+			"description": "The lab panel comment from the performing Lab.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "obr_comment",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"loincCode": {
+			"type": "string",
+			"maxlength": 36,
+			"description": "The Loinc code for this lab panel.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "loinc_code",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"isConfidential": {
+			"type": "boolean",
+			"description": "A flag indicating whether the lab panel is confidential.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "confidential_ind",
+					"name": "lab_results_obr_p"
+				}
+			}
+		},
+		"orderTestId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "The id of the ordered lab test.",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "order_test_id",
+					"name": "lab_results_obr_p"
+				}
+			}
+		}	},
+	"required": [
+		"id",
+		"isDeleted",
+		"createTimestamp",
+		"isConfidential"
+	],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/panels",
+      "description": "Gets a list of lab order observation panels.",
+      "method": "GET"
+    },
+    {
+      "name": "panel",
+      "href": "/persons/{personId}/chart/lab/panels/{id}",
+      "description": "Get observation panel details for by panel id.",
+      "method": "GET"
+    },
+    {
+      "name": "order",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}",
+      "description": "Get order details for person by order id.",
+      "method": "GET"
+    },
+    {
+      "name": "lab-order-test-details",
+      "href": "/persons/{personId}/chart/lab/orders/{orderId}/tests/{orderTestId}",
+      "description": "Get ordered test details for the specified order id and order test id."
+    },
+    {
+      "name": "results",
+      "href": "/persons/{personId}/chart/lab/panels/{id}/results",
+      "description": "Gets a list of results for the specified observation panel.",
+      "method": "GET"
+    },
+    {
+      "name": "ordering-provider",
+      "href": "/providers/{orderingProviderId}",
+      "description": "Get details for the given provider.",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}

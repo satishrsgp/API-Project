@@ -1,0 +1,220 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "LabOrderInsurance.json",
+	"title": "LabOrderInsurance",
+	"description": "",
+	"type": "object",
+	"identifier": "",
+	"properties": {
+		"id": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "unique_ins_num",
+          "name": "lab_order_ins"
+        }
+			}
+		},
+		"personPayerId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "person_payer_id",
+            "name": "lab_order_ins"
+          },
+          {
+            "type": "table",
+            "field": "person_pay_id",
+            "name": "person_payer"
+          },
+          {
+            "type": "table",
+            "field": "employer_payer_id",
+            "name": "employer_payers"
+          }
+
+        ]
+			}
+		},
+		"payerId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "payer_id",
+            "name": "lab_order_ins"
+          },
+          {
+            "type": "table",
+            "field": "payer_id",
+            "name": "person_payer"
+          },
+          {
+            "type": "table",
+            "field": "payer_id",
+            "name": "employer_payers"
+          }
+        ]
+			}
+		},
+		"insuredPersonId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+        "storage": {
+            "type": "table",
+            "field": "insured_person_id",
+            "name": "lab_order_ins"
+          }
+			}
+		},
+		"cob": {
+			"type": "integer",
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "cob",
+					"name": "lab_order_ins"
+				}
+			}
+		},
+		"orderNumber": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "order_num",
+            "name": "lab_order_ins"
+          },
+          {
+            "type": "table",
+            "field": "order_num",
+            "name": "lab_nor"
+          }
+        ]
+			}
+		},
+		"personId": {
+			"type": "string",
+			"pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+			"maxlength": 16,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "person_id",
+					"name": "lab_nor"
+				}
+			}
+		},
+		"lastName": {
+			"type": "string",
+			"maxlength": 60,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "last_name",
+					"name": "person"
+				}
+			}
+		},
+		"firstName": {
+			"type": "string",
+			"maxlength": 60,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "first_name",
+					"name": "person"
+				}
+			}
+		},
+		"enterpriseId": {
+			"type": "string",
+			"maxlength": 5,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "enterprise_id",
+					"name": "lab_nor"
+				}
+			}
+		},
+		"practiceId": {
+			"type": "string",
+			"maxlength": 4,
+			"description": "",
+			"vendorExtensions": {
+				"storage": {
+					"type": "table",
+					"field": "practice_id",
+					"name": "lab_nor"
+				}
+			}
+		},
+		"payerName": {
+			"type": "string",
+			"maxlength": 40,
+			"description": "",
+			"vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "payer_name",
+            "name": "person_payer"
+          },
+          {
+            "type": "table",
+            "field": "payer_name",
+            "name": "payer_mstr"
+          }
+        ]
+			}
+		}	},
+	"required": [
+		"id",
+		"personId",
+		"lastName",
+		"firstName",
+		"enterpriseId",
+		"practiceId",
+		"payerName"
+	],
+  "links": [
+    {
+      "name": "self",
+      "href": "/persons/{personId}/chart/lab/orders/{orderNumber}/insurances",
+      "description": "Get the insurances for the corresponding order",
+      "method": "GET"
+    },
+    {
+      "name": "order",
+      "href": "/persons/{personId}/chart/lab/orders/{orderNumber}",
+      "description": "Get lab order detail",
+      "method": "GET"
+    }
+  ]
+}

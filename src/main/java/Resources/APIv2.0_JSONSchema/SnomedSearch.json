@@ -1,0 +1,57 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "SnomedSearch.json",
+  "title": "snomedSearch",
+  "description": "",
+  "type": "object",
+  "identifier": "",
+  "properties": {
+    "description": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "snomed_term",
+          "name": "sno_search"
+        }
+      }
+    },
+    "fullySpecifiedName": {
+      "type": "string",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "fsn",
+          "name": "sno_search"
+        }
+      }
+    },
+    "conceptId": {
+      "type": "number",
+      "maxlength": 18,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "concept_id",
+          "name": "sno_search"
+        }
+      }
+    }
+  },
+  "required": [
+    "conceptId"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/master/problems/search",
+      "description": "Search for problem based on search keyword",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,627 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "ApprovalQueue.json",
+  "title": "ApprovalQueue",
+  "description": "Model object that contains the one provider approval queue (paq) item",
+  "type": "object",
+  "identifier": "id",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "unique id",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "document_id",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "note_id",
+            "description": "",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "image_id",
+            "description": "",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "document_id",
+            "description": "",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "order_num",
+            "description": "",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "report_id",
+            "description": "",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "document_id",
+            "description": "",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "providerId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "paq_provider_id",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "paq_provider_id",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "paq_provider_id",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "provider_id",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "paq_provider_id",
+            "name": "lab_nor"
+          }
+        ]
+      }
+    },
+    "itemType": {
+      "type": "string",
+      "maxlength": 1,
+      "description": "",
+      "vendorExtensions": {
+        "storage": {
+          "type": "calculated"
+        }
+      }
+    },
+    "itemFile": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "document_file",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "note_id",
+            "description": "concatenated with '.rtf",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "image_file",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "file_name",
+            "name": "page"
+          },
+          {
+            "type": "table",
+            "field": "precedence",
+            "name": "paq_lab_flags"
+          },
+          {
+            "type": "table",
+            "field": "report_file",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "uri",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "itemName": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "For other types (not report), this field is null",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "report_name",
+          "name": "patient_report"
+        }
+      }
+    },
+    "itemDescription": {
+      "type": "string",
+      "maxlength": 250,
+      "description": "different source, depending on type",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "document_desc",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "table_name",
+            "description": "for notes type; concatenated with field_name - see below",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "field_name",
+            "description": "for notes type; concatenated with table_name - see above",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "image_desc",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "description",
+            "description": "for ICS type; if null, uses value below",
+            "name": "document"
+          },
+          {
+            "type": "table",
+            "field": "description",
+            "description": "for ICS type; if above value is null",
+            "name": "doc_type_mstr"
+          },
+          {
+            "type": "table",
+            "field": "test_desc",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "report_desc",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "description",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "format": {
+      "type": "string",
+      "maxlength": 20,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "file_format",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "format",
+            "name": "hie_document"
+          },
+          {
+            "type": "calculated",
+            "description": "RTF', 'IMG', 'ICS', 'LAB', 'RPT' depending on type"
+          }
+        ]
+      }
+    },
+    "personId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_encounter"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "patient_ics_images",
+            "description": "This is important, because person_id may be null for encounter"
+          },
+          {
+            "type": "table",
+            "field": "person_id",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "maxlength": 16,
+      "description": "For hie type, this field is null",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_id",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "appCreatedBy": {
+      "type": "string",
+      "maxlength": 8,
+      "description": "For other types, this field is null",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "app_created_by",
+          "name": "patient_documents"
+        }
+      }
+    },
+    "permPos": {
+      "type": "integer",
+      "description": "For other types, this field is 0",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "perm_pos",
+            "name": "security_items"
+          },
+          {
+            "type": "table",
+            "field": "perm_pos",
+            "name": "templates"
+          }
+        ]
+      }
+    },
+    "createdBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "created_by",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "createTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "createTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "create_timestamp_tz",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "modifiedBy": {
+      "type": "integer",
+      "description": "",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "modified_by",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "modifyTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "modifyTimestampTimezone": {
+      "type": "integer",
+      "vendorExtensions": {
+        "storage": [
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_documents"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_notes"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_ics_images"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "lab_nor"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "patient_reports"
+          },
+          {
+            "type": "table",
+            "field": "modify_timestamp_tz",
+            "name": "hie_document"
+          }
+        ]
+      }
+    },
+    "encounterTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "null for HIE type",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp",
+          "name": "patient_encounter"
+        }
+      }
+    },
+    "encounterTimestampTimezone": {
+      "type": "integer",
+      "description": "null for HIE type",
+      "vendorExtensions": {
+        "storage": {
+          "type": "table",
+          "field": "enc_timestamp_tz",
+          "name": "patient_encounter"
+        }
+      }
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "links": [
+    {
+      "name": "self",
+      "href": "/providers/{providerId}/paq",
+      "description": "Gets Encounter Details",
+      "method": "GET"
+    },
+    {
+      "name": "provider",
+      "href": "/providers/{providerId}",
+      "description": "Gets Provider Details",
+      "method": "GET"
+    },
+    {
+      "name": "encounter",
+      "href": "/persons/{personId}/chart/encounters/{encounterId}",
+      "description": "Gets Encounter Details",
+      "method": "GET"
+    },
+    {
+      "name": "person",
+      "href": "/persons/{personId}",
+      "description": "The demographics of the person",
+      "method": "GET"
+    },
+    {
+      "name": "chart",
+      "href": "/persons/{personId}/chart",
+      "description": "Get demographics for a given patient",
+      "method": "GET"
+    }
+  ]
+}
