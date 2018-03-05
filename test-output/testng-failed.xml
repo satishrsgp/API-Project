@@ -8,8 +8,6 @@
           <include name="createDetailedTestLog"/>
           <include name="beforeTest"/>
           <include name="chart_GetSocialHistory_TC1"/>
-          <include name="testCleanUp"/>
-          <include name="tearDown"/>
           <include name="preCondition"/>
         </methods>
       </class> <!-- com.testscripts.Chart_GetSocialHistory_TC1 -->
